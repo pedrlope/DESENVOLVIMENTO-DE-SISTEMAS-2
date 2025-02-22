@@ -1,5 +1,5 @@
 # DESENVOLVIMENTO-DE-SISTEMAS-2
-
+# exercicio 1
 using System.ComponentModel;
 int p = 1;
 do
@@ -154,3 +154,29 @@ do
 }
 while (p == 1);
    
+#    EXERCICIO 2
+
+Console.WriteLine("Hello world");
+
+Console.WriteLine("digite um numero");
+int num = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("digite outro numero");
+int num2 = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine($"o resutado é {num+num2}");
+
+Console.WriteLine("digite um numero");
+int num3 = Convert.ToInt32(Console.ReadLine());
+if (num3 >=18)
+{
+    Console.WriteLine("maioridade");
+}
+
+else
+{
+    Console.WriteLine("menor de idade");
+}
+
+for (int i = 1; i < 11; i++) ;
+Console.WriteLine($"{i}");
