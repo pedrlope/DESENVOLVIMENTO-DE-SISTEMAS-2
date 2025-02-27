@@ -159,27 +159,55 @@ while (p == 1);
 Console.WriteLine("Hello world");
 
 Console.WriteLine("digite um numero");
-int num = Convert.ToInt32(Console.ReadLine());
+int num1 = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("digite outro numero");
 int num2 = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine($"o resutado é {num+num2}");
+Console.WriteLine($"o resuLtado é {num1 + num2}");
 
-Console.WriteLine("digite um numero");
-int num3 = Convert.ToInt32(Console.ReadLine());
-if (num3 >=18)
+if (num1 > num2)
 {
-    Console.WriteLine("maioridade");
-}
+    Console.WriteLine($"o maior número é{num1}");
 
+}
 else
 {
-    Console.WriteLine("menor de idade");
+    Console.WriteLine($"o maior número é {num2}");
 }
 
-for (int i = 1; i < 11; i++) ;
-Console.WriteLine($"{i}");
+Console.WriteLine("digite um número");
+int num3 = Convert.ToInt32(Console.ReadLine());
+if (num3 % 2 == 0)
+{
+    Console.WriteLine("PAR");
+}
+else
+{
+    Console.WriteLine("IMPAR");
+}
+
+Console.WriteLine("digite 1 número");
+int num7 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine();
+for (int i = 1; i < 11; i++)
+    Console.WriteLine($"{i} x {num7} = {i * num7} ");
+
+Console.WriteLine("Digite o fatorial:");
+int valor = Convert.ToInt32(Console.ReadLine());
+int resultado = 1;
+for (int r = valor; r >= 1; r--)
+{
+    if (r != 1)
+    {
+        Console.WriteLine($"{r} X {resultado}");
+    }
+    resultado *= r;
+
+}
+Console.WriteLine($"O fatorial de {valor} é {resultado}");
+
+
 
 
 # BATERIA DE EXERCICIOS 1
