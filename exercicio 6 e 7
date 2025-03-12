@@ -1,11 +1,21 @@
-class Livro
-{
-    public string Titulo { get; set; }
-    public int Data { get; set; }
-    public string Autor { get; set; }
-}
+        Dictionary<string, string> dicionario = new Dictionary<string, string>();
+        for (int i = 0; i < 3; i++)
+        {
+            Console.Write("Digite a chave (titulo/data/autor): ");
+            string chave =  Console.ReadLine();
+            Console.Write("Digite o valor (string): ");
+            string valor = Console.ReadLine();
+            dicionario[chave] = valor;
+        }
+
+foreach
+Console.WriteLine("o titulo/data/autor do livro é");
+
+Console.WriteLine("o valor é");
+
 
 public class Animal
 {
 
 }
+
