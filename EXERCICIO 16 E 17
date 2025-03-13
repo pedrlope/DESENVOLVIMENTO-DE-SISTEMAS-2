@@ -1,0 +1,119 @@
+
+int x = 1;
+while (x>0)
+{
+    Console.WriteLine("nesse aplicativo você possue 5 opções que estão abaixo");
+    Console.WriteLine("1 - Array");
+    Console.WriteLine("2 - Lists");
+    Console.WriteLine("3 - Stack");
+    Console.WriteLine("4 - Files");
+    Console.WriteLine("5 - Dictionary");
+    int escolha = Convert.ToInt32(Console.ReadLine());
+    switch (escolha)
+    {
+
+
+
+        case 1:
+            int[] numeros = new int[5];
+            for (int i = 0; i < 5; i++)
+            {
+                Console.Write("Digite o número " + (i + 1) + ": ");
+                numeros[i] = int.Parse(Console.ReadLine());
+
+            }
+            for (int i = 4; i >= 0; i--)
+            {
+                Console.WriteLine(numeros[i]);
+            }
+            break;
+        //EXERCICIO 1
+
+
+        case 2:
+            List<string> nomes = new List<string>();
+
+
+            for (int i = 0; i < 5; i++)
+            {
+                Console.Write("Digite o nome " + (i + 1) + ": ");
+                nomes.Add(Console.ReadLine());
+            }
+
+
+            Console.WriteLine("Nomes da lista:");
+            foreach (string nome in nomes)
+            {
+                Console.WriteLine(nome);
+            }
+            break;
+        //EXERCICIO 2
+
+
+        case 3:
+            Stack<int> pilha = new Stack<int>();
+
+            for (int i = 0; i < 3; i++)
+            {
+                Console.Write("Digite o número " + (i + 1) + ": ");
+                pilha.Push(int.Parse(Console.ReadLine()));
+            }
+            Console.WriteLine("Números desempilhados:");
+            while (pilha.Count > 0)
+            {
+                Console.WriteLine(pilha.Pop());
+            }
+            break;
+        //EXERCICIO 3
+
+
+        case 4:
+            Queue<string> fila = new Queue<string>();
+
+            // Adicionando nomes à fila
+            for (int i = 0; i < 3; i++)
+            {
+                Console.Write("Digite o nome " + (i + 1) + ": ");
+                fila.Enqueue(Console.ReadLine());
+            }
+
+            // Desenfileirando e imprimindo os nomes
+            Console.WriteLine("Nomes desenfileirados:");
+            while (fila.Count > 0)
+            {
+                Console.WriteLine(fila.Dequeue());
+            }
+            break;
+        //EXERCICIO 4
+
+
+        case 5:
+            Dictionary<int, string> dicionario = new Dictionary<int, string>();
+
+           
+            for (int i = 0; i < 3; i++)
+            {
+                Console.Write("Digite a chave (número inteiro): ");
+                int chave = int.Parse(Console.ReadLine());
+                Console.Write("Digite o valor (string): ");
+                string valor = Console.ReadLine();
+                dicionario[chave] = valor;
+            }
+            // Imprimindo todos os pares chave-valor
+            Console.WriteLine("Pares chave-valor no dicionário:");
+            foreach (var item in dicionario)
+            {
+                Console.WriteLine("Chave: " + item.Key + ", Valor: " + item.Value);
+            }
+    
+            break;
+            //EXERCICIO 5
+    } 
+    Console.WriteLine("quer sair?");
+     int loopend = Int32.Parse(Console.ReadLine());
+    if (loopend < 1)
+    {
+       x = 0;
+    }
+}
+    
