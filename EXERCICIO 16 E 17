@@ -15,16 +15,16 @@ while (x>0)
 
 
         case 1:
-            int[] numeros = new int[5];
+            int[] array = new int[5];
             for (int i = 0; i < 5; i++)
             {
                 Console.Write("Digite o número " + (i + 1) + ": ");
-                numeros[i] = int.Parse(Console.ReadLine());
+                array[i] = int.Parse(Console.ReadLine());
 
             }
             for (int i = 4; i >= 0; i--)
             {
-                Console.WriteLine(numeros[i]);
+                Console.WriteLine(array[i]);
             }
             break;
         //EXERCICIO 1
@@ -58,7 +58,7 @@ while (x>0)
                 Console.Write("Digite o número " + (i + 1) + ": ");
                 pilha.Push(int.Parse(Console.ReadLine()));
             }
-            Console.WriteLine("Números desempilhados:");
+           
             while (pilha.Count > 0)
             {
                 Console.WriteLine(pilha.Pop());
@@ -70,15 +70,13 @@ while (x>0)
         case 4:
             Queue<string> fila = new Queue<string>();
 
-            // Adicionando nomes à fila
+            
             for (int i = 0; i < 3; i++)
             {
                 Console.Write("Digite o nome " + (i + 1) + ": ");
                 fila.Enqueue(Console.ReadLine());
             }
 
-            // Desenfileirando e imprimindo os nomes
-            Console.WriteLine("Nomes desenfileirados:");
             while (fila.Count > 0)
             {
                 Console.WriteLine(fila.Dequeue());
@@ -93,17 +91,17 @@ while (x>0)
            
             for (int i = 0; i < 3; i++)
             {
-                Console.Write("Digite a chave (número inteiro): ");
+                Console.Write("Digite a chave");
                 int chave = int.Parse(Console.ReadLine());
-                Console.Write("Digite o valor (string): ");
+                Console.Write("Digite o valor da chave");
                 string valor = Console.ReadLine();
                 dicionario[chave] = valor;
             }
-            // Imprimindo todos os pares chave-valor
+            
             Console.WriteLine("Pares chave-valor no dicionário:");
             foreach (var item in dicionario)
             {
-                Console.WriteLine("Chave: " + item.Key + ", Valor: " + item.Value);
+                Console.WriteLine("Chave:"+item.Key+",Valor:"+item.Value);
             }
     
             break;
