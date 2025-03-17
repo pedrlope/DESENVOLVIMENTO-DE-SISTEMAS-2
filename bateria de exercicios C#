@@ -690,6 +690,13 @@ static void exercicio1()
         //consumo
         static void combustivel()
         {
+            int distancia, tempo;
+
+            Console.WriteLine("qual a distancia percorrida?");
+            distancia = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("em quanto tempo?");
+            tempo = Convert.ToInt32(Console.ReadLine());
+
 
         }
         //consumo
@@ -721,6 +728,7 @@ static void exercicio1()
         if(escolha == 2)
         {
             i = 0;
+
         }
         else 
         {
