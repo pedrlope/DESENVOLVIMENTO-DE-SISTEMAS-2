@@ -1,0 +1,498 @@
+
+Console.WriteLine("escolha o exercicio");
+Console.WriteLine("1");
+Console.WriteLine("2");
+Console.WriteLine("3");
+Console.WriteLine("4");
+Console.WriteLine("5");
+Console.WriteLine("6");
+Console.WriteLine("7");
+Console.WriteLine("8");
+Console.WriteLine("9");
+Console.WriteLine("10");
+Console.WriteLine("11");
+Console.WriteLine("12");
+Console.WriteLine("13");
+Console.WriteLine("14");
+Console.WriteLine("15");
+Console.WriteLine("16");
+int exercicio = Convert.ToInt32(Console.ReadLine());
+
+if (exercicio== 1) 
+{
+    exercicio1();
+}
+
+if (exercicio == 2)
+{
+    exercicio2();
+}
+
+if (exercicio == 3)
+{
+    exercicio3();
+}
+
+if (exercicio == 4)
+{
+    exercicio4();
+}
+
+if (exercicio == 5)
+{
+    exercicio5();
+}
+
+if (exercicio == 6)
+{
+    exercicio6();
+}
+
+if (exercicio == 7)
+{
+    exercicio7();
+}
+
+if (exercicio == 8)
+{
+    exercicio8();
+}
+
+if (exercicio == 9)
+{
+    exercicio9();
+}
+
+if (exercicio == 10)
+{
+    exercicio10();
+}
+
+if (exercicio == 11)
+{
+    exercicio11();
+}
+
+if (exercicio == 12)
+{
+    exercicio12();
+}
+
+if (exercicio == 13)
+{
+    exercicio13();
+}
+
+if (exercicio == 14)
+{
+    exercicio14();
+}
+
+if (exercicio == 15)
+{
+    exercicio15();
+}
+
+if (exercicio == 16)
+{
+    exercicio16();
+}
+
+static void exercicio2()
+{
+    int i = 1;
+    while (i > 0)
+    {
+        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+        int escolha = Convert.ToInt32(Console.ReadLine());
+
+        if (escolha == 2)
+        {
+            i = 0;
+        }
+        else
+        {
+
+        }
+    }
+}
+
+static void exercicio3()
+{
+    int i = 1;
+    while (i > 0)
+    {
+        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+        int escolha = Convert.ToInt32(Console.ReadLine());
+
+        if (escolha == 2)
+        {
+            i = 0;
+        }
+        else
+        {
+
+        }
+    }
+}
+
+static void exercicio4()
+{
+    int i = 1;
+    while (i > 0)
+    {
+        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+        int escolha = Convert.ToInt32(Console.ReadLine());
+
+        if (escolha == 2)
+        {
+            i = 0;
+        }
+        else
+        {
+
+        }
+    }
+}
+
+static void exercicio5()
+{
+    int i = 1;
+    while (i > 0)
+    {
+        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+        int escolha = Convert.ToInt32(Console.ReadLine());
+
+        if (escolha == 2)
+        {
+            i = 0;
+        }
+        else
+        {
+
+        }
+    }
+}
+
+static void exercicio6()
+{
+    int i = 1;
+    while (i > 0)
+    {
+        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+        int escolha = Convert.ToInt32(Console.ReadLine());
+
+        if (escolha == 2)
+        {
+            i = 0;
+        }
+        else
+        {
+
+        }
+    }
+}
+
+static void exercicio7()
+{
+    int i = 1;
+    while (i > 0)
+    {
+        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+        int escolha = Convert.ToInt32(Console.ReadLine());
+
+        if (escolha == 2)
+        {
+            i = 0;
+        }
+        else
+        {
+
+        }
+    }
+}
+
+static void exercicio8()
+{
+    int i = 1;
+    while (i > 0)
+    {
+        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+        int escolha = Convert.ToInt32(Console.ReadLine());
+
+        if (escolha == 2)
+        {
+            i = 0;
+        }
+        else
+        {
+
+        }
+    }
+}
+
+static void exercicio9()
+{
+    int i = 1;
+    while (i > 0)
+    {
+        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+        int escolha = Convert.ToInt32(Console.ReadLine());
+
+        if (escolha == 2)
+        {
+            i = 0;
+        }
+        else
+        {
+
+        }
+    }
+}
+
+static void exercicio10()
+{
+    int i = 1;
+    while (i > 0)
+    {
+        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+        int escolha = Convert.ToInt32(Console.ReadLine());
+
+        if (escolha == 2)
+        {
+            i = 0;
+        }
+        else
+        {
+
+        }
+    }
+}
+
+static void exercicio11()
+{
+    int i = 1;
+    while (i > 0)
+    {
+        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+        int escolha = Convert.ToInt32(Console.ReadLine());
+
+        if (escolha == 2)
+        {
+            i = 0;
+        }
+        else
+        {
+
+        }
+    }
+}
+
+static void exercicio12()
+{
+    int i = 1;
+    while (i > 0)
+    {
+        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+        int escolha = Convert.ToInt32(Console.ReadLine());
+
+        if (escolha == 2)
+        {
+            i = 0;
+        }
+        else
+        {
+
+        }
+    }
+}
+
+static void exercicio13()
+{
+    int i = 1;
+    while (i > 0)
+    {
+        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+        int escolha = Convert.ToInt32(Console.ReadLine());
+
+        if (escolha == 2)
+        {
+            i = 0;
+        }
+        else
+        {
+
+        }
+    }
+}
+
+static void exercicio14()
+{
+    int i = 1;
+    while (i > 0)
+    {
+        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+        int escolha = Convert.ToInt32(Console.ReadLine());
+
+        if (escolha == 2)
+        {
+            i = 0;
+        }
+        else
+        {
+
+        }
+    }
+}
+
+static void exercicio15()
+{
+    int i = 1;
+    while (i > 0)
+    {
+        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+        int escolha = Convert.ToInt32(Console.ReadLine());
+
+        if (escolha == 2)
+        {
+            i = 0;
+        }
+        else
+        {
+
+        }
+    }
+}
+
+static void exercicio16()
+{
+    int i = 1;
+    while (i > 0)
+    {
+        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+        int escolha = Convert.ToInt32(Console.ReadLine());
+
+        if (escolha == 2)
+        {
+            i = 0;
+        }
+        else
+        {
+
+        }
+    }
+}
+
+
+static void exercicio1()
+{
+    int i = 1;
+    while (i > 0)
+    {
+        Console.WriteLine("qual o exercicio");
+        Console.WriteLine("1");
+        Console.WriteLine("2");
+        Console.WriteLine("3");
+        Console.WriteLine("4");
+        Console.WriteLine("5");
+        Console.WriteLine("6");
+        Console.WriteLine("7");
+        Console.WriteLine("8");
+        Console.WriteLine("9");
+        //caixa
+        static void caixa()
+        {
+            int altura, largura, profundidade;
+
+            Console.WriteLine("qual a altura em metros da caixa");
+            altura = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("qual a largura em metros da caixa");
+            largura = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("qual a profundidade em metros da caixa");
+            profundidade = Convert.ToInt32(Console.ReadLine());
+            int formula;
+            formula = largura * altura * profundidade;
+            Console.WriteLine($" o volume da caixa é {formula} ");
+        }
+        //caixa
+
+
+        //temperatura
+        static void temperatura()
+        {
+            float temperatura, c, f;
+            char unidade;
+
+            Console.WriteLine("qual a temperatura?");
+            temperatura = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("qual a unidade de medida?");
+            unidade = Char.ToUpper(Convert.ToChar(Console.ReadLine()));
+            f = (9 * temperatura) / 5 + 32;
+            c = (5 * (temperatura - 32)) / 9;
+            if (unidade == 'C' || unidade == 'c')
+            {
+                Console.WriteLine($" a temperatura é {f}");
+            }
+
+            if (unidade == 'F' || unidade == 'f')
+            {
+                Console.WriteLine($" a temperatura é {c}");
+            }
+
+        }
+        //temperatura
+
+        //cilindro
+        static void cilindro()
+        {
+
+        }
+        //cilindro
+
+        //coelhos
+        static void coelhos()
+        {
+
+        }
+        //coelhos
+
+        //consumo
+        static void combustivel()
+        {
+
+        }
+        //consumo
+
+        //diferença expoenecial
+        static void diferença()
+        {
+
+        }
+        //diferença expoenecial
+
+        //
+        static void distribuitiva()
+        {
+
+        }
+        //
+
+        //volume de esfera
+        static void esfera()
+        {
+
+        }
+        //volume de esfera
+        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+        int escolha = Convert.ToInt32(Console.ReadLine());
+
+        if(escolha == 2)
+        {
+            i = 0;
+        }
+        else 
+        {
+
+        }
+    }
+}
