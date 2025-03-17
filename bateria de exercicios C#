@@ -103,6 +103,18 @@ static void exercicio2()
     int i = 1;
     while (i > 0)
     {
+
+        Console.WriteLine("qual o exercicio");
+        Console.WriteLine("1");
+        Console.WriteLine("2");
+        Console.WriteLine("3");
+        Console.WriteLine("4");
+        Console.WriteLine("5");
+        Console.WriteLine("6");
+        Console.WriteLine("7");
+        Console.WriteLine("8");
+        Console.WriteLine("9");
+
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
 
@@ -122,6 +134,18 @@ static void exercicio3()
     int i = 1;
     while (i > 0)
     {
+
+        Console.WriteLine("qual o exercicio");
+        Console.WriteLine("1");
+        Console.WriteLine("2");
+        Console.WriteLine("3");
+        Console.WriteLine("4");
+        Console.WriteLine("5");
+        Console.WriteLine("6");
+        Console.WriteLine("7");
+        Console.WriteLine("8");
+        Console.WriteLine("9");
+
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
 
@@ -141,6 +165,18 @@ static void exercicio4()
     int i = 1;
     while (i > 0)
     {
+
+        Console.WriteLine("qual o exercicio");
+        Console.WriteLine("1");
+        Console.WriteLine("2");
+        Console.WriteLine("3");
+        Console.WriteLine("4");
+        Console.WriteLine("5");
+        Console.WriteLine("6");
+        Console.WriteLine("7");
+        Console.WriteLine("8");
+        Console.WriteLine("9");
+
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
 
@@ -160,6 +196,18 @@ static void exercicio5()
     int i = 1;
     while (i > 0)
     {
+
+        Console.WriteLine("qual o exercicio");
+        Console.WriteLine("1");
+        Console.WriteLine("2");
+        Console.WriteLine("3");
+        Console.WriteLine("4");
+        Console.WriteLine("5");
+        Console.WriteLine("6");
+        Console.WriteLine("7");
+        Console.WriteLine("8");
+        Console.WriteLine("9");
+
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
 
@@ -179,6 +227,18 @@ static void exercicio6()
     int i = 1;
     while (i > 0)
     {
+
+        Console.WriteLine("qual o exercicio");
+        Console.WriteLine("1");
+        Console.WriteLine("2");
+        Console.WriteLine("3");
+        Console.WriteLine("4");
+        Console.WriteLine("5");
+        Console.WriteLine("6");
+        Console.WriteLine("7");
+        Console.WriteLine("8");
+        Console.WriteLine("9");
+
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
 
@@ -198,6 +258,18 @@ static void exercicio7()
     int i = 1;
     while (i > 0)
     {
+
+        Console.WriteLine("qual o exercicio");
+        Console.WriteLine("1");
+        Console.WriteLine("2");
+        Console.WriteLine("3");
+        Console.WriteLine("4");
+        Console.WriteLine("5");
+        Console.WriteLine("6");
+        Console.WriteLine("7");
+        Console.WriteLine("8");
+        Console.WriteLine("9");
+
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
 
@@ -217,6 +289,18 @@ static void exercicio8()
     int i = 1;
     while (i > 0)
     {
+
+        Console.WriteLine("qual o exercicio");
+        Console.WriteLine("1");
+        Console.WriteLine("2");
+        Console.WriteLine("3");
+        Console.WriteLine("4");
+        Console.WriteLine("5");
+        Console.WriteLine("6");
+        Console.WriteLine("7");
+        Console.WriteLine("8");
+        Console.WriteLine("9");
+
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
 
@@ -236,6 +320,18 @@ static void exercicio9()
     int i = 1;
     while (i > 0)
     {
+
+        Console.WriteLine("qual o exercicio");
+        Console.WriteLine("1");
+        Console.WriteLine("2");
+        Console.WriteLine("3");
+        Console.WriteLine("4");
+        Console.WriteLine("5");
+        Console.WriteLine("6");
+        Console.WriteLine("7");
+        Console.WriteLine("8");
+        Console.WriteLine("9");
+
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
 
@@ -255,6 +351,18 @@ static void exercicio10()
     int i = 1;
     while (i > 0)
     {
+
+        Console.WriteLine("qual o exercicio");
+        Console.WriteLine("1");
+        Console.WriteLine("2");
+        Console.WriteLine("3");
+        Console.WriteLine("4");
+        Console.WriteLine("5");
+        Console.WriteLine("6");
+        Console.WriteLine("7");
+        Console.WriteLine("8");
+        Console.WriteLine("9");
+
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
 
@@ -274,6 +382,19 @@ static void exercicio11()
     int i = 1;
     while (i > 0)
     {
+
+        Console.WriteLine("qual o exercicio");
+        Console.WriteLine("1");
+        Console.WriteLine("2");
+        Console.WriteLine("3");
+        Console.WriteLine("4");
+        Console.WriteLine("5");
+        Console.WriteLine("6");
+        Console.WriteLine("7");
+        Console.WriteLine("8");
+        Console.WriteLine("9");
+
+
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
 
@@ -293,6 +414,19 @@ static void exercicio12()
     int i = 1;
     while (i > 0)
     {
+
+        Console.WriteLine("qual o exercicio");
+        Console.WriteLine("1");
+        Console.WriteLine("2");
+        Console.WriteLine("3");
+        Console.WriteLine("4");
+        Console.WriteLine("5");
+        Console.WriteLine("6");
+        Console.WriteLine("7");
+        Console.WriteLine("8");
+        Console.WriteLine("9");
+
+
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
 
@@ -312,6 +446,19 @@ static void exercicio13()
     int i = 1;
     while (i > 0)
     {
+
+        Console.WriteLine("qual o exercicio");
+        Console.WriteLine("1");
+        Console.WriteLine("2");
+        Console.WriteLine("3");
+        Console.WriteLine("4");
+        Console.WriteLine("5");
+        Console.WriteLine("6");
+        Console.WriteLine("7");
+        Console.WriteLine("8");
+        Console.WriteLine("9");
+
+
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
 
@@ -331,6 +478,19 @@ static void exercicio14()
     int i = 1;
     while (i > 0)
     {
+
+        Console.WriteLine("qual o exercicio");
+        Console.WriteLine("1");
+        Console.WriteLine("2");
+        Console.WriteLine("3");
+        Console.WriteLine("4");
+        Console.WriteLine("5");
+        Console.WriteLine("6");
+        Console.WriteLine("7");
+        Console.WriteLine("8");
+        Console.WriteLine("9");
+
+
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
 
@@ -350,6 +510,19 @@ static void exercicio15()
     int i = 1;
     while (i > 0)
     {
+
+        Console.WriteLine("qual o exercicio");
+        Console.WriteLine("1");
+        Console.WriteLine("2");
+        Console.WriteLine("3");
+        Console.WriteLine("4");
+        Console.WriteLine("5");
+        Console.WriteLine("6");
+        Console.WriteLine("7");
+        Console.WriteLine("8");
+        Console.WriteLine("9");
+
+
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
 
@@ -366,9 +539,25 @@ static void exercicio15()
 
 static void exercicio16()
 {
+
+
     int i = 1;
     while (i > 0)
     {
+
+        Console.WriteLine("qual o exercicio");
+        Console.WriteLine("1");
+        Console.WriteLine("2");
+        Console.WriteLine("3");
+        Console.WriteLine("4");
+        Console.WriteLine("5");
+        Console.WriteLine("6");
+        Console.WriteLine("7");
+        Console.WriteLine("8");
+        Console.WriteLine("9");
+
+
+
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
 
