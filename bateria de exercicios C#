@@ -205,8 +205,6 @@ static void exercicio5()
         Console.WriteLine("5");
         Console.WriteLine("6");
         Console.WriteLine("7");
-        Console.WriteLine("8");
-        Console.WriteLine("9");
 
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
@@ -236,8 +234,6 @@ static void exercicio6()
         Console.WriteLine("5");
         Console.WriteLine("6");
         Console.WriteLine("7");
-        Console.WriteLine("8");
-        Console.WriteLine("9");
 
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
@@ -268,7 +264,6 @@ static void exercicio7()
         Console.WriteLine("6");
         Console.WriteLine("7");
         Console.WriteLine("8");
-        Console.WriteLine("9");
 
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
@@ -299,7 +294,6 @@ static void exercicio8()
         Console.WriteLine("6");
         Console.WriteLine("7");
         Console.WriteLine("8");
-        Console.WriteLine("9");
 
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
@@ -425,6 +419,7 @@ static void exercicio12()
         Console.WriteLine("7");
         Console.WriteLine("8");
         Console.WriteLine("9");
+        Console.WriteLine("10");
 
 
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
@@ -457,7 +452,7 @@ static void exercicio13()
         Console.WriteLine("7");
         Console.WriteLine("8");
         Console.WriteLine("9");
-
+        Console.WriteLine("10");
 
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
@@ -489,6 +484,7 @@ static void exercicio14()
         Console.WriteLine("7");
         Console.WriteLine("8");
         Console.WriteLine("9");
+        Console.WriteLine("10");
 
 
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
@@ -521,6 +517,7 @@ static void exercicio15()
         Console.WriteLine("7");
         Console.WriteLine("8");
         Console.WriteLine("9");
+        Console.WriteLine("10");
 
 
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
@@ -555,7 +552,7 @@ static void exercicio16()
         Console.WriteLine("7");
         Console.WriteLine("8");
         Console.WriteLine("9");
-
+        Console.WriteLine("10");
 
 
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
@@ -714,7 +711,8 @@ static void exercicio1()
         //volume de esfera
         static void esfera()
         {
-
+            double formula;
+            formula =  3 / 4 (r,3);
         }
         //volume de esfera
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
