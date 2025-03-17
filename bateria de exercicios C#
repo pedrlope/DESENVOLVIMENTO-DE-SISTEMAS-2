@@ -579,15 +579,50 @@ static void exercicio1()
     while (i > 0)
     {
         Console.WriteLine("qual o exercicio");
-        Console.WriteLine("1");
-        Console.WriteLine("2");
-        Console.WriteLine("3");
-        Console.WriteLine("4");
-        Console.WriteLine("5");
-        Console.WriteLine("6");
-        Console.WriteLine("7");
-        Console.WriteLine("8");
-        Console.WriteLine("9");
+        Console.WriteLine("1 - volume de uma caixa");
+        Console.WriteLine("2 - mudança de celsius para farenheit e vice e versa");
+        Console.WriteLine("3 - volume de um cilindro");
+        Console.WriteLine("4 - criação de coelhos");
+        Console.WriteLine("5 - consumo de combustivel");
+        Console.WriteLine("6 - diferença quadratica");
+        Console.WriteLine("7 - propriedade distribuitiva");
+        Console.WriteLine("8 - volume de uma esfera");
+        int escolha1 = Convert.ToInt32(Console.ReadLine());
+        switch(escolha1)
+        {
+                case 1:
+                caixa();
+                break;
+
+            case 2:
+                temperatura();
+                break;
+
+            case 3:
+                cilindro();
+                break;
+
+            case 4:
+                coelhos();
+                break;
+
+            case 5:
+                combustivel();
+                break;
+
+            case 6:
+                diferença();
+                break;
+
+            case 7:
+                distribuitiva();
+                break;
+
+            case 8:
+                esfera();
+                break;
+        }
+
         //caixa
         static void caixa()
         {
@@ -634,7 +669,17 @@ static void exercicio1()
         //cilindro
         static void cilindro()
         {
+            double formula, altura, raio;
 
+            Console.WriteLine("qual o raio do cilindro:");
+            raio = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("qual a altura do cilindro:");
+            altura = Convert.ToDouble(Console.ReadLine());
+
+            formula = Math.PI * Math.Pow(raio, 2) * altura;
+
+            Console.WriteLine($"o volume é {formula}");
         }
         //cilindro
 
