@@ -18,7 +18,7 @@ Console.WriteLine("15");
 Console.WriteLine("16");
 int exercicio = Convert.ToInt32(Console.ReadLine());
 
-if (exercicio== 1) 
+if (exercicio == 1)
 {
     exercicio1();
 }
@@ -115,6 +115,28 @@ static void exercicio2()
         Console.WriteLine("8");
         Console.WriteLine("9");
 
+        //Numero Ao quadrado
+        static void NumeroAoQuadrado()
+        {
+            Console.WriteLine("qual o numero?");
+            double num = Convert.ToDouble(Console.ReadLine());
+            double formula = num * num;
+            Console.WriteLine($" a area e {formula}");
+        }
+        //Numero Ao quadrado
+
+        //area quadrado
+        static void AreaQuadrado()
+        {
+            Console.WriteLine("qual o comprimento do primeiro lado");
+            double lado1= Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("qual o comprimento do segundo lado");
+            double lado2 = Convert.ToDouble(Console.ReadLine());
+            double  formula = lado1 * lado2;
+            Console.WriteLine($" a area e {formula}");
+        }
+        //area quadrado
+        
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
 
@@ -145,6 +167,18 @@ static void exercicio3()
         Console.WriteLine("7");
         Console.WriteLine("8");
         Console.WriteLine("9");
+
+        //AreaTriangulo
+        static void AreaTriangulo()
+        {
+            Console.WriteLine("qual o comprimento do primeiro lado");
+            double altura = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("qual o comprimento do segundo lado");
+            double bases = Convert.ToDouble(Console.ReadLine());
+            double formula = (bases * altura)/2;
+            Console.WriteLine($" a area e {formula}");
+        }
+        //AreaTriangulo
 
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
@@ -177,6 +211,87 @@ static void exercicio4()
         Console.WriteLine("8");
         Console.WriteLine("9");
 
+        //comparaconumeros
+        static void ComparacoNumeros()
+        {
+            Console.WriteLine("qual o primeiro numero?");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("qual o segundo numero?");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("qual o terceiro numero?");
+            int num3 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("qual o quarto numero?");
+            int num4 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("qual o quinto numero?");
+            int num5 = Convert.ToInt32(Console.ReadLine());
+
+
+
+        }
+        //comparaconumeros
+
+        //AceitaNumeros
+        static void AceitaNumeros()
+        {
+            Console.WriteLine("qual o primeiro numero?");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("qual o segundo numero?");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("qual o terceiro numero?");
+            int num3 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("qual o quarto numero?");
+            int num4 = Convert.ToInt32(Console.ReadLine());
+        }
+        //AceitaNumeros
+
+        // Diferenca
+        static void Diferenca()
+        {
+            Console.WriteLine("qual o primeiro numero?");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("qual o segundo numero?");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+            int formula = num1 - num2; 
+            if (num1>num2)
+            {
+                Console.WriteLine($"o maior numero e {num1}");
+                Console.WriteLine($"a diferenca e{formula}");
+            }
+
+            else 
+            {
+                Console.WriteLine($"o maior numero e {num2}");
+                Console.WriteLine($"a diferenca e{formula}");
+            }
+        }
+        //Diferenca
+
+        //MediaAluno
+        static void MediaAluno()
+        {
+            Console.WriteLine("qual o primeira nota?");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("qual o segunda nota?");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("qual o terceira nota?");
+            int num3 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("qual o quarta nota?");
+            int num4 = Convert.ToInt32(Console.ReadLine());
+            int formula = (num1 + num2 + num3 + num4)/4;
+            Console.WriteLine($"a media e {formula}");
+            int Media = 7;
+            if (formula >= Media)
+            {
+                Console.WriteLine("aluno aprovado");
+            }
+           
+            else
+            {
+                Console.WriteLine("aluno reprovado");
+            }
+        }
+        //MediaAluno
+
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
 
@@ -190,6 +305,7 @@ static void exercicio4()
         }
     }
 }
+
 
 static void exercicio5()
 {
@@ -585,9 +701,9 @@ static void exercicio1()
         Console.WriteLine("7 - propriedade distribuitiva");
         Console.WriteLine("8 - volume de uma esfera");
         int escolha1 = Convert.ToInt32(Console.ReadLine());
-        switch(escolha1)
+        switch (escolha1)
         {
-                case 1:
+            case 1:
                 caixa();
                 break;
 
@@ -690,12 +806,14 @@ static void exercicio1()
         //consumo
         static void combustivel()
         {
-            int distancia, tempo;
+            int distancia, litros;
 
             Console.WriteLine("qual a distancia percorrida?");
             distancia = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("em quanto tempo?");
-            tempo = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("em quanto litros?");
+            litros = Convert.ToInt32(Console.ReadLine());
+            int formula = distancia /  litros;
+            Console.WriteLine($"o consumo e de:{formula}");
 
 
         }
@@ -718,19 +836,22 @@ static void exercicio1()
         //volume de esfera
         static void esfera()
         {
+            Console.WriteLine("qual o raio do cilindro:");
+           double r = Convert.ToDouble(Console.ReadLine());
             double formula;
-            formula =  3 / 4 (r,3);
+            formula = Math.PI * Math.Pow(r, 3)/4;
+            Console.WriteLine($"o volume da esfera é {formula}");
         }
         //volume de esfera
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
 
-        if(escolha == 2)
+        if (escolha == 2)
         {
             i = 0;
 
         }
-        else 
+        else
         {
 
         }
