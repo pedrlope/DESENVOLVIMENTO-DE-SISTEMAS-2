@@ -687,7 +687,14 @@ static void exercicio14()
         //SerieDez
         static void SerieDez()
         {
+            int n = 1;
+            do
+            {
+                
+                Console.WriteLine($"{n}");
+                n++;
 
+            }while (n<=10);
         }
         //SerieDez
 
