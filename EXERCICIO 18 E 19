@@ -1,0 +1,146 @@
+1)
+
+using System;
+using System.Linq;
+
+class Program
+{
+    static void Main()
+    {
+        int[] numeros = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        
+        var numerosPares = numeros
+                            .Where(n => n % 2 == 0)
+                            .OrderBy(n => n)
+                            .ToArray();
+
+        Console.WriteLine("Números pares em ordem crescente:");
+        foreach (var numero in numerosPares)
+        {
+            Console.WriteLine(numero);
+        }
+    }
+}
+
+
+2)
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        List<string> nomes = new List<string> { "Ana", "Carlos", "Alice", "Paulo", "Amanda", "João" };
+
+        var nomesComA = nomes
+                        .Where(nome => nome.StartsWith("A"))
+                        .OrderByDescending(nome => nome)
+                        .ToList();
+
+        Console.WriteLine("Nomes que começam com 'A' em ordem decrescente:");
+        foreach (var nome in nomesComA)
+        {
+            Console.WriteLine(nome);
+        }
+    }
+}
+
+
+
+3)
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        Dictionary<int, string> dicionario = new Dictionary<int, string>
+        {
+            { 1, "João" },
+            { 2, "Pedro" },
+            { 3, "Maria" },
+            { 4, "Lucas" },
+            { 5, "Felipe" }
+        };
+
+        var entradasComE = dicionario
+                            .Where(kv => kv.Value.Contains("e"))
+                            .OrderBy(kv => kv.Key)
+                            .ToList();
+
+        Console.WriteLine("Entradas com a letra 'e' ordenadas pela chave:");
+        foreach (var entry in entradasComE)
+        {
+            Console.WriteLine($"Chave: {entry.Key}, Valor: {entry.Value}");
+        }
+    }
+}
+
+
+
+4)
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+class Produto
+{
+    public string Nome { get; set; }
+    public string Categoria { get; set; }
+}
+
+class Program
+{
+    static void Main()
+    {
+        List<Produto> produtos = new List<Produto>
+        {
+            new Produto { Nome = "Camiseta", Categoria = "Roupas" },
+            new Produto { Nome = "Calça", Categoria = "Roupas" },
+            new Produto { Nome = "Notebook", Categoria = "Eletrônicos" },
+            new Produto { Nome = "Smartphone", Categoria = "Eletrônicos" },
+            new Produto { Nome = "Tênis", Categoria = "Roupas" }
+        };
+
+        var agrupamentoPorCategoria = produtos
+                                      .GroupBy(p => p.Categoria)
+                                      .Select(g => new { Categoria = g.Key, Quantidade = g.Count() })
+                                      .ToList();
+
+        Console.WriteLine("Produtos agrupados por categoria e contagem:");
+        foreach (var grupo in agrupamentoPorCategoria)
+        {
+            Console.WriteLine($"Categoria: {grupo.Categoria}, Quantidade: {grupo.Quantidade}");
+        }
+    }
+}
+
+
+
+5)
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        List<int> numeros = new List<int> { 5, 12, 18, 3, 7, 15, 10 };
+
+        var numerosMultiplicados = numeros
+                                   .Where(n => n > 10)
+                                   .Select(n => n * 2)
+                                   .ToList();
+
+        Console.WriteLine("Números maiores que 10 multiplicados por 2:");
+        foreach (var numero in numerosMultiplicados)
+        {
+            Console.WriteLine(numero);
+        }
+    }
+}
