@@ -115,6 +115,53 @@ static void exercicio2()
         Console.WriteLine("8");
         Console.WriteLine("9");
 
+//mediaPonderada
+        static void MediaPonderada()
+{
+Console.WriteLine("qual a primeira nota");
+int nota1= Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("qual o peso da primeira nota");
+int peso1= Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("qual a segunda nota");
+int nota2= Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("qual o peso segunda nota");
+int peso2= Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("qual a terceira nota");
+int nota3= Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("qual o peso terceira nota");
+int peso3= Convert.ToInt32(Console.ReadLine());
+
+int formula = ((nota1* peso1) + (nota2*peso2) +(nota3*peso3))/(peso1+peso2+peso3) 
+
+Console.WriteLine($" a media ponderada é {formula});
+}
+//mediaPonderada
+
+//mediaHarmonica
+        static void MediaHarmonica()
+{
+Console.WriteLine("qual a primeira nota");
+int nota1= Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("qual a segunda nota");
+int nota2= Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("qual a terceira nota");
+int nota3= Convert.ToInt32(Console.ReadLine());
+
+int n = 3;
+
+int formula = n/((1/nota1) + (1/nota2) +(1/nota3)) 
+
+Console.WriteLine($" a media ponderada é {formula});
+}
+//mediaHarmonica
+
         //Numero Ao quadrado
         static void NumeroAoQuadrado()
         {
@@ -137,6 +184,13 @@ static void exercicio2()
         }
         //area quadrado
 
+        //Potencia
+        static void Potencia()
+{
+
+}
+        //Potencia
+  
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
 
