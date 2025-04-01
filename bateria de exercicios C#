@@ -1,21 +1,23 @@
 
+using System.Diagnostics;
+
 Console.WriteLine("escolha o exercicio");
-Console.WriteLine("1");
-Console.WriteLine("2");
-Console.WriteLine("3");
-Console.WriteLine("4");
-Console.WriteLine("5");
-Console.WriteLine("6");
-Console.WriteLine("7");
-Console.WriteLine("8");
-Console.WriteLine("9");
-Console.WriteLine("10");
-Console.WriteLine("11");
-Console.WriteLine("12");
-Console.WriteLine("13");
-Console.WriteLine("14");
-Console.WriteLine("15");
-Console.WriteLine("16");
+Console.WriteLine("1 – Entrada e Saída de Dados e Declaração de Variáveis");
+Console.WriteLine("2 – Entradas e Saídas de Dados e Declaração de Variáveis");
+Console.WriteLine("3 – Entrada e Saída de Dados e Declaração de Variáveis");
+Console.WriteLine("4 – Estrutura de Seleção IF e IF / ELSE");
+Console.WriteLine("5 – Estrutura de Seleção IF e IF / ELSE");
+Console.WriteLine("6 – Estrutura de Seleção IF e IF / ELSE");
+Console.WriteLine("7 – Estrutura de Seleção While e Outras");
+Console.WriteLine("8 – Estrutura de Repetição While e outras");
+Console.WriteLine("9 – Estrutura de Repetição IF, ELSE, While e outras");
+Console.WriteLine("10 – Estrutura de Repetição While e outras");
+Console.WriteLine("11 – Estrutura de Repetição While, For e outras");
+Console.WriteLine("12 – Estrutura de Repetição While, For e outras");
+Console.WriteLine("13 – Estrutura de Repetição For, While e outras");
+Console.WriteLine("14 – Estrutura de Repetição Do / While e outras");
+Console.WriteLine("15 – Estrutura de Repetição Do /While e outras");
+Console.WriteLine("16 - Estrutura de Seleção Múltipla Switch e outras");
 int exercicio = Convert.ToInt32(Console.ReadLine());
 
 if (exercicio == 1)
@@ -116,40 +118,40 @@ static void exercicio1()
         switch (escolha1)
         {
             case 1:
-                caixa();
+                Caixa();
                 break;
 
             case 2:
-                temperatura();
+                Temperatura();
                 break;
 
             case 3:
-                cilindro();
+                Cilindro();
                 break;
 
             case 4:
-                coelhos();
+                Coelhos();
                 break;
 
             case 5:
-                combustivel();
+                Combustivel();
                 break;
 
             case 6:
-                diferença();
+                Diferença();
                 break;
 
             case 7:
-                distribuitiva();
+                Distribuitiva();
                 break;
 
             case 8:
-                esfera();
+                Esfera();
                 break;
         }
 
         //caixa
-        static void caixa()
+        static void Caixa()
         {
             int altura, largura, profundidade;
 
@@ -167,7 +169,7 @@ static void exercicio1()
 
 
         //temperatura
-        static void temperatura()
+        static void Temperatura()
         {
             float temperatura, c, f;
             char unidade;
@@ -192,7 +194,7 @@ static void exercicio1()
         //temperatura
 
         //cilindro
-        static void cilindro()
+        static void Cilindro()
         {
             double formula, altura, raio;
 
@@ -209,14 +211,14 @@ static void exercicio1()
         //cilindro
 
         //coelhos
-        static void coelhos()
+        static void Coelhos()
         {
 
         }
         //coelhos
 
         //consumo
-        static void combustivel()
+        static void Combustivel()
         {
             int distancia, litros;
 
@@ -232,1004 +234,18 @@ static void exercicio1()
         //consumo
 
         //diferença expoenecial
-        static void diferença()
+        static void Diferença()
         {
-
+            
         }
         //diferença expoenecial
 
         //
-        static void distribuitiva()
+        static void Distribuitiva()
         {
 
         }
         //
-
-        //volume de esfera
-        static void esfera()
-        {
-            Console.WriteLine("qual o raio da esfera:");
-            double r = Convert.ToDouble(Console.ReadLine());
-            double formula;
-            formula = Math.PI * Math.Pow(r, 3) / 4;
-            Console.WriteLine($"o volume da esfera é {formula}");
-        }
-        //volume de esfera
-
-static void exercicio2()
-{
-    int i = 1;
-    while (i > 0)
-    {
-
-         Console.WriteLine("qual o exercicio");
-        Console.WriteLine("1 - Calcula o produto e a adição de frações ");
-        Console.WriteLine("2 - Calcula o salário de um vendedor");
-        Console.WriteLine("3 - Calcula o volume de uma lata de oleo");
-        Console.WriteLine("4 - Média harmônica");
-        Console.WriteLine("5 - Média ponderada");
-        Console.WriteLine("6 - Lê números e calcula operações");
-        Console.WriteLine("7 - Calcula potência de número");
-        Console.WriteLine("8 - Quadrado de um número");
-        Console.WriteLine("9 - Área de um quadrado");
-        int escolha1 = Convert.ToInt32(Console.ReadLine());
-        switch (escolha1)
-        {
-            case 1:
-                ProdutoeAdicaoFracao();
-                break;
-
-            case 2:
-                salario();
-                break;
-
-            case 3:
-                VolumeLata();
-                break;
-
-            case 4:
-                MediaHarmonica();
-                break;
-
-            case 5:
-                MediaPonderada();
-                break;
-
-            case 6:
-                LerNumeros();
-                break;
-
-            case 7:
-                Potencia();
-                break;
-
-            case 8:
-                AreaQuadrado();
-                break;
-
-            case 9:
-                NumeroAoQuadrado();
-                break;
-        }
-
-//produto
-static void ProdutoeAdicaoFracao()
-{
-
-}
-//produto
-
-//salario
-static void salario()
-{
-
-}
-//salario
-
-//volumelata
-static void VolumeLata()
-{
-
-}
-//volumelata
-
-//mediaHarmonica
-        static void MediaHarmonica()
-{
-Console.WriteLine("qual a primeira nota");
-int nota1= Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine("qual a segunda nota");
-int nota2= Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine("qual a terceira nota");
-int nota3= Convert.ToInt32(Console.ReadLine());
-
-int n = 3;
-
-int formula = n/((1/nota1) + (1/nota2) +(1/nota3)) 
-
-Console.WriteLine($" a media ponderada é {formula});
-}
-//mediaHarmonica
-
-
-//mediaPonderada
-        static void MediaPonderada()
-{
-Console.WriteLine("qual a primeira nota");
-int nota1= Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine("qual o peso da primeira nota");
-int peso1= Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine("qual a segunda nota");
-int nota2= Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine("qual o peso segunda nota");
-int peso2= Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine("qual a terceira nota");
-int nota3= Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine("qual o peso terceira nota");
-int peso3= Convert.ToInt32(Console.ReadLine());
-
-int formula = ((nota1* peso1) + (nota2*peso2) +(nota3*peso3))/(peso1+peso2+peso3) 
-
-Console.WriteLine($" a media ponderada é {formula});
-}
-//mediaPonderada
-
-//ler
-static void LerNumeros()
-{
-
-}
-//ler
-
- //Potencia
-        static void Potencia()
-{
-
-}
-        //Potencia
-
-        //area quadrado
-        static void AreaQuadrado()
-        {
-            Console.WriteLine("qual o comprimento do primeiro lado");
-            double lado1 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("qual o comprimento do segundo lado");
-            double lado2 = Convert.ToDouble(Console.ReadLine());
-            double formula = lado1 * lado2;
-            Console.WriteLine($" a area e {formula}");
-        }
-        //area quadrado
-
-    //Numero Ao quadrado
-        static void NumeroAoQuadrado()
-        {
-            Console.WriteLine("qual o numero?");
-            double num = Convert.ToDouble(Console.ReadLine());
-            double formula = num * num;
-            Console.WriteLine($" a area e {formula}");
-        }
-        //Numero Ao quadrado
-  
-        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
-        int escolha = Convert.ToInt32(Console.ReadLine());
-
-        if (escolha == 2)
-        {
-            i = 0;
-        }
-        else
-        {
-
-        }
-    }
-}
-
-static void exercicio3()
-{
-    int i = 1;
-    while (i > 0)
-    {
-
-        Console.WriteLine("qual o exercicio");
-        Console.WriteLine("1 - Consumo de combustível");
-        Console.WriteLine("2 - Troca de valores entre números");
-        Console.WriteLine("3 - Entrada e saída de dados");
-        Console.WriteLine("4 - Conversão de temperaturas");
-        Console.WriteLine("5 - Prestação em atrazo");
-        Console.WriteLine("6 - Soma do quadrado de números");
-        Console.WriteLine("7 - Salário de funcionário");
-        Console.WriteLine("8 - Salário mensal");
-        Console.WriteLine("9 - Velocidade de veículo");
-        int escolha1 = Convert.ToInt32(Console.ReadLine());
-        switch (escolha1)
-        {
-            case 1:
-                ProdutoeAdicaoFracao();
-                break;
-
-            case 2:
-                salario();
-                break;
-
-            case 3:
-                VolumeLata();
-                break;
-
-            case 4:
-                MediaHarmonica();
-                break;
-
-            case 5:
-                MediaPonderada();
-                break;
-
-            case 6:
-                LerNumeros();
-                break;
-
-            case 7:
-                Potencia();
-                break;
-
-            case 8:
-                AreaQuadrado();
-                break;
-
-            case 9:
-                NumeroAoQuadrado();
-                break;
-        }
-
-        //AreaTriangulo
-        static void AreaTriangulo()
-        {
-            Console.WriteLine("qual o comprimento do primeiro lado");
-            double altura = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("qual o comprimento do segundo lado");
-            double bases = Convert.ToDouble(Console.ReadLine());
-            double formula = (bases * altura) / 2;
-            Console.WriteLine($" a area e {formula}");
-        }
-        //AreaTriangulo
-
-        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
-        int escolha = Convert.ToInt32(Console.ReadLine());
-
-        if (escolha == 2)
-        {
-            i = 0;
-        }
-        else
-        {
-
-        }
-    }
-}
-
-static void exercicio4()
-{
-    int i = 1;
-    while (i > 0)
-    {
-
-        Console.WriteLine("qual o exercicio");
-        Console.WriteLine("1 - Verifica número informado");
-        Console.WriteLine("2 - Verificar o maior e o menor número dados");
-        Console.WriteLine("3 - Verificar se medidas informadas é um triângulo");
-        Console.WriteLine("4 - Ler dois números e verificar a diferença");
-        Console.WriteLine("5 - Aceita números e verifica seus divisores");
-        Console.WriteLine("6 - Lê dois número e verifica suas diferenças");
-        Console.WriteLine("7 - Calcula média de aluno");
-        Console.WriteLine("8 - Lê números e compara valores");
-        Console.WriteLine("9 - Verifica se aluno foi aprovado");
-        int escolha1 = Convert.ToInt32(Console.ReadLine());
-        switch (escolha1)
-        {
-            case 1:
-                ProdutoeAdicaoFracao();
-                break;
-
-            case 2:
-                ComparacoNumeros();
-                break;
-
-            case 3:
-                VolumeLata();
-                break;
-
-            case 4:
-                MediaHarmonica();
-                break;
-
-            case 5:
-                AceitaNumeros();
-                break;
-
-            case 6:
-                Diferenca();
-                break;
-
-            case 7:
-                MediaAluno();
-                break;
-
-            case 8:
-                AreaQuadrado();
-                break;
-
-            case 9:
-                NumeroAoQuadrado();
-                break;
-        }
-
-        //comparaconumeros
-        static void ComparacoNumeros()
-        {
-            Console.WriteLine("qual o primeiro numero?");
-            int num1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("qual o segundo numero?");
-            int num2 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("qual o terceiro numero?");
-            int num3 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("qual o quarto numero?");
-            int num4 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("qual o quinto numero?");
-            int num5 = Convert.ToInt32(Console.ReadLine());
-
-
-
-        }
-        //comparaconumeros
-
-        //AceitaNumeros
-        static void AceitaNumeros()
-        {
-            Console.WriteLine("qual o primeiro numero?");
-            int num1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("qual o segundo numero?");
-            int num2 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("qual o terceiro numero?");
-            int num3 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("qual o quarto numero?");
-            int num4 = Convert.ToInt32(Console.ReadLine());
-        }
-        //AceitaNumeros
-
-        // Diferenca
-        static void Diferenca()
-        {
-            Console.WriteLine("qual o primeiro numero?");
-            int num1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("qual o segundo numero?");
-            int num2 = Convert.ToInt32(Console.ReadLine());
-            int formula = num1 - num2;
-            if (num1 > num2)
-            {
-                Console.WriteLine($"o maior numero e {num1}");
-                Console.WriteLine($"a diferenca e{formula}");
-            }
-
-            else
-            {
-                Console.WriteLine($"o maior numero e {num2}");
-                Console.WriteLine($"a diferenca e{formula}");
-            }
-        }
-        //Diferenca
-
-        //MediaAluno
-        static void MediaAluno()
-        {
-            Console.WriteLine("qual o primeira nota?");
-            int num1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("qual o segunda nota?");
-            int num2 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("qual o terceira nota?");
-            int num3 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("qual o quarta nota?");
-            int num4 = Convert.ToInt32(Console.ReadLine());
-            int formula = (num1 + num2 + num3 + num4) / 4;
-            Console.WriteLine($"a media e {formula}");
-            int Media = 7;
-            if (formula >= Media)
-            {
-                Console.WriteLine("aluno aprovado");
-            }
-
-            else
-            {
-                Console.WriteLine("aluno reprovado");
-            }
-        }
-        //MediaAluno
-
-        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
-        int escolha = Convert.ToInt32(Console.ReadLine());
-
-        if (escolha == 2)
-        {
-            i = 0;
-        }
-        else
-        {
-
-        }
-    }
-}
-
-
-static void exercicio5()
-{
-    int i = 1;
-    while (i > 0)
-    {
-
-        Console.WriteLine("qual o exercicio");
-        Console.WriteLine("1 - Soma números e compara resultado");
-        Console.WriteLine("2 - Reajusta salário");
-        Console.WriteLine("3 - Lê número e o converte de + para -");
-        Console.WriteLine("4 - Acha intervado de número");
-        Console.WriteLine("5 - Soma funções");
-        Console.WriteLine("6 - Recebe números e verifica divisores");
-        Console.WriteLine("7 - Verifica lados de um triângulo");
-        int escolha1 = Convert.ToInt32(Console.ReadLine());
-        switch (escolha1)
-        {
-            case 1:
-                ProdutoeAdicaoFracao();
-                break;
-
-            case 2:
-                ComparacoNumeros();
-                break;
-
-            case 3:
-                VolumeLata();
-                break;
-
-            case 4:
-                MediaHarmonica();
-                break;
-
-            case 5:
-                AceitaNumeros();
-                break;
-
-            case 6:
-                Diferenca();
-                break;
-
-            case 7:
-                MediaAluno();
-                break;
-        }
-
-        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
-        int escolha = Convert.ToInt32(Console.ReadLine());
-
-        if (escolha == 2)
-        {
-            i = 0;
-        }
-        else
-        {
-
-        }
-    }
-}
-
-static void exercicio6()
-{
-    int i = 1;
-    while (i > 0)
-    {
-
-        Console.WriteLine("qual o exercicio");
-        Console.WriteLine("1 - Verifica nome e sexo de pessoa");
-        Console.WriteLine("2 - Compara soma de números");
-        Console.WriteLine("3 - Extrai raízes quadradas");
-        Console.WriteLine("4 - Compara valores");
-        Console.WriteLine("5 - Calcula Imposto de Renda");
-        Console.WriteLine("6 - Reajusta salário");
-        Console.WriteLine("7 - Verifica número");
-        int escolha1 = Convert.ToInt32(Console.ReadLine());
-        switch (escolha1)
-        {
-            case 1:
-                ProdutoeAdicaoFracao();
-                break;
-
-            case 2:
-                ComparacoNumeros();
-                break;
-
-            case 3:
-                VolumeLata();
-                break;
-
-            case 4:
-                MediaHarmonica();
-                break;
-
-            case 5:
-                AceitaNumeros();
-                break;
-
-            case 6:
-                Diferenca();
-                break;
-
-            case 7:
-                MediaAluno();
-                break;
-        }
-
-        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
-        int escolha = Convert.ToInt32(Console.ReadLine());
-
-        if (escolha == 2)
-        {
-            i = 0;
-        }
-        else
-        {
-
-        }
-    }
-}
-
-static void exercicio7()
-{
-    int i = 1;
-    while (i > 0)
-    {
-
-        Console.WriteLine("qual o exercicio");
-        Console.WriteLine("1 - Calcula tabuada de número");
-        Console.WriteLine("2 - Lê número e pede novos valores");
-        Console.WriteLine("3 - Quadrado entre um intervalo");
-        Console.WriteLine("4 - Determina idade e percentuais em pesquisa");
-        Console.WriteLine("5 - Lê valores e verifica-os");
-        Console.WriteLine("6 - Gera números e verifica divisores");
-        Console.WriteLine("7 - Termos de PA");
-        Console.WriteLine("8 - Calcula média Geral de alunos");
-        int escolha1 = Convert.ToInt32(Console.ReadLine());
-        switch (escolha1)
-        {
-            case 1:
-                ProdutoeAdicaoFracao();
-                break;
-
-            case 2:
-                ComparacoNumeros();
-                break;
-
-            case 3:
-                VolumeLata();
-                break;
-
-            case 4:
-                MediaHarmonica();
-                break;
-
-            case 5:
-                AceitaNumeros();
-                break;
-
-            case 6:
-                Diferenca();
-                break;
-
-            case 7:
-                MediaAluno();
-                break;
-
-            case 8:
-                MediaAluno();
-                break;
-        }
-
-        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
-        int escolha = Convert.ToInt32(Console.ReadLine());
-
-        if (escolha == 2)
-        {
-            i = 0;
-        }
-        else
-        {
-
-        }
-    }
-}
-
-static void exercicio8()
-{
-    int i = 1;
-    while (i > 0)
-    {
-
-        Console.WriteLine("qual o exercicio");
-        Console.WriteLine("1 - Apresenta valores em uma faixa de números");
-        Console.WriteLine("2 - Calcula média de idades");
-        Console.WriteLine("3 - Calcula população de um país");
-        Console.WriteLine("4 - Média de uma turma de alunos");
-        Console.WriteLine("5 - Soma dos primeiros números inteiros");
-        Console.WriteLine("6 - Resultado de pesquisa");
-        Console.WriteLine("7 - Potencias de um intervalo");
-        Console.WriteLine("8 - Lê números em um intervalo");
-        int escolha1 = Convert.ToInt32(Console.ReadLine());
-        switch (escolha1)
-        {
-            case 1:
-                ProdutoeAdicaoFracao();
-                break;
-
-            case 2:
-                ComparacoNumeros();
-                break;
-
-            case 3:
-                VolumeLata();
-                break;
-
-            case 4:
-                MediaHarmonica();
-                break;
-
-            case 5:
-                AceitaNumeros();
-                break;
-
-            case 6:
-                Diferenca();
-                break;
-
-            case 7:
-                MediaAluno();
-                break;
-
-            case 8:
-                MediaAluno();
-                break;
-        }
-        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
-        int escolha = Convert.ToInt32(Console.ReadLine());
-
-        if (escolha == 2)
-        {
-            i = 0;
-        }
-        else
-        {
-
-        }
-    }
-}
-
-static void exercicio9()
-{
-    int i = 1;
-    while (i > 0)
-    {
-
-        Console.WriteLine("qual o exercicio");
-        Console.WriteLine("1 - Utilizando operadores lógicos");
-        Console.WriteLine("2 - Estruturas de seleção simples e repetição while");
-        Console.WriteLine("3 - Estrutura de repetição while e variáveis");
-        Console.WriteLine("4 - Contadores e incremento e while");
-        Console.WriteLine("5 - Calcula média de notas de aluno");
-        Console.WriteLine("6 - Recebe números com e extrai cada dígito");
-        Console.WriteLine("7 - Aninhamento de escruturas de seleção");
-        Console.WriteLine("8 - Soma dez primeiros números");
-        int escolha1 = Convert.ToInt32(Console.ReadLine());
-        switch (escolha1)
-        {
-            case 1:
-                ProdutoeAdicaoFracao();
-                break;
-
-            case 2:
-                ComparacoNumeros();
-                break;
-
-            case 3:
-                VolumeLata();
-                break;
-
-            case 4:
-                MediaHarmonica();
-                break;
-
-            case 5:
-                AceitaNumeros();
-                break;
-
-            case 6:
-                Diferenca();
-                break;
-
-            case 7:
-                MediaAluno();
-                break;
-
-            case 8:
-                MediaAluno();
-                break;
-        }
-
-        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
-        int escolha = Convert.ToInt32(Console.ReadLine());
-
-        if (escolha == 2)
-        {
-            i = 0;
-        }
-        else
-        {
-
-        }
-    }
-}
-
-static void exercicio10()
-{
-    int i = 1;
-    while (i > 0)
-    {
-
-        Console.WriteLine("qual o exercicio");
-        Console.WriteLine("1 -Calcula tabuada de um número");
-        Console.WriteLine("2 - Lê valores e pede novos valores");
-        Console.WriteLine("3 - Seleção composta encadeada e aninhada");
-        Console.WriteLine("4 - Lê valores e conta os números negativos");
-        Console.WriteLine("5 - Calcula média de idade");
-        Console.WriteLine("6 - Calcula tempo");
-        Console.WriteLine("7 - Gera números divisíveis");
-        Console.WriteLine("8 - Média geral de alunos");
-        Console.WriteLine("9 - Calcula média de turma de alunos");
-        int escolha1 = Convert.ToInt32(Console.ReadLine());
-        switch (escolha1)
-        {
-            case 1:
-                ProdutoeAdicaoFracao();
-                break;
-
-            case 2:
-                ComparacoNumeros();
-                break;
-
-            case 3:
-                VolumeLata();
-                break;
-
-            case 4:
-                MediaHarmonica();
-                break;
-
-            case 5:
-                AceitaNumeros();
-                break;
-
-            case 6:
-                Diferenca();
-                break;
-
-            case 7:
-                MediaAluno();
-                break;
-
-            case 8:
-                MediaAluno();
-                break;
-        }
-
-        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
-        int escolha = Convert.ToInt32(Console.ReadLine());
-
-        if (escolha == 2)
-        {
-            i = 0;
-        }
-        else
-        {
-
-        }
-    }
-}
-
-static void exercicio11()
-{
-    int i = 1;
-    while (i > 0)
-    {
-
-        Console.WriteLine("qual o exercicio");
-        Console.WriteLine("1");
-        Console.WriteLine("2");
-        Console.WriteLine("3");
-        Console.WriteLine("4");
-        Console.WriteLine("5");
-        Console.WriteLine("6");
-        Console.WriteLine("7");
-        Console.WriteLine("8");
-        Console.WriteLine("9");
-
-
-        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
-        int escolha = Convert.ToInt32(Console.ReadLine());
-
-        if (escolha == 2)
-        {
-            i = 0;
-        }
-        else
-        {
-
-        }
-    }
-}
-
-static void exercicio12()
-{
-    int i = 1;
-    while (i > 0)
-    {
-
-        Console.WriteLine("qual o exercicio");
-        Console.WriteLine("1");
-        Console.WriteLine("2");
-        Console.WriteLine("3");
-        Console.WriteLine("4");
-        Console.WriteLine("5");
-        Console.WriteLine("6");
-        Console.WriteLine("7");
-        Console.WriteLine("8");
-        Console.WriteLine("9");
-        Console.WriteLine("10");
-
-
-        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
-        int escolha = Convert.ToInt32(Console.ReadLine());
-
-        if (escolha == 2)
-        {
-            i = 0;
-        }
-        else
-        {
-
-        }
-    }
-}
-
-static void exercicio13()
-{
-    int i = 1;
-    while (i > 0)
-    {
-
-        Console.WriteLine("qual o exercicio");
-        Console.WriteLine("1");
-        Console.WriteLine("2");
-        Console.WriteLine("3");
-        Console.WriteLine("4");
-        Console.WriteLine("5");
-        Console.WriteLine("6");
-        Console.WriteLine("7");
-        Console.WriteLine("8");
-        Console.WriteLine("9");
-        Console.WriteLine("10");
-
-        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
-        int escolha = Convert.ToInt32(Console.ReadLine());
-
-        if (escolha == 2)
-        {
-            i = 0;
-        }
-        else
-        {
-
-        }
-    }
-}
-
-static void exercicio14()
-{
-    int i = 1;
-    while (i > 0)
-    {
-
-        Console.WriteLine("qual o exercicio");
-        Console.WriteLine("1");
-        Console.WriteLine("2");
-        Console.WriteLine("3");
-        Console.WriteLine("4");
-        Console.WriteLine("5");
-        Console.WriteLine("6");
-        Console.WriteLine("7");
-        Console.WriteLine("8");
-        Console.WriteLine("9");
-        Console.WriteLine("10");
-        int escolha1 = Convert.ToInt32(Console.ReadLine());
-        switch (escolha1)
-        {
-            case 1:
-                Somatoria();
-                break;
-
-            case 2:
-                Reajuste();
-                break;
-
-            case 3:
-                Perfeito();
-                break;
-
-            case 4:
-                DezNotas();
-                break;
-
-            case 5:
-                Expressão();
-                break;
-
-            case 6:
-                SerieNumerica();
-                break;
-
-            case 7:
-                Esfera();
-                break;
-
-            case 8:
-                SerieDez();
-                break;
-
-            case 9:
-                MediaDeAluno();
-                break;
-
-            case 10:
-                ExpressãoH();
-                break;
-        }
-
-        //reajuste salarial
-        static void Reajuste()
-        {
-
-        }
-        //reajuste salarial
-
-        //Perfeito
-        static void Perfeito()
-        {
-
-        }
-        //Perfeito
-
-        //DezNotas
-        static void DezNotas()
-        {
-
-        }
-        //DezNotas
-
-        //SerieNumerica
-        static void SerieNumerica()
-        {
-
-        }
-        //SerieNumerica
 
         //volume de esfera
         static void Esfera()
@@ -1242,215 +258,1426 @@ static void exercicio14()
         }
         //volume de esfera
 
-        //SerieDez
-        static void SerieDez()
+    }
+}
+    static void exercicio2()
+    {
+        int i = 1;
+        while (i > 0)
         {
-            int n = 1;
-            do
+
+            Console.WriteLine("qual o exercicio");
+            Console.WriteLine("1 - Calcula o produto e a adição de frações ");
+            Console.WriteLine("2 - Calcula o salário de um vendedor");
+            Console.WriteLine("3 - Calcula o volume de uma lata de oleo");
+            Console.WriteLine("4 - Média harmônica");
+            Console.WriteLine("5 - Média ponderada");
+            Console.WriteLine("6 - Lê números e calcula operações");
+            Console.WriteLine("7 - Calcula potência de número");
+            Console.WriteLine("8 - Quadrado de um número");
+            Console.WriteLine("9 - Área de um quadrado");
+            int escolha1 = Convert.ToInt32(Console.ReadLine());
+            switch (escolha1)
             {
-                
-                Console.WriteLine($"{n}");
-                n++;
+                case 1:
+                    ProdutoeAdicaoFracao();
+                    break;
 
-            }while (n<=10);
-        }
-        //SerieDez
+                case 2:
+                    salario();
+                    break;
 
-        //MediaDeAluno
-        static void MediaDeAluno()
-        {
+                case 3:
+                    VolumeLata();
+                    break;
 
-        }
-        //MediaDeAluno
+                case 4:
+                    MediaHarmonica();
+                    break;
 
-        //Expressão2
-        static void ExpressãoH()
-        {
+                case 5:
+                    MediaPonderada();
+                    break;
+
+                case 6:
+                    LerNumeros();
+                    break;
+
+                case 7:
+                    Potencia();
+                    break;
+
+                case 8:
+                    AreaQuadrado();
+                    break;
+
+                case 9:
+                    NumeroAoQuadrado();
+                    break;
+            }
+
+            //produto
+            static void ProdutoeAdicaoFracao()
             {
-                int l = 0;
-                double dois, soma;
-                soma = 0;
-                do
-                {
-                    Console.WriteLine("qual o tamanho da espressão");
-                    double n = Convert.ToDouble(Console.ReadLine());
-                    for (int i = 1; i <= n; i++)
-                    {
-                        
-                        dois = i;
-                        soma += (1 / dois);
-                        Console.WriteLine($"O valor {i} é {1}/ {dois}");
-                    }
-                    Console.WriteLine($" a soma dos valores da expressao de {n} é: {soma}");
-                    Console.WriteLine($"digite 1 caso deseje parar");
-                    int escolha = Convert.ToInt32(Console.ReadLine());
-                    if (escolha == 1)
-                    {
-                        l = 1;
-                    }
-                    else
-                    {
 
-                    }
-                }
-                while (l == 0);
+            }
+            //produto
+
+            //salario
+            static void salario()
+            {
+
+            }
+            //salario
+
+            //volumelata
+            static void VolumeLata()
+            {
+
+            }
+            //volumelata
+
+            //mediaHarmonica
+            static void MediaHarmonica()
+            {
+                Console.WriteLine("qual a primeira nota");
+                int nota1 = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("qual a segunda nota");
+                int nota2 = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("qual a terceira nota");
+                int nota3 = Convert.ToInt32(Console.ReadLine());
+
+                int n = 3;
+
+                int formula = n / ((1 / nota1) + (1 / nota2) + (1 / nota3));
+                Console.WriteLine($" a media ponderada é {formula}");
+            }
+            //mediaHarmonica
+
+
+            //mediaPonderada
+            static void MediaPonderada()
+            {
+                Console.WriteLine("qual a primeira nota");
+                int nota1 = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("qual o peso da primeira nota");
+                int peso1 = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("qual a segunda nota");
+                int nota2 = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("qual o peso segunda nota");
+                int peso2 = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("qual a terceira nota");
+                int nota3 = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("qual o peso terceira nota");
+                int peso3 = Convert.ToInt32(Console.ReadLine());
+
+                int formula = ((nota1 * peso1) + (nota2 * peso2) + (nota3 * peso3)) / (peso1 + peso2 + peso3);
+                Console.WriteLine($" a media ponderada é {formula}");
+            }
+            //mediaPonderada
+
+            //ler
+            static void LerNumeros()
+            {
+
+            }
+            //ler
+
+            //Potencia
+            static void Potencia()
+            {
+
+            }
+            //Potencia
+
+            //area quadrado
+            static void AreaQuadrado()
+            {
+                Console.WriteLine("qual o comprimento do primeiro lado");
+                double lado1 = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("qual o comprimento do segundo lado");
+                double lado2 = Convert.ToDouble(Console.ReadLine());
+                double formula = lado1 * lado2;
+                Console.WriteLine($" a area e {formula}");
+            }
+            //area quadrado
+
+            //Numero Ao quadrado
+            static void NumeroAoQuadrado()
+            {
+                Console.WriteLine("qual o numero?");
+                double num = Convert.ToDouble(Console.ReadLine());
+                double formula = num * num;
+                Console.WriteLine($" a area e {formula}");
+            }
+            //Numero Ao quadrado
+
+            Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+            int escolha = Convert.ToInt32(Console.ReadLine());
+
+            if (escolha == 2)
+            {
+                i = 0;
+            }
+            else
+            {
+
             }
         }
-        //Expressão2
+    }
 
 
-        //Somatoria
-        static void Somatoria()
-
-            {
-            int l = 0;
-            double dois, um, soma;
-            soma = 0;
-            do
-            {
-                for (int i = 1; i <= 50; i++)
-                {
-                    um = i;
-                    dois = (2 * i - 1);
-                    soma += (dois / um);
-                    Console.WriteLine($"O valor {i} é {dois}/ {um}");
-                }
-                Console.WriteLine($"a soma dos valores é: {soma}");
-                Console.WriteLine($"digite 1 caso deseje parar");
-                int escolha = Convert.ToInt32(Console.ReadLine());
-                if (escolha == 1 )
-                {
-                    l = 1;
-                }
-                else
-                {
-
-                }
-            }
-            while (l == 0);
-        }
-        //Somatoria
-
-        //Expressão
-        static void Expressão()
-
+        static void exercicio3()
         {
-            int l = 0;
-            double dois, um, soma;
-            soma = 0;
-            do
+            int i = 1;
+            while (i > 0)
             {
-                
-                for (int i = 1; i <= 10; i++)
+
+                Console.WriteLine("qual o exercicio");
+                Console.WriteLine("1 - Consumo de combustível");
+                Console.WriteLine("2 - Troca de valores entre números");
+                Console.WriteLine("3 - Entrada e saída de dados");
+                Console.WriteLine("4 - Conversão de temperaturas");
+                Console.WriteLine("5 - Prestação em atrazo");
+                Console.WriteLine("6 - Soma do quadrado de números");
+                Console.WriteLine("7 - Salário de funcionário");
+                Console.WriteLine("8 - Salário mensal");
+                Console.WriteLine("9 - Velocidade de veículo");
+                int escolha1 = Convert.ToInt32(Console.ReadLine());
+                switch (escolha1)
                 {
-                    dois = (i*i);
-                    um = i;
-                    double fração = um / dois;
-                    if (um%2!=0)
-                    {
-                        fração = -fração;
-                    }
-                     soma += fração; 
-                    Console.WriteLine($"O valor {i} é {um}/ {dois}");
+                    case 1:
+                        ConsumoCombustível();
+                        break;
+
+                    case 2:
+                        TrocaValor();
+                        break;
+
+                    case 3:
+                        EntradaDados();
+                        break;
+
+                    case 4:
+                        Temperatura();
+                        break;
+
+                    case 5:
+                        Prestação();
+                        break;
+
+                    case 6:
+                        SomaQuadrado();
+                        break;
+
+                    case 7:
+                        Funcionário();
+                        break;
+
+                    case 8:
+                        Mensal();
+                        break;
+
+                    case 9:
+                        Velocidade();
+                        break;
+                }
+
+                //ConsumoCombustível
+                static void ConsumoCombustível()
+                {
                     
                 }
-                Console.WriteLine($"a soma dos valores é: {soma}");
-                Console.WriteLine($"digite 1 caso deseje parar");
-                int escolha = Convert.ToInt32(Console.ReadLine());
-                if (escolha == 1)
+                //ConsumoCombustível
+
+                //TrocaValor
+                static void TrocaValor()
                 {
-                    l = 1;
+                    
+                }
+                //TrocaValor
+
+                //EntradaDados
+                static void EntradaDados()
+                {
+                    
+                }
+                //EntradaDados
+
+                //temperatura
+                static void Temperatura()
+                {
+                   
+                }
+                //temperatura
+
+                //Prestação
+                static void Prestação()
+                {
+                    
+                }
+                //Prestação
+
+                //SomaQuadrado
+                static void SomaQuadrado()
+                {
+                   
+                }
+                //SomaQuadrado
+
+                //Funcionário
+                static void Funcionário()
+                {
+                    
+                }
+                //Funcionário
+
+                //Mensal
+                static void Mensal()
+                {
+                    
+                }
+                //Mensal
+
+                // Velocidade
+                static void Velocidade()
+                {
+                    
+                }
+                // Velocidade
+
+                Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+                int escolha = Convert.ToInt32(Console.ReadLine());
+
+                if (escolha == 2)
+                {
+                    i = 0;
                 }
                 else
                 {
 
                 }
             }
-            while (l == 0);
         }
-        //Expressão
 
-        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
-        int escolha = Convert.ToInt32(Console.ReadLine());
 
-        if (escolha == 2)
+        static void exercicio4()
         {
-            i = 0;
+            int i = 1;
+            while (i > 0)
+            {
+
+                Console.WriteLine("qual o exercicio");
+                Console.WriteLine("1 - Verifica número informado");
+                Console.WriteLine("2 - Verificar o maior e o menor número dados");
+                Console.WriteLine("3 - Verificar se medidas informadas é um triângulo");
+                Console.WriteLine("4 - Ler dois números e verificar a diferença");
+                Console.WriteLine("5 - Aceita números e verifica seus divisores");
+                Console.WriteLine("6 - Lê dois número e verifica suas diferenças");
+                Console.WriteLine("7 - Calcula média de aluno");
+                Console.WriteLine("8 - Lê números e compara valores");
+                Console.WriteLine("9 - Verifica se aluno foi aprovado");
+                int escolha1 = Convert.ToInt32(Console.ReadLine());
+                switch (escolha1)
+                {
+                    case 1:
+                        Verificacao();
+                        break;
+
+                    case 2:
+                        ComparacoNumeros();
+                        break;
+
+                    case 3:
+                        Triangulo();
+                        break;
+
+                    case 4:
+                        MediaHarmonica();
+                        break;
+
+                    case 5:
+                        AceitaNumeros();
+                        break;
+
+                    case 6:
+                        Diferenca();
+                        break;
+
+                    case 7:
+                        MediaAluno();
+                        break;
+
+                    case 8:
+                        AreaQuadrado();
+                        break;
+
+                    case 9:
+                        NumeroAoQuadrado();
+                        break;
+                }
+
+                //comparaconumeros
+                static void ComparacoNumeros()
+                {
+                    Console.WriteLine("qual o primeiro numero?");
+                    int num1 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("qual o segundo numero?");
+                    int num2 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("qual o terceiro numero?");
+                    int num3 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("qual o quarto numero?");
+                    int num4 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("qual o quinto numero?");
+                    int num5 = Convert.ToInt32(Console.ReadLine());
+
+
+
+                }
+                //comparaconumeros
+
+                //AceitaNumeros
+                static void AceitaNumeros()
+                {
+                    Console.WriteLine("qual o primeiro numero?");
+                    int num1 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("qual o segundo numero?");
+                    int num2 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("qual o terceiro numero?");
+                    int num3 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("qual o quarto numero?");
+                    int num4 = Convert.ToInt32(Console.ReadLine());
+                }
+                //AceitaNumeros
+
+                // Diferenca
+                static void Diferenca()
+                {
+                    Console.WriteLine("qual o primeiro numero?");
+                    int num1 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("qual o segundo numero?");
+                    int num2 = Convert.ToInt32(Console.ReadLine());
+                    int formula = num1 - num2;
+                    if (num1 > num2)
+                    {
+                        Console.WriteLine($"o maior numero e {num1}");
+                        Console.WriteLine($"a diferenca e{formula}");
+                    }
+
+                    else
+                    {
+                        Console.WriteLine($"o maior numero e {num2}");
+                        Console.WriteLine($"a diferenca e{formula}");
+                    }
+                }
+                //Diferenca
+
+                //MediaAluno
+                static void MediaAluno()
+                {
+                    Console.WriteLine("qual o primeira nota?");
+                    int num1 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("qual o segunda nota?");
+                    int num2 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("qual o terceira nota?");
+                    int num3 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("qual o quarta nota?");
+                    int num4 = Convert.ToInt32(Console.ReadLine());
+                    int formula = (num1 + num2 + num3 + num4) / 4;
+                    Console.WriteLine($"a media e {formula}");
+                    int Media = 7;
+                    if (formula >= Media)
+                    {
+                        Console.WriteLine("aluno aprovado");
+                    }
+
+                    else
+                    {
+                        Console.WriteLine("aluno reprovado");
+                    }
+                }
+                //MediaAluno
+
+                Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+                int escolha = Convert.ToInt32(Console.ReadLine());
+
+                if (escolha == 2)
+                {
+                    i = 0;
+                }
+                else
+                {
+
+                }
+            }
         }
-        else
+
+
+        static void exercicio5()
+        {
+            int i = 1;
+            while (i > 0)
+            {
+
+                Console.WriteLine("qual o exercicio");
+                Console.WriteLine("1 - Soma números e compara resultado");
+                Console.WriteLine("2 - Reajusta salário");
+                Console.WriteLine("3 - Lê número e o converte de + para -");
+                Console.WriteLine("4 - Acha intervado de número");
+                Console.WriteLine("5 - Soma funções");
+                Console.WriteLine("6 - Recebe números e verifica divisores");
+                Console.WriteLine("7 - Verifica lados de um triângulo");
+                int escolha1 = Convert.ToInt32(Console.ReadLine());
+                switch (escolha1)
+                {
+                    case 1:
+                        ProdutoeAdicaoFracao();
+                        break;
+
+                    case 2:
+                        ComparacoNumeros();
+                        break;
+
+                    case 3:
+                        VolumeLata();
+                        break;
+
+                    case 4:
+                        MediaHarmonica();
+                        break;
+
+                    case 5:
+                        AceitaNumeros();
+                        break;
+
+                    case 6:
+                        Diferenca();
+                        break;
+
+                    case 7:
+                        MediaAluno();
+                        break;
+                }
+
+                Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+                int escolha = Convert.ToInt32(Console.ReadLine());
+
+                if (escolha == 2)
+                {
+                    i = 0;
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        static void exercicio6()
+        {
+            int i = 1;
+            while (i > 0)
+            {
+
+                Console.WriteLine("qual o exercicio");
+                Console.WriteLine("1 - Verifica nome e sexo de pessoa");
+                Console.WriteLine("2 - Compara soma de números");
+                Console.WriteLine("3 - Extrai raízes quadradas");
+                Console.WriteLine("4 - Compara valores");
+                Console.WriteLine("5 - Calcula Imposto de Renda");
+                Console.WriteLine("6 - Reajusta salário");
+                Console.WriteLine("7 - Verifica número");
+                int escolha1 = Convert.ToInt32(Console.ReadLine());
+                switch (escolha1)
+                {
+                    case 1:
+                        ProdutoeAdicaoFracao();
+                        break;
+
+                    case 2:
+                        ComparacoNumeros();
+                        break;
+
+                    case 3:
+                        VolumeLata();
+                        break;
+
+                    case 4:
+                        MediaHarmonica();
+                        break;
+
+                    case 5:
+                        AceitaNumeros();
+                        break;
+
+                    case 6:
+                        Diferenca();
+                        break;
+
+                    case 7:
+                        MediaAluno();
+                        break;
+                }
+
+                Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+                int escolha = Convert.ToInt32(Console.ReadLine());
+
+                if (escolha == 2)
+                {
+                    i = 0;
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        static void exercicio7()
+        {
+            int i = 1;
+            while (i > 0)
+            {
+
+                Console.WriteLine("qual o exercicio");
+                Console.WriteLine("1 - Calcula tabuada de número");
+                Console.WriteLine("2 - Lê número e pede novos valores");
+                Console.WriteLine("3 - Quadrado entre um intervalo");
+                Console.WriteLine("4 - Determina idade e percentuais em pesquisa");
+                Console.WriteLine("5 - Lê valores e verifica-os");
+                Console.WriteLine("6 - Gera números e verifica divisores");
+                Console.WriteLine("7 - Termos de PA");
+                Console.WriteLine("8 - Calcula média Geral de alunos");
+                int escolha1 = Convert.ToInt32(Console.ReadLine());
+                switch (escolha1)
+                {
+                    case 1:
+                        ProdutoeAdicaoFracao();
+                        break;
+
+                    case 2:
+                        ComparacoNumeros();
+                        break;
+
+                    case 3:
+                        VolumeLata();
+                        break;
+
+                    case 4:
+                        MediaHarmonica();
+                        break;
+
+                    case 5:
+                        AceitaNumeros();
+                        break;
+
+                    case 6:
+                        Diferenca();
+                        break;
+
+                    case 7:
+                        MediaAluno();
+                        break;
+
+                    case 8:
+                        MediaAluno();
+                        break;
+                }
+
+                Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+                int escolha = Convert.ToInt32(Console.ReadLine());
+
+                if (escolha == 2)
+                {
+                    i = 0;
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        static void exercicio8()
+        {
+            int i = 1;
+            while (i > 0)
+            {
+
+                Console.WriteLine("qual o exercicio");
+                Console.WriteLine("1 - Apresenta valores em uma faixa de números");
+                Console.WriteLine("2 - Calcula média de idades");
+                Console.WriteLine("3 - Calcula população de um país");
+                Console.WriteLine("4 - Média de uma turma de alunos");
+                Console.WriteLine("5 - Soma dos primeiros números inteiros");
+                Console.WriteLine("6 - Resultado de pesquisa");
+                Console.WriteLine("7 - Potencias de um intervalo");
+                Console.WriteLine("8 - Lê números em um intervalo");
+                int escolha1 = Convert.ToInt32(Console.ReadLine());
+                switch (escolha1)
+                {
+                    case 1:
+                        ProdutoeAdicaoFracao();
+                        break;
+
+                    case 2:
+                        ComparacoNumeros();
+                        break;
+
+                    case 3:
+                        VolumeLata();
+                        break;
+
+                    case 4:
+                        MediaHarmonica();
+                        break;
+
+                    case 5:
+                        AceitaNumeros();
+                        break;
+
+                    case 6:
+                        Diferenca();
+                        break;
+
+                    case 7:
+                        MediaAluno();
+                        break;
+
+                    case 8:
+                        MediaAluno();
+                        break;
+                }
+                Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+                int escolha = Convert.ToInt32(Console.ReadLine());
+
+                if (escolha == 2)
+                {
+                    i = 0;
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        static void exercicio9()
+        {
+            int i = 1;
+            while (i > 0)
+            {
+
+                Console.WriteLine("qual o exercicio");
+                Console.WriteLine("1 - Utilizando operadores lógicos");
+                Console.WriteLine("2 - Estruturas de seleção simples e repetição while");
+                Console.WriteLine("3 - Estrutura de repetição while e variáveis");
+                Console.WriteLine("4 - Contadores e incremento e while");
+                Console.WriteLine("5 - Calcula média de notas de aluno");
+                Console.WriteLine("6 - Recebe números com e extrai cada dígito");
+                Console.WriteLine("7 - Aninhamento de escruturas de seleção");
+                Console.WriteLine("8 - Soma dez primeiros números");
+                int escolha1 = Convert.ToInt32(Console.ReadLine());
+                switch (escolha1)
+                {
+                    case 1:
+                        ProdutoeAdicaoFracao();
+                        break;
+
+                    case 2:
+                        ComparacoNumeros();
+                        break;
+
+                    case 3:
+                        VolumeLata();
+                        break;
+
+                    case 4:
+                        MediaHarmonica();
+                        break;
+
+                    case 5:
+                        AceitaNumeros();
+                        break;
+
+                    case 6:
+                        Diferenca();
+                        break;
+
+                    case 7:
+                        MediaAluno();
+                        break;
+
+                    case 8:
+                        MediaAluno();
+                        break;
+                }
+
+                Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+                int escolha = Convert.ToInt32(Console.ReadLine());
+
+                if (escolha == 2)
+                {
+                    i = 0;
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        static void exercicio10()
+        {
+            int i = 1;
+            while (i > 0)
+            {
+
+                Console.WriteLine("qual o exercicio");
+                Console.WriteLine("1 -Calcula tabuada de um número");
+                Console.WriteLine("2 - Lê valores e pede novos valores");
+                Console.WriteLine("3 - Seleção composta encadeada e aninhada");
+                Console.WriteLine("4 - Lê valores e conta os números negativos");
+                Console.WriteLine("5 - Calcula média de idade");
+                Console.WriteLine("6 - Calcula tempo");
+                Console.WriteLine("7 - Gera números divisíveis");
+                Console.WriteLine("8 - Média geral de alunos");
+                Console.WriteLine("9 - Calcula média de turma de alunos");
+                int escolha1 = Convert.ToInt32(Console.ReadLine());
+                switch (escolha1)
+                {
+                    case 1:
+                        ProdutoeAdicaoFracao();
+                        break;
+
+                    case 2:
+                        ComparacoNumeros();
+                        break;
+
+                    case 3:
+                        VolumeLata();
+                        break;
+
+                    case 4:
+                        MediaHarmonica();
+                        break;
+
+                    case 5:
+                        AceitaNumeros();
+                        break;
+
+                    case 6:
+                        Diferenca();
+                        break;
+
+                    case 7:
+                        MediaAluno();
+                        break;
+
+                    case 8:
+                        MediaAluno();
+                        break;
+
+                    case 9:
+                        MediaAluno();
+                        break;
+                }
+
+                Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+                int escolha = Convert.ToInt32(Console.ReadLine());
+
+                if (escolha == 2)
+                {
+                    i = 0;
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        static void exercicio11()
+        {
+            int i = 1;
+            while (i > 0)
+            {
+
+                Console.WriteLine("qual o exercicio");
+                Console.WriteLine("1 - Calcula soma de números inteiros");
+                Console.WriteLine("2 - Calcula termos de uma série");
+                Console.WriteLine("3 - Caucula alunos reprovados e aprovados");
+                Console.WriteLine("4 - Resultado de uma pesquisa de aceitação");
+                Console.WriteLine("5 - Calcula média de uma turma de alunos");
+                Console.WriteLine("6 - Lê numero e soma entre uma série");
+                Console.WriteLine("7 - Calcula uma função");
+                Console.WriteLine("8 - Calcula termos de PA");
+                Console.WriteLine("9 - Calcula temperaqtura em graus diversos e com variações");
+                int escolha1 = Convert.ToInt32(Console.ReadLine());
+                switch (escolha1)
+                {
+                    case 1:
+                        ProdutoeAdicaoFracao();
+                        break;
+
+                    case 2:
+                        ComparacoNumeros();
+                        break;
+
+                    case 3:
+                        VolumeLata();
+                        break;
+
+                    case 4:
+                        MediaHarmonica();
+                        break;
+
+                    case 5:
+                        AceitaNumeros();
+                        break;
+
+                    case 6:
+                        Diferenca();
+                        break;
+
+                    case 7:
+                        MediaAluno();
+                        break;
+
+                    case 8:
+                        MediaAluno();
+                        break;
+
+                    case 9:
+                        MediaAluno();
+                        break;
+
+                }
+
+
+                Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+                int escolha = Convert.ToInt32(Console.ReadLine());
+
+                if (escolha == 2)
+                {
+                    i = 0;
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        static void exercicio12()
+        {
+            int i = 1;
+            while (i > 0)
+            {
+
+                Console.WriteLine("qual o exercicio");
+                Console.WriteLine("1 - Calcula a soma de termos de uma série");
+                Console.WriteLine("2 - Petencia de 3 com variações");
+                Console.WriteLine("3 - Pesquisa de satisfação");
+                Console.WriteLine("4 - Soma de numeros de um intervalo");
+                Console.WriteLine("5 - Média de uma turma");
+                Console.WriteLine("6 - Juros compostos com MessageBox");
+                Console.WriteLine("7 - Reajuste de salário");
+                Console.WriteLine("8 - Repetição controlada por contador");
+                Console.WriteLine("9 - Calcula bonus de uma faixa salarial");
+                Console.WriteLine("10 - Lê número de faz multiplicações");
+                int escolha1 = Convert.ToInt32(Console.ReadLine());
+                switch (escolha1)
+                {
+                    case 1:
+                        ProdutoeAdicaoFracao();
+                        break;
+
+                    case 2:
+                        ComparacoNumeros();
+                        break;
+
+                    case 3:
+                        VolumeLata();
+                        break;
+
+                    case 4:
+                        MediaHarmonica();
+                        break;
+
+                    case 5:
+                        AceitaNumeros();
+                        break;
+
+                    case 6:
+                        Diferenca();
+                        break;
+
+                    case 7:
+                        MediaAluno();
+                        break;
+
+                    case 8:
+                        AreaQuadrado();
+                        break;
+
+                    case 9:
+                        NumeroAoQuadrado();
+                        break;
+
+                    case 10:
+                        NumeroAoQuadrado();
+                        break;
+                }
+
+
+                Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+                int escolha = Convert.ToInt32(Console.ReadLine());
+
+                if (escolha == 2)
+                {
+                    i = 0;
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        static void exercicio13()
+        {
+            int i = 1;
+            while (i > 0)
+            {
+
+                Console.WriteLine("qual o exercicio");
+                Console.WriteLine("1 – Faz pesquisa de preços por região");
+                Console.WriteLine("2 – Reajuste salarial de funcionário");
+                Console.WriteLine("3 – Quadrado de números");
+                Console.WriteLine("4 – Peso ideal de uma pessoa com base em dados pessoais");
+                Console.WriteLine("5 – Recebe informações de produtos: Preço, região, etc");
+                Console.WriteLine("6 – Verifica notas informadas");
+                Console.WriteLine("7 - Valor máximo de gastos de clientes");
+                Console.WriteLine("8 – Verifica dados com base em classificação");
+                Console.WriteLine("9 - Simples calculadora com MessageBox");
+                Console.WriteLine("10 - Comparação entre números");
+                int escolha1 = Convert.ToInt32(Console.ReadLine());
+                switch (escolha1)
+                {
+                    case 1:
+                        ProdutoeAdicaoFracao();
+                        break;
+
+                    case 2:
+                        ComparacoNumeros();
+                        break;
+
+                    case 3:
+                        VolumeLata();
+                        break;
+
+                    case 4:
+                        MediaHarmonica();
+                        break;
+
+                    case 5:
+                        AceitaNumeros();
+                        break;
+
+                    case 6:
+                        Diferenca();
+                        break;
+
+                    case 7:
+                        MediaAluno();
+                        break;
+
+                    case 8:
+                        AreaQuadrado();
+                        break;
+
+                    case 9:
+                        NumeroAoQuadrado();
+                        break;
+
+                    case 10:
+                        NumeroAoQuadrado();
+                        break;
+                }
+                Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+                int escolha = Convert.ToInt32(Console.ReadLine());
+
+                if (escolha == 2)
+                {
+                    i = 0;
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        static void exercicio14()
+        {
+            int i = 1;
+            while (i > 0)
+            {
+
+                Console.WriteLine("qual o exercicio");
+                Console.WriteLine("1 – Calcula uma série");
+                Console.WriteLine("2 – Reajuste salarial de acordo com critérios");
+                Console.WriteLine("3 – Calcula número “perfeito”");
+                Console.WriteLine("4 – Lê notas escolares e efetua cálculos");
+                Console.WriteLine("5 – Calcula uma expressão");
+                Console.WriteLine("6 – Calcula uma série numérica");
+                Console.WriteLine("7 – Volume de uma esfera");
+                Console.WriteLine("8 – Imprime série de 1 a 10");
+                Console.WriteLine("9 – Calcula média de um aluno");
+                Console.WriteLine("10 – Calcula uma expressão");
+                int escolha1 = Convert.ToInt32(Console.ReadLine());
+                switch (escolha1)
+                {
+                    case 1:
+                        Somatoria();
+                        break;
+
+                    case 2:
+                        Reajuste();
+                        break;
+
+                    case 3:
+                        Perfeito();
+                        break;
+
+                    case 4:
+                        DezNotas();
+                        break;
+
+                    case 5:
+                        Expressão();
+                        break;
+
+                    case 6:
+                        SerieNumerica();
+                        break;
+
+                    case 7:
+                        Esfera();
+                        break;
+
+                    case 8:
+                        SerieDez();
+                        break;
+
+                    case 9:
+                        MediaDeAluno();
+                        break;
+
+                    case 10:
+                        ExpressãoH();
+                        break;
+                }
+
+                //reajuste salarial
+                static void Reajuste()
+                {
+
+                }
+                //reajuste salarial
+
+                //Perfeito
+                static void Perfeito()
+                {
+
+                }
+                //Perfeito
+
+                //DezNotas
+                static void DezNotas()
+                {
+
+                }
+                //DezNotas
+
+                //SerieNumerica
+                static void SerieNumerica()
+                {
+
+                }
+                //SerieNumerica
+
+                //volume de esfera
+                static void Esfera()
+                {
+                    Console.WriteLine("qual o raio da esfera:");
+                    double r = Convert.ToDouble(Console.ReadLine());
+                    double formula;
+                    formula = Math.PI * Math.Pow(r, 3) / 4;
+                    Console.WriteLine($"o volume da esfera é {formula}");
+                }
+                //volume de esfera
+
+                //SerieDez
+                static void SerieDez()
+                {
+                    int n = 1;
+                    do
+                    {
+
+                        Console.WriteLine($"{n}");
+                        n++;
+
+                    } while (n <= 10);
+                }
+                //SerieDez
+
+                //MediaDeAluno
+                static void MediaDeAluno()
+                {
+
+                }
+                //MediaDeAluno
+
+                //Expressão2
+                static void ExpressãoH()
+                {
+                    {
+                        int l = 0;
+                        double dois, soma;
+                        soma = 0;
+                        do
+                        {
+                            Console.WriteLine("qual o tamanho da espressão");
+                            double n = Convert.ToDouble(Console.ReadLine());
+                            for (int i = 1; i <= n; i++)
+                            {
+
+                                dois = i;
+                                soma += (1 / dois);
+                                Console.WriteLine($"O valor {i} é {1}/ {dois}");
+                            }
+                            Console.WriteLine($" a soma dos valores da expressao de {n} é: {soma}");
+                            Console.WriteLine($"digite 1 caso deseje parar");
+                            int escolha = Convert.ToInt32(Console.ReadLine());
+                            if (escolha == 1)
+                            {
+                                l = 1;
+                            }
+                            else
+                            {
+
+                            }
+                        }
+                        while (l == 0);
+                    }
+                }
+                //Expressão2
+
+
+                //Somatoria
+                static void Somatoria()
+
+                {
+                    int l = 0;
+                    double dois, um, soma;
+                    soma = 0;
+                    do
+                    {
+                        for (int i = 1; i <= 50; i++)
+                        {
+                            um = i;
+                            dois = (2 * i - 1);
+                            soma += (dois / um);
+                            Console.WriteLine($"O valor {i} é {dois}/ {um}");
+                        }
+                        Console.WriteLine($"a soma dos valores é: {soma}");
+                        Console.WriteLine($"digite 1 caso deseje parar");
+                        int escolha = Convert.ToInt32(Console.ReadLine());
+                        if (escolha == 1)
+                        {
+                            l = 1;
+                        }
+                        else
+                        {
+
+                        }
+                    }
+                    while (l == 0);
+                }
+                //Somatoria
+
+                //Expressão
+                static void Expressão()
+
+                {
+                    int l = 0;
+                    double dois, um, soma;
+                    soma = 0;
+                    do
+                    {
+
+                        for (int i = 1; i <= 10; i++)
+                        {
+                            dois = (i * i);
+                            um = i;
+                            double fração = um / dois;
+                            if (um % 2 != 0)
+                            {
+                                fração = -fração;
+                            }
+                            soma += fração;
+                            Console.WriteLine($"O valor {i} é {um}/ {dois}");
+
+                        }
+                        Console.WriteLine($"a soma dos valores é: {soma}");
+                        Console.WriteLine($"digite 1 caso deseje parar");
+                        int escolha = Convert.ToInt32(Console.ReadLine());
+                        if (escolha == 1)
+                        {
+                            l = 1;
+                        }
+                        else
+                        {
+
+                        }
+                    }
+                    while (l == 0);
+                }
+                //Expressão
+
+                Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+                int escolha = Convert.ToInt32(Console.ReadLine());
+
+                if (escolha == 2)
+                {
+                    i = 0;
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        static void exercicio15()
+        {
+            int i = 1;
+            while (i > 0)
+            {
+
+                Console.WriteLine("qual o exercicio");
+                Console.WriteLine("1 – Soma de termos de uma série");
+                Console.WriteLine("2 – Pesquisa de Mercado");
+                Console.WriteLine("3 – Bônus salarial");
+                Console.WriteLine("4 – Menor número");
+                Console.WriteLine("5 – Maior número dentre assinantes");
+                Console.WriteLine("6 – Gera uma série Fibonacci");
+                Console.WriteLine("7 - Fatorial de um número");
+                Console.WriteLine("8 – Equação do 2o gráu");
+                Console.WriteLine("9 - Conversão de temperaturas");
+                Console.WriteLine("10 - Termos de uma série");
+                int escolha1 = Convert.ToInt32(Console.ReadLine());
+                switch (escolha1)
+                {
+                    case 1:
+                        ProdutoeAdicaoFracao();
+                        break;
+
+                    case 2:
+                        ComparacoNumeros();
+                        break;
+
+                    case 3:
+                        VolumeLata();
+                        break;
+
+                    case 4:
+                        MediaHarmonica();
+                        break;
+
+                    case 5:
+                        AceitaNumeros();
+                        break;
+
+                    case 6:
+                        Diferenca();
+                        break;
+
+                    case 7:
+                        MediaAluno();
+                        break;
+
+                    case 8:
+                        AreaQuadrado();
+                        break;
+
+                    case 9:
+                        NumeroAoQuadrado();
+                        break;
+
+                    case 10:
+                        NumeroAoQuadrado();
+                        break;
+                }
+
+
+                Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+                int escolha = Convert.ToInt32(Console.ReadLine());
+
+                if (escolha == 2)
+                {
+                    i = 0;
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        static void exercicio16()
         {
 
+
+            int i = 1;
+            while (i > 0)
+            {
+
+                Console.WriteLine("qual o exercicio");
+                Console.WriteLine("1 – Lê idade e classifica categoria");
+                Console.WriteLine("2 – Calcula medidas");
+                Console.WriteLine("3 – Verifica uma escolha");
+                Console.WriteLine("4 – Mostra como utilizar estruturas de seleção dupla e composta");
+                Console.WriteLine("5 – Testando a instrução break");
+                Console.WriteLine("6 – Compara números");
+                Console.WriteLine("7 – Bônus salarial");
+                Console.WriteLine("8 – Testando instrução break");
+                Console.WriteLine("9 – Cálculo de áreas de figuras geométricas");
+                Console.WriteLine("10 – Números de votos por candidatos");
+
+
+                Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+                int escolha = Convert.ToInt32(Console.ReadLine());
+
+                if (escolha == 2)
+                {
+                    i = 0;
+                }
+                else
+                {
+
+                }
+            }
         }
-    }
-}
-
-static void exercicio15()
-{
-    int i = 1;
-    while (i > 0)
-    {
-
-        Console.WriteLine("qual o exercicio");
-        Console.WriteLine("1");
-        Console.WriteLine("2");
-        Console.WriteLine("3");
-        Console.WriteLine("4");
-        Console.WriteLine("5");
-        Console.WriteLine("6");
-        Console.WriteLine("7");
-        Console.WriteLine("8");
-        Console.WriteLine("9");
-        Console.WriteLine("10");
-
-
-        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
-        int escolha = Convert.ToInt32(Console.ReadLine());
-
-        if (escolha == 2)
-        {
-            i = 0;
-        }
-        else
-        {
-
-        }
-    }
-}
-
-static void exercicio16()
-{
-
-
-    int i = 1;
-    while (i > 0)
-    {
-
-        Console.WriteLine("qual o exercicio");
-        Console.WriteLine("1");
-        Console.WriteLine("2");
-        Console.WriteLine("3");
-        Console.WriteLine("4");
-        Console.WriteLine("5");
-        Console.WriteLine("6");
-        Console.WriteLine("7");
-        Console.WriteLine("8");
-        Console.WriteLine("9");
-        Console.WriteLine("10");
-
-
-        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
-        int escolha = Convert.ToInt32(Console.ReadLine());
-
-        if (escolha == 2)
-        {
-            i = 0;
-        }
-        else
-        {
-
-        }
-    }
-}
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
 
