@@ -578,8 +578,12 @@ using System.Diagnostics;
         //Prestação
         static void Prestação()
                     {
-                    
-                    }
+            Console.WriteLine("Qual o valor do aluguel?");
+            int aluguel = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Qual o juros?");
+            double juros = Convert.ToDouble(Console.ReadLine());
+            double formula = aluguel + juros;
+        }
                     //Prestação
 
                     //SomaQuadrado
@@ -1753,7 +1757,53 @@ using System.Diagnostics;
                     Console.WriteLine("9 – Cálculo de áreas de figuras geométricas");
                     Console.WriteLine("10 – Números de votos por candidatos");
 
+                    //CaluloDeAreas
+                    static void CaluloDeAreas()
+        {
+            Console.WriteLine("voce deseja calcular a  area de qual forma?");
+            Console.WriteLine("1 – Cubo");
+            Console.WriteLine("2 – Hexagono");
+            Console.WriteLine("3 – triangulo");
+            int escolher = Convert.ToInt32(Console.ReadLine());
+            if (escolher == 1)
+            {
+                Console.WriteLine("qual o valor do primeiro lado do cubo?");
+                int l1 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("qual o valor do segundo lado do cubo?");
+                int l2 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("qual o valor do terceiro lado do cubo?");
+                int l3 = Convert.ToInt32(Console.ReadLine());
+                int formula = 6*(l1*l1);
+                Console.WriteLine($"A area do cubo é de : {formula}m²");
+                
+            }
 
+            if (escolher == 2)
+            {
+                Console.WriteLine("Qual o valor do comprimento de um lado do hexagono?");
+                int l1 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Qual o valor do apotema(meio do hexagono até um dos lados)?");
+                int apotema = Convert.ToInt32(Console.ReadLine());
+                int formula = (3/2) * apotema * l1;
+                Console.WriteLine($"A area do hexagono é de : {formula}m²");
+            }
+
+            if (escolher == 3)
+            {
+                Console.WriteLine("qual o valor da base do triangulo?");
+                int bases = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("qual a altura?");
+                int altura = Convert.ToInt32(Console.ReadLine());
+                int formula = (altura*bases)/ 2;
+                Console.WriteLine($"A area do triangulo é de : {formula}m²");
+            }
+
+            else
+            {
+                Console.WriteLine("Não é possivel");
+            }
+        }
+                    //CaluloDeAreas
                     Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
                     int escolha = Convert.ToInt32(Console.ReadLine());
 
@@ -1768,9 +1818,9 @@ using System.Diagnostics;
                 }
             
             Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
-            int escolha = Convert.ToInt32(Console.ReadLine());
+            int escolha2 = Convert.ToInt32(Console.ReadLine());
 
-            if (escolha == 2)
+            if (escolha2 == 2)
             {
                 i = 0;
 
