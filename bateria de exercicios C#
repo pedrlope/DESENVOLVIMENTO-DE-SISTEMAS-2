@@ -962,6 +962,71 @@ using System.Diagnostics;
                             break;
                     }
 
+//Tabuada
+static void Tabuada ()
+{
+    Console.WriteLine("qual o número que quer fazer a tabuada?");
+    int numero = Convert.ToInt32 (Console.ReadLine());
+
+    for (int i = 1; i <= 10; i++)
+    {
+        Console.WriteLine($"{i} X {numero} = {i * numero}");
+    }
+}
+//Tabuada
+
+//LerNumero
+static void LerNumero()
+{
+    bool car = true;
+    while ( car =true)
+    {
+        Console.WriteLine("qual o número?");
+        int numero = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("escreva sim para parar?");
+        string escolha = Convert.ToString(Console.ReadLine());
+        if (escolha == "sim")
+        {
+           car = false;
+        }
+    }
+    
+}
+//LerNumero
+
+//GeraNumeros
+static void GeraNumeros()
+{
+    for (float i = 10; i <= 100; i++)
+    {
+        if(i %11 ==5){
+            Console.WriteLine($"numero divisivel por 11 com resto 5: {i}");
+        }
+    }
+
+}
+//GeraNumeros
+
+//MediaTurma
+static void MediaTurma()
+{
+    Console.WriteLine("Qual o numero de alunos?");
+    int alunos = Convert.ToInt32 (Console.ReadLine());
+    double somaDasMedias = 0;
+
+    for (int i = 1; i<= alunos; i++)
+    {
+        Console.WriteLine($"Qual a media do aluno {i}");
+        int mediaAluno = Convert.ToInt32(Console.ReadLine());
+        somaDasMedias += mediaAluno;
+    }
+    double formula = somaDasMedias / alunos;
+    Console.WriteLine($"A media da clase = {formula}");
+    
+
+}
+//MediaTurma
+
                     Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
                     int escolha = Convert.ToInt32(Console.ReadLine());
 
