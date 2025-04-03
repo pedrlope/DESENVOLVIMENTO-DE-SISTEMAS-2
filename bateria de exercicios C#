@@ -1373,6 +1373,24 @@ static void MediaTurma()
                             break;
                     }
 
+                   
+//EX10
+static void EX10 ()
+{
+    Console.WriteLine("Qual número deseja multiplicar por 3?");
+    int numero = ConvertToInt32(Console.ReadLine());
+    int soma = 0;
+    int formula = numero * 3;
+    for (int i = 0; i<5; i++)
+    {
+        
+        Console.WriteLine($" {numero} X 3 = {numero*3}formula");
+        soma += formula;
+    }
+    Console.WriteLine($" o resultado é {formula}");
+}
+
+
 
                     Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
                     int escolha = Convert.ToInt32(Console.ReadLine());
