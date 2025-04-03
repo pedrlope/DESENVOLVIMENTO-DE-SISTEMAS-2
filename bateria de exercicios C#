@@ -1372,7 +1372,117 @@ static void MediaTurma()
                             NumeroAoQuadrado();
                             break;
                     }
+//EX1
+static void EX1()
 
+{
+    int l = 0;
+    double dois, um, soma;
+    soma = 0;
+    do
+    {
+
+        for (int i = 1; i <= 50; i++)
+        {
+            
+            dois = 1000-3 * (i - 1);
+            um = i;
+            double fração =  dois/um;
+            soma += fração;
+            if (i % 2 == 0)
+            {
+                fração = -fração;
+            }
+            Console.WriteLine($"O valor {i} é {dois}/ {um} = {fração}");
+
+        }
+        Console.WriteLine($"a soma dos valores é: {soma}");
+        Console.WriteLine($"digite 1 caso deseje parar");
+        int escolha = Convert.ToInt32(Console.ReadLine());
+        if (escolha == 1)
+        {
+            l = 1;
+        }
+        else
+        {
+
+        }
+    }
+    while (l == 0);
+}
+//EX1
+
+static void EX4()
+{
+    int soma = 0;
+
+    for (int i = 2; i <= 100; i++)
+    {
+        Console.WriteLine($"{i}");
+        soma += i;
+    }
+    Console.WriteLine($" a soma é {soma}");
+}
+
+static void EX5()
+{
+    
+    double somaDasMedias = 0;
+
+    for (int i = 1; i <= 10; i++)
+    {
+        Console.WriteLine($"Qual a media do aluno {i}");
+        int mediaAluno = Convert.ToInt32(Console.ReadLine());
+        somaDasMedias += mediaAluno;
+    }
+    double formula = somaDasMedias / 10;
+    Console.WriteLine($"A media da clase = {formula}");
+
+
+}
+EX6();
+static void EX6()
+{
+    Console.WriteLine($"Qual o tempo do emprestimo?Em meses");
+    int t = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine($"Qual o interesse do emprestimo?");
+    double indice = Convert.ToDouble(Console.ReadLine());
+    Console.WriteLine($"Qual o capital do emprestimo?");
+    int c = Convert.ToInt32(Console.ReadLine());
+    double resultado1 = 0; 
+    double resultado2 = 0;
+    
+    
+
+    for (int i = 1; i <=t; i++)
+        
+    {
+        double Juros = c * indice * i;
+        double Montante = Juros + c;
+
+        Console.WriteLine($"Mês {i}");
+        Console.WriteLine($"O Juros é = {Juros}");
+        Console.WriteLine($"O Montante é = {Montante}");
+        resultado1 = Juros;
+        resultado2 = Montante;
+    }
+
+
+}
+
+static void EX8()
+{
+
+    Console.WriteLine("Preparando o lançamento");
+
+    for (int i = 10; i >= 1; i--)
+    {
+        Console.WriteLine($"{i}");
+    }
+    Console.WriteLine($"Decolando!");
+
+
+}
                    
 //EX10
 static void EX10 ()
