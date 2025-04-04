@@ -2132,7 +2132,157 @@ static void EX9()
                     Console.WriteLine("8 – Testando instrução break");
                     Console.WriteLine("9 – Cálculo de áreas de figuras geométricas");
                     Console.WriteLine("10 – Números de votos por candidatos");
+                   
+                    //EX1
+static void EX1()
+{
+    Console.WriteLine("Quantos anos vc tem");
+    int idade = Convert.ToInt32(Console.ReadLine());
+    switch (idade)
+    {
+        case 5:
+        case 6:
+        case 7: Console.WriteLine("Infantil A");
+            break;
 
+        case 8:
+        case 9:
+        case 10:
+        case 11:
+            Console.WriteLine("Infantil B");
+            break;
+
+        case 12:
+        case 13:
+            Console.WriteLine("Juvenil A");
+            break;
+
+        case 14:
+        case 15:
+        case 16:
+        case 17:
+            Console.WriteLine("Juvenil B");
+            break;
+
+        case > 17:
+            Console.WriteLine("Adulto");
+            break;
+    }
+}
+//EX1
+
+//EX2
+static void EX2()
+{
+    Console.WriteLine("Digite 1 para media harmonica, 2 para media aritimedica e 3 para media geometrica");
+    int mediaescolha = Convert.ToInt32(Console.ReadLine);
+    switch (mediaescolha)
+    {
+
+        case 1:
+            Console.WriteLine("qual a primeira nota");
+            int nota1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("qual a segunda nota");
+            int nota2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("qual a terceira nota");
+            int nota3 = Convert.ToInt32(Console.ReadLine());
+
+            int n = 3;
+
+            int formula = n / ((1 / nota1) + (1 / nota2) + (1 / nota3));
+            Console.WriteLine($" a media aritimedica é {formula}");
+            break;
+
+        case 2:
+            Console.WriteLine("qual a primeira nota");
+            int nota4 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("qual a segunda nota");
+            int nota5 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("qual a terceira nota");
+            int nota6 = Convert.ToInt32(Console.ReadLine());
+            
+            int formula2 = (nota4 + nota5  + nota6 ) /3;
+            Console.WriteLine($" a media ponderada é {formula2}");
+            break;
+
+            case 3:
+            Console.WriteLine("qual a primeira nota");
+            int nota7 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("qual a segunda nota");
+            int nota8 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("qual a terceira nota");
+            int nota9 = Convert.ToInt32(Console.ReadLine());
+
+            double formula3 = Math.Pow(nota7 * nota8 * nota9, 1.0 / 3.0);
+            Console.WriteLine($" a media ponderada é {formula3}");
+            break;
+    }
+}
+//EX2
+
+//EX3
+static void EX3()
+{
+    bool wheli = true;
+    do
+    {
+        Console.WriteLine("Qual a sua linguagem da programação");
+        string programacao = Console.ReadLine();
+        switch (programacao)
+        {
+            case "C":
+                Console.WriteLine("Escreva uma linha no seu programa");
+                String C = Console.ReadLine();
+                if (C == "Printf" || C == "Console.WriteLine()" || C == "Print")
+                {
+                    wheli = false;
+                    Console.WriteLine("Parabéns!!");
+                }
+                else
+                {
+                    Console.WriteLine("Isso não esta certo");
+                }
+                break;
+
+            case "Python":
+                Console.WriteLine("Escreva uma linha no seu programa");
+                String Python = Console.ReadLine();
+                if (Python == "print" ||  Python == "format" || Python == "f-strings")
+                {
+                    Console.WriteLine("Parabéns!!");
+                    wheli = false;
+                }
+
+                else
+                {
+                    Console.WriteLine("Isso não esta certo");
+                }
+                break;
+
+            case "Java":
+                Console.WriteLine("Escreva uma linha no seu programa");
+                String Java = Console.ReadLine();
+                if (Java == "System.out.printf")
+                { 
+                    wheli = false;
+                Console.WriteLine("Parabéns!!");
+        } else
+                {
+                    Console.WriteLine("Isso não esta certo");
+                }
+                break;
+        }
+    }
+    while (wheli == true);
+}
+//EX3
+      
                     //CaluloDeAreas
                     static void CaluloDeAreas()
         {
