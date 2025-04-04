@@ -1576,6 +1576,116 @@ static void EX10 ()
                             NumeroAoQuadrado();
                             break;
                     }
+static void EX3()
+{
+    bool verdade = true;
+   while (verdade = true) { 
+    Console.WriteLine("Quais os numeros que vc deseja elevar ao quadrado?");
+    Console.WriteLine("1:");
+    int num1 = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("2:");
+    int num2 = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("3:");
+    int num3 = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("4:");
+    int num4 = Convert.ToInt32(Console.ReadLine());
+
+    Console.WriteLine($"{num1} elevado ao quadrado é {num1 * num1}");
+    Console.WriteLine($"{num2} elevado ao quadrado é {num2 * num2}");
+    Console.WriteLine($"{num3} elevado ao quadrado é {num3 * num3}");
+    Console.WriteLine($"{num4} elevado ao quadrado é {num4 * num4}");
+        Console.WriteLine("digite 1 caso deseje parar");
+        int parar = Convert.ToInt32(Console.ReadLine());
+        if ( parar == 1 )
+        {
+            verdade = false;
+        }
+    }
+}
+
+static void EX4()
+{
+    double formula = 0;
+    bool verdade = true;
+    while (verdade = true)
+    {
+        Console.WriteLine("Qual o seu sexo?M para mulher e h para homem");
+        char sex = Char.ToUpper(Convert.ToChar(Console.ReadLine()));
+        Console.WriteLine("Qual a sua altura?");
+        double altura = Convert.ToDouble(Console.ReadLine());
+
+        if (sex == 'm' || sex =='M')
+        {
+             formula = 62.1 * altura - 44.7;
+            Console.WriteLine($"seu peso ideal é : {formula}");
+        }
+
+        else 
+        {
+             formula = 72.7 * altura - 58;
+            Console.WriteLine($"seu peso ideal é : {formula}");
+        }
+        Console.WriteLine("digite 1 caso deseje parar");
+        int parar = Convert.ToInt32(Console.ReadLine());
+        if (parar == 1)
+        {
+            verdade = false;
+        }
+    }
+}
+
+
+static void EX7()
+{
+
+bool verdade = true;
+    while (verdade = true)
+    {
+        Produto produto1 = new Produto("Teclado", 150.00m);
+        Produto produto2 = new Produto("celular", 1500.99m);
+        Produto produto3 = new Produto("Laptop", 4500.50m);
+        Console.WriteLine("Digite a quantidade de dinheiro que você possui");
+        int dinheiro = Convert.ToInt32(Console.ReadLine());
+         if (dinheiro>= produto1.Preco)
+        {
+            
+            if (dinheiro > produto1.Preco && (dinheiro / 2) >= produto1.Preco)
+            {
+                Console.WriteLine("Voce pode comprar mais de um teclado");
+            }
+            Console.WriteLine("Voce pode comprar um teclado");
+        }
+
+        if (dinheiro >= produto2.Preco)
+        {
+            
+            if (dinheiro > produto2.Preco && (dinheiro/2) >= produto2.Preco)
+            {
+                Console.WriteLine("Voce pode comprar mais de um celular");
+            }
+            Console.WriteLine("Voce pode comprar um celular");
+        }
+
+        if (dinheiro >= produto3.Preco)
+        {
+            
+            if (dinheiro > produto2.Preco && (dinheiro / 2) >= produto2.Preco)
+            {
+                Console.WriteLine("Voce pode comprar mais de um Laptop");
+            }
+            Console.WriteLine("Voce pode comprar um Laptop");
+        }
+        Console.WriteLine("digite 1 caso deseje parar");
+        int parar = Convert.ToInt32(Console.ReadLine());
+        if (parar == 1)
+        {
+            verdade = false;
+        }
+    }
+
+
+}
+
                     Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
                     int escolha = Convert.ToInt32(Console.ReadLine());
 
