@@ -1682,8 +1682,81 @@ bool verdade = true;
             verdade = false;
         }
     }
+}
 
 
+static void EX9()
+{
+    bool verdade = true;
+    while (verdade == true)
+    {
+        double formula = 0;
+        Console.WriteLine("qual o numero?");
+        int num1 = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("qual a operação?+,-,X , /,^, PI, Raiz ");
+        string operacao = Convert.ToString(Console.ReadLine());
+
+
+        if (operacao == "-")
+        {
+            Console.WriteLine("qual o proximo numero?");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+            formula = num1 - num2;
+        }
+
+        if (operacao == "+")
+        {
+            Console.WriteLine("qual o proximo numero?");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+            formula = num1 + num2;
+        }
+
+        if (operacao == "X")
+        {
+            Console.WriteLine("qual o proximo numero?");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+            formula = num1 * num2;
+        }
+
+        if (operacao == "/")
+        {
+            Console.WriteLine("qual o proximo numero?");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+            formula = num1 / num2;
+        }
+
+        if (operacao == "^")
+        {
+            Console.WriteLine("deseja elevar o numero por quanto?");
+            int elevar = Convert.ToInt32(Console.ReadLine());
+            formula = Math.Pow(num1, elevar);
+            Console.WriteLine($" {formula}");
+        }
+
+        if (operacao == "Raiz")
+        {
+            formula = Math.Pow(num1, 1.0 / 2.0);
+            Console.WriteLine($" {formula}");
+        }
+
+        if (operacao == "PI")
+        {
+            formula = Math.PI * (num1);
+            Console.WriteLine($" {formula}");
+        }
+
+        if (operacao == "")
+        {
+            Console.WriteLine("isso não é uma operacão viavel");
+        }
+        Console.WriteLine("digite 1 para parar");
+        int parou = Convert.ToInt32(Console.ReadLine());
+        if(parou == 1)
+        {
+            verdade = false;
+        }
+    }
 }
 
                     Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
