@@ -2162,6 +2162,30 @@ static void EX4()
             menorNumero = num;
         }
 
+
+
+    static void EX6()
+    {
+        Console.WriteLine("Quantos números da sequência de Fibonacci você deseja gerar?");
+        int n = Convert.ToInt32(Console.ReadLine());
+
+        int a = 0, b = 1;
+        int contador = 1;
+
+        Console.WriteLine("Sequência de Fibonacci:");
+
+        // Gerando e imprimindo a sequência
+        do
+        {
+            Console.WriteLine(a);
+            int temp = a + b;
+            a = b;
+            b = temp;
+
+            contador++;
+        } while (contador <= n);
+    }
+
         Console.WriteLine("Deseja continuar? Digite 0 para sair ou outro número para continuar.");
         R = Convert.ToInt32(Console.ReadLine());
 
