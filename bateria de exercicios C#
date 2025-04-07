@@ -2186,6 +2186,21 @@ static void EX4()
         } while (contador <= n);
     }
 
+
+EX7();
+static void EX7()
+{
+    int soma = 1;
+    Console.WriteLine("Qual o número que deseja fatorar?");
+    int num = Convert.ToInt32 (Console.ReadLine());
+
+    for (int i = 1; i <=num; i++)
+    {
+        soma *= i;
+    }
+    Console.WriteLine($"a fatoração deu{soma}");
+}
+
         Console.WriteLine("Deseja continuar? Digite 0 para sair ou outro número para continuar.");
         R = Convert.ToInt32(Console.ReadLine());
 
