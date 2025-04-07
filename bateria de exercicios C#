@@ -2075,32 +2075,6 @@ static void EX9()
                             NumeroAoQuadrado();
                             break;
                     }
-
-        static void Temperatura()
-        {
-            float temperatura, c, f;
-            char unidade;
-
-            Console.WriteLine("qual a temperatura?");
-            temperatura = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("qual a unidade de medida?");
-            unidade = Char.ToUpper(Convert.ToChar(Console.ReadLine()));
-            f = (9 * temperatura) / 5 + 32;
-            c = (5 * (temperatura - 32)) / 9;
-            if (unidade == 'C' || unidade == 'c')
-            {
-                Console.WriteLine($" a temperatura é {f}");
-            }
-
-            if (unidade == 'F' || unidade == 'f')
-            {
-                Console.WriteLine($" a temperatura é {c}");
-            }
-
-        }
-
-
-
 static void EX3()
 {
     double formula = 0;
@@ -2206,10 +2180,46 @@ static void EX7()
 
     } while (R != 0);
 
+static void EX8()
+{
+    int X = 1; 
+    do
+    { 
+        int resultado = (X * X) - (3 * X) - 4;
+        Console.WriteLine($"F({X}) = {resultado}");
+
+        X++;
+    }
+    while (X <= 10);
+    }
+
+
     // Após sair do loop, exibe o menor número encontrado
     Console.WriteLine($"O menor número digitado foi: {menorNumero}");
 }
 
+static void Temperatura()
+        {
+            float temperatura, c, f;
+            char unidade;
+
+            Console.WriteLine("qual a temperatura?");
+            temperatura = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("qual a unidade de medida?");
+            unidade = Char.ToUpper(Convert.ToChar(Console.ReadLine()));
+            f = (9 * temperatura) / 5 + 32;
+            c = (5 * (temperatura - 32)) / 9;
+            if (unidade == 'C' || unidade == 'c')
+            {
+                Console.WriteLine($" a temperatura é {f}");
+            }
+
+            if (unidade == 'F' || unidade == 'f')
+            {
+                Console.WriteLine($" a temperatura é {c}");
+            }
+
+        }
 
 
 
