@@ -591,11 +591,22 @@ static void Coelhos()
                     //Prestação
 
                     //SomaQuadrado
-                    static void SomaQuadrado()
-                    {
-                   
-                    }
-                    //SomaQuadrado
+static void SomaQuadrado()
+{
+    Console.WriteLine("qual o valor do primeiro numero");
+    int num1 = Convert.ToInt32(Console.ReadLine());
+
+    Console.WriteLine("qual o valor do segundo numero");
+    int num2 = Convert.ToInt32(Console.ReadLine());
+
+    Console.WriteLine("qual o valor do terceiro numero");
+    int num3 = Convert.ToInt32(Console.ReadLine());
+
+    int formula = (num1*num1)+(num2*num2)+(num3*num3);
+
+    Console.WriteLine($"a soma dos quadrados é: {formula}");
+}
+//SomaQuadrado
 
                     //Funcionário
                     static void Funcionário()
