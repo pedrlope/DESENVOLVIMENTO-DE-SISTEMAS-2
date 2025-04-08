@@ -633,11 +633,19 @@ static void SomaQuadrado()
                     //Mensal
 
                     // Velocidade
-                    static void Velocidade()
-                    {
-                    
-                    }
-                    // Velocidade
+static void Velocidade()
+{
+    Console.WriteLine("Qual a distancia percorrida?");
+    double deltaS = Convert.ToDouble(Console.ReadLine());
+
+    Console.WriteLine("Em quanto tempo?Em horas");
+    double deltaT = Convert.ToDouble(Console.ReadLine());
+
+    double formula = deltaS / deltaT;
+
+    Console.WriteLine($"A velocidade do carro é de {formula}Km/h");
+}
+// Velocidade
 
                     Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
                     int escolha = Convert.ToInt32(Console.ReadLine());
