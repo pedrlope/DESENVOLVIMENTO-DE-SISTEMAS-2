@@ -211,11 +211,15 @@ using System.Diagnostics;
             //cilindro
 
             //coelhos
-            static void Coelhos()
-            {
-
-            }
-            //coelhos
+static void Coelhos()
+{
+    Console.WriteLine("Quantos coelhos possue ou vai comprar?");
+    int Coelho = Convert.ToInt32(Console.ReadLine());
+    int custoc = Coelho * 150;
+    Console.WriteLine("O custo de um coelho varia de 50 a 200 reais");
+    Console.WriteLine($"Já o custo mensal de seu(s) é de {custoc} e o gato total que ira fazer vai variar de {custoc*12+50} a {custoc*12+200}");
+}
+//coelhos
 
             //consumo
             static void Combustivel()
