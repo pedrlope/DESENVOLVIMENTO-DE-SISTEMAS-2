@@ -524,11 +524,19 @@ static void Coelhos()
                     }
 
                     //ConsumoCombustível
-                    static void ConsumoCombustível()
-                    {
-                    
-                    }
-                    //ConsumoCombustível
+static void ConsumoCombustível()
+{
+    Console.WriteLine("Quantos quilometros você rodou?");
+    int Km = Convert.ToInt32(Console.ReadLine());
+
+    Console.WriteLine("Qual o consumo medio de combustivel?");
+    int lKm = Convert.ToInt32(Console.ReadLine());
+
+    double formula = Km/lKm;
+
+    Console.WriteLine($"a quantidade de litros consumida é de :{formula}L");
+}
+//ConsumoCombustível
 
                     //TrocaValor
                     static void TrocaValor()
