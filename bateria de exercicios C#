@@ -727,37 +727,96 @@ static void Velocidade()
                     }
 
                     //comparaconumeros
-                    static void ComparacoNumeros()
-                    {
-                        Console.WriteLine("qual o primeiro numero?");
-                        int num1 = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("qual o segundo numero?");
-                        int num2 = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("qual o terceiro numero?");
-                        int num3 = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("qual o quarto numero?");
-                        int num4 = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("qual o quinto numero?");
-                        int num5 = Convert.ToInt32(Console.ReadLine());
+static void ComparacoNumeros()
+{
+    Console.WriteLine("qual o primeiro numero?");
+    int num1 = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("qual o segundo numero?");
+    int num2 = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("qual o terceiro numero?");
+    int num3 = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("qual o quarto numero?");
+    int num4 = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("qual o quinto numero?");
+    int num5 = Convert.ToInt32(Console.ReadLine());
 
-
-
-                    }
-                    //comparaconumeros
+    if (num1>num2&& num1>num3 && num1>num4 && num1>num5 )
+    {
+        Console.WriteLine($"{num2} é o maior");
+    }
+    if (num1 < num2 && num1 < num3 && num1 < num2 && num1 < num5)
+    {
+        Console.WriteLine($"{num1} é o menor");
+    }
+    if (num2 > num1 && num2 > num3 && num2 > num4 && num2 > num5)
+    {
+        Console.WriteLine($"{num1} é o maior");
+    }
+    if (num2 < num1 && num2 < num3 && num2 < num4 && num2 < num5)
+    {
+        Console.WriteLine($"{num2} é o menor");
+    }
+    if (num3 > num1 && num3 > num2 && num3 > num4 && num3 > num5)
+    {
+        Console.WriteLine($"{num3} é o maior");
+    }
+    if (num3 < num1 && num3 < num4 && num3 < num2 && num3 < num5)
+    {
+        Console.WriteLine($"{num3} é o menor");
+    }
+    if (num4 > num1 && num4 > num3 && num4 > num2 && num4 > num5)
+    {
+        Console.WriteLine($"{num4} é o maior");
+    }
+    if(num4 < num1 && num4 < num3 && num4 < num2 && num4 < num5)
+    {
+        Console.WriteLine($"{num4} é o menor");
+    }
+    if (num5 > num1 && num5 > num3 && num5 > num2 && num5 > num4)
+    {
+        Console.WriteLine($"{num5} é o maior");
+    }
+    if(num5 < num1 && num5 < num3 && num5 < num2 && num5 < num4)
+    {
+        Console.WriteLine($"{num5} é o menor");
+    }
+}
+//comparaconumeros
 
                     //AceitaNumeros
-                    static void AceitaNumeros()
-                    {
-                        Console.WriteLine("qual o primeiro numero?");
-                        int num1 = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("qual o segundo numero?");
-                        int num2 = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("qual o terceiro numero?");
-                        int num3 = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("qual o quarto numero?");
-                        int num4 = Convert.ToInt32(Console.ReadLine());
-                    }
-                    //AceitaNumeros
+
+static void AceitaNumeros()
+{
+    int quantidade = 4;
+    int[] numeros = new int[quantidade];
+
+    for (int i = 0; i < 4; i++)
+    {
+        Console.Write($"Digite o {i+1}º número: ");
+        numeros[i] = Convert.ToInt32(Console.ReadLine());
+    }
+
+    foreach (int num in numeros)
+    {
+        if (num % 2 == 0)
+        {
+            Console.WriteLine($"{num} é divisível por 2");
+        }
+        else
+        {
+            Console.WriteLine($"{num} não é divisível por 2");
+        }
+        if (num % 3 == 0)
+        {
+            Console.WriteLine($"{num} é divisível por 3");
+        }
+        else
+        {
+            Console.WriteLine($"{num} não é divisível por 3");
+        }
+    }
+}
+//AceitaNumeros
 
                     // Diferenca
                     static void Diferenca()
