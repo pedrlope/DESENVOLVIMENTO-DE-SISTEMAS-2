@@ -448,11 +448,17 @@ static void Distribuitiva()
                 //ler
 
                 //Potencia
-                static void Potencia()
-                {
-                  
-                }
-                //Potencia
+static void Potencia()
+{
+    Console.WriteLine("Digite o numero");
+    int num1 = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("digite o expoente");
+    int expoente = Convert.ToInt32(Console.ReadLine());
+
+    double resultado = Math.Pow(num1, expoente);
+    Console.WriteLine($"a potencia é {resultado}");
+}
+//Potencia
 
                 //area quadrado
                 static void AreaQuadrado()
