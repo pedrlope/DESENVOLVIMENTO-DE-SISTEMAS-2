@@ -702,7 +702,7 @@ static void Velocidade()
                             break;
 
                         case 4:
-                            MediaHarmonica();
+                            Diferenca();
                             break;
 
                         case 5:
@@ -865,6 +865,57 @@ static void AceitaNumeros()
                         }
                     }
                     //MediaAluno
+
+                    static void EX9()
+{
+    Console.WriteLine("digite as sua media");
+    int media = Convert.ToInt32(Console.ReadLine()); 
+    switch (media)
+    {
+    case 1:
+    Console.WriteLine("reprovado");
+    Console.WriteLine("conceito E");
+    break;
+    case 2:
+    Console.WriteLine("reprovado");
+    Console.WriteLine("conceito E");
+    break;
+    case 3:
+    Console.WriteLine("reprovado");
+    Console.WriteLine("conceito D");
+    break;
+    case 4:
+    Console.WriteLine("reprovado");
+    Console.WriteLine("conceito D");
+    break;
+    case 5:
+    Console.WriteLine("reprovado");
+    Console.WriteLine("conceito C");
+    break;
+    case 6:
+    Console.WriteLine("reprovado");
+    Console.WriteLine("conceito C");
+    break;
+    case 7:
+    Console.WriteLine("aprovado");
+    Console.WriteLine("conceito B");
+    break;
+    case 8:
+    Console.WriteLine("aprovado");
+    Console.WriteLine("conceito B");
+    break;
+    case 9:
+    Console.WriteLine("aprovado");
+    Console.WriteLine("conceito A");
+    break;
+    case 10:
+    Console.WriteLine("aprovado");
+    Console.WriteLine("conceito A");
+    break;
+    }
+    
+}
+
 
                     Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
                     int escolha = Convert.ToInt32(Console.ReadLine());
