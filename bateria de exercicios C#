@@ -280,8 +280,7 @@ static void Distribuitiva()
             {
                 Console.WriteLine("qual o raio da esfera:");
                 double r = Convert.ToDouble(Console.ReadLine());
-                double formula;
-                formula = Math.PI * Math.Pow(r, 3) / 4;
+                double formula = (4.0 / 3.0) * Math.PI * Math.Pow(r, 3);
                 Console.WriteLine($"o volume da esfera é {formula}");
             }
             //volume de esfera
@@ -348,15 +347,15 @@ static void Distribuitiva()
                 static void ProdutoeAdicaoFracao()
                 {
             Console.WriteLine("qual o numerador?");
-            int num1 = Convert.ToInt32(Console.ReadLine());
+            double  num1 = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("qual o denominador?");
-            int num2 = Convert.ToInt32(Console.ReadLine());
+            double  num2 = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("qual o outro numerador?");
-            int num3 = Convert.ToInt32(Console.ReadLine());
+            double  num3 = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("qual o outro denominador?");
-            int num4 = Convert.ToInt32(Console.ReadLine());
-            int formula = num1 / num2;
-            int formula2 = num3 / num4;
+            double  num4 = Convert.ToDouble(Console.ReadLine());
+            double  formula = num1 / num2;
+            double  formula2 = num3 / num4;
             Console.WriteLine($"A soma das fracões é {formula + formula2} O produto é {formula * formula2}");
         }
                 //produto
@@ -368,8 +367,9 @@ static void Distribuitiva()
             Console.WriteLine("Qual a comissão?");
             double comissao = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Qual o salario?");
-            int salario = Convert.ToInt32(Console.ReadLine());
+            double salario = Convert.ToDouble(Console.ReadLine());
             double formula = salario * comissao + salario;
+            Console.WriteLine($"O salário total é R$ {formula}");
         }
                 //salario
 
@@ -394,17 +394,17 @@ static void Distribuitiva()
                 static void MediaHarmonica()
                 {
                     Console.WriteLine("qual a primeira nota");
-                    int nota1 = Convert.ToInt32(Console.ReadLine());
+                    double  nota1 = Convert.ToDouble(Console.ReadLine());
 
                     Console.WriteLine("qual a segunda nota");
-                    int nota2 = Convert.ToInt32(Console.ReadLine());
+                    double  nota2 = Convert.ToDouble(Console.ReadLine());
 
                     Console.WriteLine("qual a terceira nota");
-                    int nota3 = Convert.ToInt32(Console.ReadLine());
+                    double  nota3 = Convert.ToDouble(Console.ReadLine());
 
-                    int n = 3;
+                    double  n = 3;
 
-                    int formula = n / ((1 / nota1) + (1 / nota2) + (1 / nota3));
+                    double  formula = n / ((1 / nota1) + (1 / nota2) + (1 / nota3));
                     Console.WriteLine($" a media ponderada é {formula}");
                 }
                 //mediaHarmonica
@@ -463,12 +463,10 @@ static void Potencia()
                 //area quadrado
                 static void AreaQuadrado()
                 {
-                    Console.WriteLine("qual o comprimento do primeiro lado");
-                    double lado1 = Convert.ToDouble(Console.ReadLine());
-                    Console.WriteLine("qual o comprimento do segundo lado");
-                    double lado2 = Convert.ToDouble(Console.ReadLine());
-                    double formula = lado1 * lado2;
-                    Console.WriteLine($" a area e {formula}");
+                    Console.WriteLine("Qual o comprimento do lado do quadrado?");
+                    double lado = Convert.ToDouble(Console.ReadLine());
+                    double area = Math.Pow(lado, 2);
+                    Console.WriteLine($"A área do quadrado é {area}");
                 }
                 //area quadrado
 
@@ -571,12 +569,18 @@ static void ConsumoCombustível()
                     //TrocaValor
                     static void TrocaValor()
                     {
-                     Console.WriteLine("Digite um numero");
-                     int num1 = Convert.ToInt32(Console.ReadLine());
-                     Console.WriteLine("Digite outro numero");
-                     int num2 = Convert.ToInt32(Console.ReadLine());
-                     Console.WriteLine("trocando os valores");
-                     Console.WriteLine($"num1 = {num2}, num2 = {num1}");
+                     Console.WriteLine("Digite o primeiro número:");
+    int num1 = Convert.ToInt32(Console.ReadLine());
+
+    Console.WriteLine("Digite o segundo número:");
+    int num2 = Convert.ToInt32(Console.ReadLine());
+
+    // Trocando valores
+    int temp = num1;
+    num1 = num2;
+    num2 = temp;
+
+    Console.WriteLine($"Após a troca: num1 = {num1}, num2 = {num2}");
         }
         //TrocaValor
 
@@ -620,11 +624,12 @@ static void ConsumoCombustível()
         //Prestação
         static void Prestação()
                     {
-            Console.WriteLine("Qual o valor do aluguel?");
+            Console.WriteLine("Qual o valor do prestação?");
             int aluguel = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Qual o juros?");
             double juros = Convert.ToDouble(Console.ReadLine());
             double formula = aluguel + juros;
+            Console.WriteLine($"o valor total é: {formula}");
         }
                     //Prestação
 
