@@ -238,18 +238,42 @@ static void Coelhos()
             //consumo
 
             //diferença expoenecial
-            static void Diferença()
-            {
-            
-            }
-            //diferença expoenecial
+static void Diferença()
+{
+    Console.WriteLine("digite o primeiro numero");
+   double num1 = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("digite o segundo numero");
+    double num2 = Convert.ToInt32(Console.ReadLine());
 
-            //
-            static void Distribuitiva()
-            {
 
-            }
-            //
+    double diferenca = num1 - num2;
+    double quadrado_da_diferenca = Math.Pow(diferenca, 2);
+
+
+Console.WriteLine($"O quadrado da diferença entre {num1} e {num2} é {quadrado_da_diferenca}");
+}
+//diferença expoenecial
+
+           //Distribuitiva
+static void Distribuitiva()
+{
+    Console.Write("Digite o valor de A: ");
+    double a = Convert.ToDouble(Console.ReadLine());
+
+    Console.Write("Digite o valor de B: ");
+    double b = Convert.ToDouble(Console.ReadLine());
+
+    Console.Write("Digite o valor de C: ");
+    double c = Convert.ToDouble(Console.ReadLine());
+
+    Console.Write("Digite o valor de D: ");
+    double d = Convert.ToDouble(Console.ReadLine());
+    double resultadoDireto = a * (b + c + d); 
+
+    Console.WriteLine($"{a}X ({b }+ {c}+ {d})");
+    Console.WriteLine($"{resultadoDireto}");
+}
+//Distribuitiva
 
             //volume de esfera
             static void Esfera()
