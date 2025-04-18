@@ -67,12 +67,36 @@ static void exercicio4()
                 break;
 
             case 8:
-                AreaQuadrado();
+                ComparaValores();
                 break;
 
             case 9:
-                NumeroAoQuadrado();
+                EX9();
                 break;
+        }
+        static void Verificacao()
+        {
+            int numero;
+
+            Console.WriteLine("digite um número:");
+            numero = Convert.ToInt32(Console.ReadLine());
+
+            if (numero < 0)
+            {
+                Console.WriteLine("O número está abaixo de 0.");
+            }
+            else if (numero >= 0 && numero <= 10)
+            {
+                Console.WriteLine("O número está entre 0 e 10.");
+            }
+            else if (numero > 10 && numero <= 100)
+            {
+                Console.WriteLine("O número está entre 11 e 100.");
+            }
+            else
+            {
+                Console.WriteLine("O número está acima de 100.");
+            }
         }
 
         //comparaconumeros
@@ -132,9 +156,42 @@ static void exercicio4()
         }
         //comparaconumeros
 
-        //AceitaNumeros
+        static void Triangulo()
+        {
+            double a, b, c;
 
-        static void AceitaNumeros()
+            Console.WriteLine("Informe o primeiro lado do triângulo:");
+            a = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Informe o segundo lado do triângulo:");
+            b = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Informe o terceiro lado do triângulo:");
+            c = Convert.ToDouble(Console.ReadLine());
+
+            if (a + b > c && a + c > b && b + c > a)
+            {
+                Console.WriteLine("É um triângulo!");
+                if (a == b && b == c)
+                {
+                    Console.WriteLine("Tipo: Equilátero");
+                }
+                else if (a == b || a == c || b == c)
+                {
+                    Console.WriteLine("Tipo: Isósceles");
+                }
+                else
+                {
+                    Console.WriteLine("Tipo: Escaleno");
+                }
+            }
+            else
+            {
+                Console.WriteLine("As medidas informadas não formam um triângulo.");
+            }
+
+            //AceitaNumeros
+            static void AceitaNumeros()
         {
             int quantidade = 4;
             int[] numeros = new int[quantidade];
@@ -213,9 +270,44 @@ static void exercicio4()
                 Console.WriteLine("aluno reprovado");
             }
         }
-        //MediaAluno
+            //MediaAluno
 
-        static void EX9()
+            static void ComparaValores()
+            {
+                double num1, num2, num3;
+
+                Console.WriteLine("Informe o 1º número:");
+                num1 = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine("Informe o 2º número:");
+                num2 = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine("Informe o 3º número:");
+                num3 = Convert.ToDouble(Console.ReadLine());
+
+                
+                if (num1 < 10)
+                {
+                    num2 *= 2;
+                    num3 += 5;
+                }
+                else if (num1 >= 10 && num1 <= 50)
+                {
+                    num2 += 10;
+                    num3 -= 3;
+                }
+                else
+                {
+                    num2 /= 2;
+                    num3 *= 3;
+                }
+
+                Console.WriteLine($"\nValores atualizados:");
+                Console.WriteLine($"2º número: {num2}");
+                Console.WriteLine($"3º número: {num3}");
+            }
+
+            static void EX9()
         {
             Console.WriteLine("digite as sua media");
             int media = Convert.ToInt32(Console.ReadLine());
