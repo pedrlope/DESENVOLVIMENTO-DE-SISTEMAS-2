@@ -25,6 +25,262 @@ Console.WriteLine("escolha o exercicio");
         exercicio16();
     }
 
+static void exercicio13()
+            {
+                int i = 1;
+                while (i > 0)
+                {
+
+                    Console.WriteLine("qual o exercicio");
+                    Console.WriteLine("1 – Faz pesquisa de preços por região");
+                    Console.WriteLine("2 – Reajuste salarial de funcionário");
+                    Console.WriteLine("3 – Quadrado de números");
+                    Console.WriteLine("4 – Peso ideal de uma pessoa com base em dados pessoais");
+                    Console.WriteLine("5 – Recebe informações de produtos: Preço, região, etc");
+                    Console.WriteLine("6 – Verifica notas informadas");
+                    Console.WriteLine("7 - Valor máximo de gastos de clientes");
+                    Console.WriteLine("8 – Verifica dados com base em classificação");
+                    Console.WriteLine("9 - Simples calculadora com MessageBox");
+                    Console.WriteLine("10 - Comparação entre números");
+                    int escolha1 = Convert.ToInt32(Console.ReadLine());
+                    switch (escolha1)
+                    {
+                        case 1:
+                            ProdutoeAdicaoFracao();
+                            break;
+
+                        case 2:
+                            ComparacoNumeros();
+                            break;
+
+                        case 3:
+                            VolumeLata();
+                            break;
+
+                        case 4:
+                            MediaHarmonica();
+                            break;
+
+                        case 5:
+                            AceitaNumeros();
+                            break;
+
+                        case 6:
+                            Diferenca();
+                            break;
+
+                        case 7:
+                            MediaAluno();
+                            break;
+
+                        case 8:
+                            AreaQuadrado();
+                            break;
+
+                        case 9:
+                            NumeroAoQuadrado();
+                            break;
+
+                        case 10:
+                            NumeroAoQuadrado();
+                            break;
+                    }
+static void EX3()
+{
+    bool verdade = true;
+   while (verdade = true) { 
+    Console.WriteLine("Quais os numeros que vc deseja elevar ao quadrado?");
+    Console.WriteLine("1:");
+    int num1 = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("2:");
+    int num2 = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("3:");
+    int num3 = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("4:");
+    int num4 = Convert.ToInt32(Console.ReadLine());
+
+    Console.WriteLine($"{num1} elevado ao quadrado é {num1 * num1}");
+    Console.WriteLine($"{num2} elevado ao quadrado é {num2 * num2}");
+    Console.WriteLine($"{num3} elevado ao quadrado é {num3 * num3}");
+    Console.WriteLine($"{num4} elevado ao quadrado é {num4 * num4}");
+        Console.WriteLine("digite 1 caso deseje parar");
+        int parar = Convert.ToInt32(Console.ReadLine());
+        if ( parar == 1 )
+        {
+            verdade = false;
+        }
+    }
+}
+
+static void EX4()
+{
+    double formula = 0;
+    bool verdade = true;
+    while (verdade = true)
+    {
+        Console.WriteLine("Qual o seu sexo?M para mulher e h para homem");
+        char sex = Char.ToUpper(Convert.ToChar(Console.ReadLine()));
+        Console.WriteLine("Qual a sua altura?");
+        double altura = Convert.ToDouble(Console.ReadLine());
+
+        if (sex == 'm' || sex =='M')
+        {
+             formula = 62.1 * altura - 44.7;
+            Console.WriteLine($"seu peso ideal é : {formula}");
+        }
+
+        else 
+        {
+             formula = 72.7 * altura - 58;
+            Console.WriteLine($"seu peso ideal é : {formula}");
+        }
+        Console.WriteLine("digite 1 caso deseje parar");
+        int parar = Convert.ToInt32(Console.ReadLine());
+        if (parar == 1)
+        {
+            verdade = false;
+        }
+    }
+}
+
+
+static void EX7()
+{
+
+bool verdade = true;
+    while (verdade = true)
+    {
+        Produto produto1 = new Produto("Teclado", 150.00m);
+        Produto produto2 = new Produto("celular", 1500.99m);
+        Produto produto3 = new Produto("Laptop", 4500.50m);
+        Console.WriteLine("Digite a quantidade de dinheiro que você possui");
+        int dinheiro = Convert.ToInt32(Console.ReadLine());
+         if (dinheiro>= produto1.Preco)
+        {
+            
+            if (dinheiro > produto1.Preco && (dinheiro / 2) >= produto1.Preco)
+            {
+                Console.WriteLine("Voce pode comprar mais de um teclado");
+            }
+            Console.WriteLine("Voce pode comprar um teclado");
+        }
+
+        if (dinheiro >= produto2.Preco)
+        {
+            
+            if (dinheiro > produto2.Preco && (dinheiro/2) >= produto2.Preco)
+            {
+                Console.WriteLine("Voce pode comprar mais de um celular");
+            }
+            Console.WriteLine("Voce pode comprar um celular");
+        }
+
+        if (dinheiro >= produto3.Preco)
+        {
+            
+            if (dinheiro > produto2.Preco && (dinheiro / 2) >= produto2.Preco)
+            {
+                Console.WriteLine("Voce pode comprar mais de um Laptop");
+            }
+            Console.WriteLine("Voce pode comprar um Laptop");
+        }
+        Console.WriteLine("digite 1 caso deseje parar");
+        int parar = Convert.ToInt32(Console.ReadLine());
+        if (parar == 1)
+        {
+            verdade = false;
+        }
+    }
+}
+
+
+static void EX9()
+{
+    bool verdade = true;
+    while (verdade == true)
+    {
+        double formula = 0;
+        Console.WriteLine("qual o numero?");
+        int num1 = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("qual a operação?+,-,X , /,^, PI, Raiz ");
+        string operacao = Convert.ToString(Console.ReadLine());
+
+
+        if (operacao == "-")
+        {
+            Console.WriteLine("qual o proximo numero?");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+            formula = num1 - num2;
+        }
+
+        if (operacao == "+")
+        {
+            Console.WriteLine("qual o proximo numero?");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+            formula = num1 + num2;
+        }
+
+        if (operacao == "X")
+        {
+            Console.WriteLine("qual o proximo numero?");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+            formula = num1 * num2;
+        }
+
+        if (operacao == "/")
+        {
+            Console.WriteLine("qual o proximo numero?");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+            formula = num1 / num2;
+        }
+
+        if (operacao == "^")
+        {
+            Console.WriteLine("deseja elevar o numero por quanto?");
+            int elevar = Convert.ToInt32(Console.ReadLine());
+            formula = Math.Pow(num1, elevar);
+            Console.WriteLine($" {formula}");
+        }
+
+        if (operacao == "Raiz")
+        {
+            formula = Math.Pow(num1, 1.0 / 2.0);
+            Console.WriteLine($" {formula}");
+        }
+
+        if (operacao == "PI")
+        {
+            formula = Math.PI * (num1);
+            Console.WriteLine($" {formula}");
+        }
+
+        if (operacao == "")
+        {
+            Console.WriteLine("isso não é uma operacão viavel");
+        }
+        Console.WriteLine("digite 1 para parar");
+        int parou = Convert.ToInt32(Console.ReadLine());
+        if(parou == 1)
+        {
+            verdade = false;
+        }
+    }
+}
+
+                    Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+                    int escolha = Convert.ToInt32(Console.ReadLine());
+
+                    if (escolha == 2)
+                    {
+                        i = 0;
+                    }
+                    else
+                    {
+
+                    }
+                }
+            }
 
 static void exercicio14()
              {
