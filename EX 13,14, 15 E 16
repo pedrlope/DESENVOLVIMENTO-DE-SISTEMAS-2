@@ -1,3 +1,31 @@
+Console.WriteLine("escolha o exercicio");
+    Console.WriteLine("13 – Estrutura de Repetição For, While e outras");
+    Console.WriteLine("14 – Estrutura de Repetição Do / While e outras");
+    Console.WriteLine("15 – Estrutura de Repetição Do /While e outras");
+    Console.WriteLine("16 - Estrutura de Seleção Múltipla Switch e outras");
+    int exercicio = Convert.ToInt32(Console.ReadLine());
+
+    if (exercicio == 13)
+    {
+        exercicio13();
+    }
+
+    if (exercicio == 14)
+    {
+        exercicio14();
+    }
+
+    if (exercicio == 15)
+    {
+        exercicio15();
+    }
+
+    if (exercicio == 16)
+    {
+        exercicio16();
+    }
+
+
 static void exercicio14()
              {
                  int i = 1;
