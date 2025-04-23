@@ -1,1 +1,459 @@
+static void exercicio15()
+            {
+                int i = 1;
+                while (i > 0)
+                {
 
+                    Console.WriteLine("qual o exercicio");
+                    Console.WriteLine("1 – Soma de termos de uma série");
+                    Console.WriteLine("2 – Pesquisa de Mercado");
+                    Console.WriteLine("3 – Bônus salarial");
+                    Console.WriteLine("4 – Menor número");
+                    Console.WriteLine("5 – Maior número dentre assinantes");
+                    Console.WriteLine("6 – Gera uma série Fibonacci");
+                    Console.WriteLine("7 - Fatorial de um número");
+                    Console.WriteLine("8 – Equação do 2o gráu");
+                    Console.WriteLine("9 - Conversão de temperaturas");
+                    Console.WriteLine("10 - Termos de uma série");
+                    int escolha1 = Convert.ToInt32(Console.ReadLine());
+                    switch (escolha1)
+                    {
+                        case 1:
+                            ProdutoeAdicaoFracao();
+                            break;
+
+                        case 2:
+                            ComparacoNumeros();
+                            break;
+
+                        case 3:
+                            VolumeLata();
+                            break;
+
+                        case 4:
+                            MediaHarmonica();
+                            break;
+
+                        case 5:
+                            AceitaNumeros();
+                            break;
+
+                        case 6:
+                            Diferenca();
+                            break;
+
+                        case 7:
+                            MediaAluno();
+                            break;
+
+                        case 8:
+                            AreaQuadrado();
+                            break;
+
+                        case 9:
+                            Temperatura();
+                            break;
+
+                        case 10:
+                            NumeroAoQuadrado();
+                            break;
+                    }
+static void EX3()
+{
+    double formula = 0;
+    int parar = 1;
+    do { 
+        Console.WriteLine("qual o seu salario?");
+    double salario = Convert.ToDouble(Console.ReadLine());
+
+    Console.WriteLine("voce é homem ou mulher?");
+    string genero = Convert.ToString(Console.ReadLine());
+
+    Console.WriteLine("à quanto tempo você trabalha?Em anos");
+    int trabalho = Convert.ToInt32(Console.ReadLine());
+
+    if ((genero == "Homem" || genero == "homem") && trabalho >15)
+        {
+            formula = salario * 0.2 + salario;
+        }
+
+        if ((genero == "Mulher" || genero == "mulher") && trabalho > 10)
+        {
+            formula = salario * 0.25 + salario;
+        }
+        else
+        {
+            formula = salario+ 5000;
+        }
+
+        Console.WriteLine($"Seu salario é {formula}");
+
+        Console.WriteLine("digite 1 para parar");
+        int parou = Convert.ToInt32(Console.ReadLine());
+
+        if (parou!= 1)
+        {
+
+        }
+        else
+        {
+            parar = 0;
+        }
+}
+    while (parar == 1) ;    
+}
+
+static void EX4()
+{
+    int menorNumero = int.MaxValue; // Inicializa com o maior valor possível para int
+    int R = 0;
+
+    do
+    {
+        Console.WriteLine("Digite um número (ou digite 0 para sair):");
+        int num = Convert.ToInt32(Console.ReadLine());
+
+        // Verifica se o número digitado é menor que o menor número encontrado até agora
+        if (num < menorNumero)
+        {
+            menorNumero = num;
+        }
+
+
+
+    static void EX6()
+    {
+        Console.WriteLine("Quantos números da sequência de Fibonacci você deseja gerar?");
+        int n = Convert.ToInt32(Console.ReadLine());
+
+        int a = 0, b = 1;
+        int contador = 1;
+
+        Console.WriteLine("Sequência de Fibonacci:");
+
+        // Gerando e imprimindo a sequência
+        do
+        {
+            Console.WriteLine(a);
+            int temp = a + b;
+            a = b;
+            b = temp;
+
+            contador++;
+        } while (contador <= n);
+    }
+
+
+EX7();
+static void EX7()
+{
+    int soma = 1;
+    Console.WriteLine("Qual o número que deseja fatorar?");
+    int num = Convert.ToInt32 (Console.ReadLine());
+
+    for (int i = 1; i <=num; i++)
+    {
+        soma *= i;
+    }
+    Console.WriteLine($"a fatoração deu{soma}");
+}
+
+        Console.WriteLine("Deseja continuar? Digite 0 para sair ou outro número para continuar.");
+        R = Convert.ToInt32(Console.ReadLine());
+
+    } while (R != 0);
+
+static void EX8()
+{
+    int X = 1; 
+    do
+    { 
+        int resultado = (X * X) - (3 * X) - 4;
+        Console.WriteLine($"F({X}) = {resultado}");
+
+        X++;
+    }
+    while (X <= 10);
+    }
+
+
+    // Após sair do loop, exibe o menor número encontrado
+    Console.WriteLine($"O menor número digitado foi: {menorNumero}");
+}
+
+static void Temperatura()
+        {
+            float temperatura, c, f;
+            char unidade;
+
+            Console.WriteLine("qual a temperatura?");
+            temperatura = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("qual a unidade de medida?");
+            unidade = Char.ToUpper(Convert.ToChar(Console.ReadLine()));
+            f = (9 * temperatura) / 5 + 32;
+            c = (5 * (temperatura - 32)) / 9;
+            if (unidade == 'C' || unidade == 'c')
+            {
+                Console.WriteLine($" a temperatura é {f}");
+            }
+
+            if (unidade == 'F' || unidade == 'f')
+            {
+                Console.WriteLine($" a temperatura é {c}");
+            }
+
+        }
+
+
+
+        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+                    int escolha = Convert.ToInt32(Console.ReadLine());
+
+                    if (escolha == 2)
+                    {
+                        i = 0;
+                    }
+                    else
+                    {
+
+                    }
+                }
+            }
+
+            static void exercicio16()
+            {
+
+
+                int i = 1;
+                while (i > 0)
+                {
+
+                    Console.WriteLine("qual o exercicio");
+                    Console.WriteLine("1 – Lê idade e classifica categoria");
+                    Console.WriteLine("2 – Calcula medidas");
+                    Console.WriteLine("3 – Verifica uma escolha");
+                    Console.WriteLine("4 – Mostra como utilizar estruturas de seleção dupla e composta");
+                    Console.WriteLine("5 – Testando a instrução break");
+                    Console.WriteLine("6 – Compara números");
+                    Console.WriteLine("7 – Bônus salarial");
+                    Console.WriteLine("8 – Testando instrução break");
+                    Console.WriteLine("9 – Cálculo de áreas de figuras geométricas");
+                    Console.WriteLine("10 – Números de votos por candidatos");
+                   
+                    //EX1
+static void EX1()
+{
+    Console.WriteLine("Quantos anos vc tem");
+    int idade = Convert.ToInt32(Console.ReadLine());
+    switch (idade)
+    {
+        case 5:
+        case 6:
+        case 7: Console.WriteLine("Infantil A");
+            break;
+
+        case 8:
+        case 9:
+        case 10:
+        case 11:
+            Console.WriteLine("Infantil B");
+            break;
+
+        case 12:
+        case 13:
+            Console.WriteLine("Juvenil A");
+            break;
+
+        case 14:
+        case 15:
+        case 16:
+        case 17:
+            Console.WriteLine("Juvenil B");
+            break;
+
+        case > 17:
+            Console.WriteLine("Adulto");
+            break;
+    }
+}
+//EX1
+
+//EX2
+static void EX2()
+{
+    Console.WriteLine("Digite 1 para media harmonica, 2 para media aritimedica e 3 para media geometrica");
+    int mediaescolha = Convert.ToInt32(Console.ReadLine);
+    switch (mediaescolha)
+    {
+
+        case 1:
+            Console.WriteLine("qual a primeira nota");
+            int nota1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("qual a segunda nota");
+            int nota2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("qual a terceira nota");
+            int nota3 = Convert.ToInt32(Console.ReadLine());
+
+            int n = 3;
+
+            int formula = n / ((1 / nota1) + (1 / nota2) + (1 / nota3));
+            Console.WriteLine($" a media aritimedica é {formula}");
+            break;
+
+        case 2:
+            Console.WriteLine("qual a primeira nota");
+            int nota4 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("qual a segunda nota");
+            int nota5 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("qual a terceira nota");
+            int nota6 = Convert.ToInt32(Console.ReadLine());
+            
+            int formula2 = (nota4 + nota5  + nota6 ) /3;
+            Console.WriteLine($" a media ponderada é {formula2}");
+            break;
+
+            case 3:
+            Console.WriteLine("qual a primeira nota");
+            int nota7 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("qual a segunda nota");
+            int nota8 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("qual a terceira nota");
+            int nota9 = Convert.ToInt32(Console.ReadLine());
+
+            double formula3 = Math.Pow(nota7 * nota8 * nota9, 1.0 / 3.0);
+            Console.WriteLine($" a media ponderada é {formula3}");
+            break;
+    }
+}
+//EX2
+
+//EX3
+static void EX3()
+{
+    bool wheli = true;
+    do
+    {
+        Console.WriteLine("Qual a sua linguagem da programação");
+        string programacao = Console.ReadLine();
+        switch (programacao)
+        {
+            case "C":
+                Console.WriteLine("Escreva uma linha no seu programa");
+                String C = Console.ReadLine();
+                if (C == "Printf" || C == "Console.WriteLine()" || C == "Print")
+                {
+                    wheli = false;
+                    Console.WriteLine("Parabéns!!");
+                }
+                else
+                {
+                    Console.WriteLine("Isso não esta certo");
+                }
+                break;
+
+            case "Python":
+                Console.WriteLine("Escreva uma linha no seu programa");
+                String Python = Console.ReadLine();
+                if (Python == "print" ||  Python == "format" || Python == "f-strings")
+                {
+                    Console.WriteLine("Parabéns!!");
+                    wheli = false;
+                }
+
+                else
+                {
+                    Console.WriteLine("Isso não esta certo");
+                }
+                break;
+
+            case "Java":
+                Console.WriteLine("Escreva uma linha no seu programa");
+                String Java = Console.ReadLine();
+                if (Java == "System.out.printf")
+                { 
+                    wheli = false;
+                Console.WriteLine("Parabéns!!");
+        } else
+                {
+                    Console.WriteLine("Isso não esta certo");
+                }
+                break;
+        }
+    }
+    while (wheli == true);
+}
+//EX3
+
+static void EX5e8()
+{
+    bool boll = true;
+    
+    do
+    {
+        Console.WriteLine("quantos numeros vão ser rodados?");
+        int numrodado = Convert.ToInt32(Console.ReadLine());
+        for (int i =0; i<=numrodado; i++)
+        {
+            Console.WriteLine($"\n{i}");
+            Console.WriteLine("qual foi número digitado?");
+            int num = Convert.ToInt32(Console.ReadLine());
+            if (num!= i) {
+                boll = false;
+                break;
+            }
+        }
+    }while (boll);
+}
+
+                    //CaluloDeAreas
+                    static void CaluloDeAreas()
+        {
+            Console.WriteLine("voce deseja calcular a  area de qual forma?");
+            Console.WriteLine("1 – Cubo");
+            Console.WriteLine("2 – Hexagono");
+            Console.WriteLine("3 – triangulo");
+            int escolher = Convert.ToInt32(Console.ReadLine());
+            if (escolher == 1)
+            {
+                Console.WriteLine("qual o valor do primeiro lado do cubo?");
+                int l1 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("qual o valor do segundo lado do cubo?");
+                int l2 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("qual o valor do terceiro lado do cubo?");
+                int l3 = Convert.ToInt32(Console.ReadLine());
+                int formula = 6*(l1*l1);
+                Console.WriteLine($"A area do cubo é de : {formula}m²");
+                
+            }
+
+            if (escolher == 2)
+            {
+                Console.WriteLine("Qual o valor do comprimento de um lado do hexagono?");
+                int l1 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Qual o valor do apotema(meio do hexagono até um dos lados)?");
+                int apotema = Convert.ToInt32(Console.ReadLine());
+                int formula = (3/2) * apotema * l1;
+                Console.WriteLine($"A area do hexagono é de : {formula}m²");
+            }
+
+            if (escolher == 3)
+            {
+                Console.WriteLine("qual o valor da base do triangulo?");
+                int bases = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("qual a altura?");
+                int altura = Convert.ToInt32(Console.ReadLine());
+                int formula = (altura*bases)/ 2;
+                Console.WriteLine($"A area do triangulo é de : {formula}m²");
+            }
+
+            else
+            {
+                Console.WriteLine("Não é possivel");
+            }
+        }
