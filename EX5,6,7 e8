@@ -307,34 +307,69 @@ static void exercicio6()
         int escolha1 = Convert.ToInt32(Console.ReadLine());
         switch (escolha1)
         {
-            case 1:
-                ProdutoeAdicaoFracao();
-                break;
+                    case 1:
+        EX1();
+            break;
 
-            case 2:
-                ComparacoNumeros();
-                break;
+        case 2:
+        EX2();
+            break;
 
-            case 3:
-                VolumeLata();
-                break;
+        case 3:
+        EX3();
+            break;
 
-            case 4:
-                MediaHarmonica();
-                break;
+        case 4:
+        EX4();
+            break;
 
-            case 5:
-                AceitaNumeros();
-                break;
+        case 5:
+        EX5();
+            break;
 
-            case 6:
-                Diferenca();
-                break;
+        case 6:
+        EX6();
+            break;
 
-            case 7:
-                MediaAluno();
-                break;
-        }
+        case 7:
+        EX7();
+            break;
+    }
+
+static void EX1()
+{
+
+}
+
+static void EX2()
+{
+
+}
+
+static void EX3()
+{
+
+}
+
+static void EX4()
+{
+
+}
+
+static void EX5()
+{
+
+}
+
+static void EX6()
+{
+
+}
+
+static void EX7()
+{
+
+}
 
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
