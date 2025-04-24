@@ -51,23 +51,23 @@ static void exercicio5()
                 break;
 
             case 3:
-                VolumeLata();
+                EX3();
                 break;
 
             case 4:
-                MediaHarmonica();
+                EX4();
                 break;
 
             case 5:
-                AceitaNumeros();
+                EX5();
                 break;
 
             case 6:
-                Diferenca();
+                EX6();
                 break;
 
             case 7:
-                MediaAluno();
+                EX7();
                 break;
         }
 
@@ -75,7 +75,7 @@ static void exercicio5()
         {
             int valor = 0;
             Console.WriteLine("digite o primeiro numero");
-            int num1= Convert.ToInt32(Console.ReadLine());
+            int num1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("digite o segundo numero");
             int num2 = Convert.ToInt32(Console.ReadLine());
 
@@ -98,7 +98,7 @@ static void exercicio5()
             Console.WriteLine("o salario foi ajustado em quantos por cento?");
             double reajuste = Convert.ToDouble(Console.ReadLine());
 
-            double formula = (salario* (reajuste/100))+salario;
+            double formula = (salario * (reajuste / 100)) + salario;
 
             if (formula > salario)
             {
@@ -118,8 +118,164 @@ static void exercicio5()
 
         static void EX3()
         {
-
+            Console.WriteLine("Digite o numero");
+            int num = Convert.ToInt32(Console.ReadLine());
+            if (num<0)
+            {
+             Console.WriteLine($"deixando o número positivo {num * -1}");
+            }
+            else
+            {
+                Console.WriteLine("número já é positivo");
+            }
         }
+
+        static void EX4()
+        {
+            Console.WriteLine("Digite o valor de A:");
+            int A = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Digite o valor de B:");
+            int B = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Digite o valor de C:");
+            int C = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Digite o valor de D:");
+            int D = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Digite um número");
+            int num = Convert.ToInt32(Console.ReadLine());
+
+            if (num >= A && num <= B && num >= C && num <= D)
+            {
+                Console.WriteLine("número em ambos intervalos");
+            }
+
+            else
+            {
+                if (num >= A && num <= B)
+                {
+                    Console.WriteLine("número em intervalo[AB]");
+                }
+
+                if (num >= C && num <= D)
+                {
+                    Console.WriteLine("número em intervalo[CD]");
+                }
+
+                else if (num < C || num > B && num < A || num > D)
+                {
+                    Console.WriteLine("número em nenhum intervalo");
+                }
+            }
+        }
+
+        static void EX5()
+        {
+            double f(double x)
+            {
+                return 2 * Math.Pow(x, 2) - 4 * x + 12;
+            }
+
+            double g(double x)
+            {
+                return 1*Math.Pow(x, 2) - 8 * x -10;
+            }
+
+            Console.WriteLine("Digite um valor para x:");
+            double x = Convert.ToDouble(Console.ReadLine());
+
+            double formula = f(x) + g(x);
+            Console.WriteLine($"o resultado é: {formula}");
+        }
+
+        static void EX6()
+        {
+            int quantidade = 4;
+            int[] numeros = new int[quantidade];
+
+            for (int i = 0; i < 4; i++)
+            {
+                Console.Write($"Digite o {i + 1}º número: ");
+                numeros[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            foreach (int num in numeros)
+            {
+                if (num % 2 == 0)
+                {
+                    Console.WriteLine($"{num} é divisível por 2");
+                }
+                else
+                {
+                    Console.WriteLine($"{num} não é divisível por 2");
+                }
+                if (num % 3 == 0)
+                {
+                    Console.WriteLine($"{num} é divisível por 3");
+                }
+                else
+                {
+                    Console.WriteLine($"{num} não é divisível por 3");
+                }
+            }
+        }
+
+        static void EX7()
+        {
+            double a, b, c;
+
+            Console.WriteLine("Digite o lado A:");
+            a = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Digite o lado B:");
+            b = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Digite o lado C:");
+            c = Convert.ToDouble(Console.ReadLine());
+
+            // Ordenação dos lados em ordem decrescente
+            double maior = a, meio = b, menor = c;
+
+            if (maior < meio)
+            {
+                double temp = maior;
+                maior = meio;
+                meio = temp;
+            }
+
+            if (maior < menor)
+            {
+                double temp = maior;
+                maior = menor;
+                menor = temp;
+            }
+
+            if (meio < menor)
+            {
+                double temp = meio;
+                meio = menor;
+                menor = temp;
+            }
+
+            Console.WriteLine($"\nLados em ordem decrescente: {maior}, {meio}, {menor}");
+
+           
+            if (maior < meio + menor)
+            {
+                Console.WriteLine("Forma um triângulo.");
+
+                if (a == b && b == c)
+                    Console.WriteLine("Tipo: Triângulo Equilátero.");
+                else if (a == b || b == c || a == c)
+                    Console.WriteLine("Tipo: Triângulo Isósceles.");
+                else
+                    Console.WriteLine("Tipo: Triângulo Escaleno.");
+            }
+            else
+            {
+                Console.WriteLine("Não forma um triângulo.");
+            }
+        }
+    }
 
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
@@ -133,8 +289,6 @@ static void exercicio5()
 
         }
     }
-}
-
 
 static void exercicio6()
 {
