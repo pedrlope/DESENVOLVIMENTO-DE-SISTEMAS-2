@@ -5,6 +5,15 @@ Console.WriteLine("7 – Estrutura de Seleção While e Outras");
 Console.WriteLine("8 – Estrutura de Repetição While e outras");
 int exercicio = Convert.ToInt32(Console.ReadLine());
 
+if (exercicio == 5)
+{
+    exercicio5();
+}
+
+if (exercicio == 6)
+{
+    exercicio6();
+}
 
 if (exercicio == 7)
 {
@@ -34,11 +43,11 @@ static void exercicio5()
         switch (escolha1)
         {
             case 1:
-                ProdutoeAdicaoFracao();
+                EX1();
                 break;
 
             case 2:
-                ComparacoNumeros();
+                EX2();
                 break;
 
             case 3:
@@ -62,6 +71,56 @@ static void exercicio5()
                 break;
         }
 
+        static void EX1()
+        {
+            int valor = 0;
+            Console.WriteLine("digite o primeiro numero");
+            int num1= Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("digite o segundo numero");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+
+            valor = num1 - num2;
+            if (valor == 10)
+            {
+                Console.WriteLine("maior que 10");
+            }
+            else
+            {
+
+            }
+        }
+
+        static void EX2()
+        {
+            Console.WriteLine("digite o salario");
+            int salario = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("o salario foi ajustado em quantos por cento?");
+            double reajuste = Convert.ToDouble(Console.ReadLine());
+
+            double formula = (salario* (reajuste/100))+salario;
+
+            if (formula > salario)
+            {
+                Console.WriteLine($"O salario aumentou de {salario} para {formula}");
+            }
+
+            if (formula < salario)
+            {
+                Console.WriteLine($"O salario diminuiu de {salario} para {formula}");
+            }
+
+            else
+            {
+                Console.WriteLine("o salario não mudou");
+            }
+        }
+
+        static void EX3()
+        {
+
+        }
+
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
 
@@ -75,6 +134,7 @@ static void exercicio5()
         }
     }
 }
+
 
 static void exercicio6()
 {
