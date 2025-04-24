@@ -2,8 +2,7 @@
 using System.Diagnostics;
 
     Console.WriteLine("escolha o exercicio");
-    Console.WriteLine("7 – Estrutura de Seleção While e Outras");
-    Console.WriteLine("8 – Estrutura de Repetição While e outras");
+    
     Console.WriteLine("9 – Estrutura de Repetição IF, ELSE, While e outras");
     Console.WriteLine("10 – Estrutura de Repetição While e outras");
     Console.WriteLine("11 – Estrutura de Repetição While, For e outras");
@@ -13,16 +12,6 @@ using System.Diagnostics;
     Console.WriteLine("15 – Estrutura de Repetição Do /While e outras");
     Console.WriteLine("16 - Estrutura de Seleção Múltipla Switch e outras");
     int exercicio = Convert.ToInt32(Console.ReadLine());
-
-    if (exercicio == 7)
-    {
-        exercicio7();
-    }
-
-    if (exercicio == 8)
-    {
-        exercicio8();
-    }
 
     if (exercicio == 9)
     {
@@ -64,199 +53,7 @@ using System.Diagnostics;
         exercicio16();
     }
 
-            static void exercicio7()
-            {
-                int i = 1;
-                while (i > 0)
-                {
-
-                    Console.WriteLine("qual o exercicio");
-                    Console.WriteLine("1 - Calcula tabuada de número");
-                    Console.WriteLine("2 - Lê número e pede novos valores");
-                    Console.WriteLine("3 - Quadrado entre um intervalo");
-                    Console.WriteLine("4 - Determina idade e percentuais em pesquisa");
-                    Console.WriteLine("5 - Lê valores e verifica-os");
-                    Console.WriteLine("6 - Gera números e verifica divisores");
-                    Console.WriteLine("7 - Termos de PA");
-                    Console.WriteLine("8 - Calcula média Geral de alunos");
-                    int escolha1 = Convert.ToInt32(Console.ReadLine());
-                    switch (escolha1)
-                    {
-                        case 1:
-                            ProdutoeAdicaoFracao();
-                            break;
-
-                        case 2:
-                            ComparacoNumeros();
-                            break;
-
-                        case 3:
-                            VolumeLata();
-                            break;
-
-                        case 4:
-                            MediaHarmonica();
-                            break;
-
-                        case 5:
-                            AceitaNumeros();
-                            break;
-
-                        case 6:
-                            Diferenca();
-                            break;
-
-                        case 7:
-                            MediaAluno();
-                            break;
-
-                        case 8:
-                            MediaAluno();
-                            break;
-                    }
-
-//Tabuada
-static void Tabuada ()
-{
-    Console.WriteLine("qual o número que quer fazer a tabuada?");
-    int numero = Convert.ToInt32 (Console.ReadLine());
-
-    for (int i = 1; i <= 10; i++)
-    {
-        Console.WriteLine($"{i} X {numero} = {i * numero}");
-    }
-}
-//Tabuada
-
-//LerNumero
-static void LerNumero()
-{
-    bool car = true;
-    while ( car =true)
-    {
-        Console.WriteLine("qual o número?");
-        int numero = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("escreva sim para parar?");
-        string escolha = Convert.ToString(Console.ReadLine());
-        if (escolha == "sim")
-        {
-           car = false;
-        }
-    }
-    
-}
-//LerNumero
-
-//GeraNumeros
-static void GeraNumeros()
-{
-    for (float i = 10; i <= 100; i++)
-    {
-        if(i %11 ==5){
-            Console.WriteLine($"numero divisivel por 11 com resto 5: {i}");
-        }
-    }
-
-}
-//GeraNumeros
-
-//MediaTurma
-static void MediaTurma()
-{
-    Console.WriteLine("Qual o numero de alunos?");
-    int alunos = Convert.ToInt32 (Console.ReadLine());
-    double somaDasMedias = 0;
-
-    for (int i = 1; i<= alunos; i++)
-    {
-        Console.WriteLine($"Qual a media do aluno {i}");
-        int mediaAluno = Convert.ToInt32(Console.ReadLine());
-        somaDasMedias += mediaAluno;
-    }
-    double formula = somaDasMedias / alunos;
-    Console.WriteLine($"A media da clase = {formula}");
-    
-
-}
-//MediaTurma
-
-                    Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
-                    int escolha = Convert.ToInt32(Console.ReadLine());
-
-                    if (escolha == 2)
-                    {
-                        i = 0;
-                    }
-                    else
-                    {
-
-                    }
-                }
-            }
-
-            static void exercicio8()
-            {
-                int i = 1;
-                while (i > 0)
-                {
-
-                    Console.WriteLine("qual o exercicio");
-                    Console.WriteLine("1 - Apresenta valores em uma faixa de números");
-                    Console.WriteLine("2 - Calcula média de idades");
-                    Console.WriteLine("3 - Calcula população de um país");
-                    Console.WriteLine("4 - Média de uma turma de alunos");
-                    Console.WriteLine("5 - Soma dos primeiros números inteiros");
-                    Console.WriteLine("6 - Resultado de pesquisa");
-                    Console.WriteLine("7 - Potencias de um intervalo");
-                    Console.WriteLine("8 - Lê números em um intervalo");
-                    int escolha1 = Convert.ToInt32(Console.ReadLine());
-                    switch (escolha1)
-                    {
-                        case 1:
-                            ProdutoeAdicaoFracao();
-                            break;
-
-                        case 2:
-                            ComparacoNumeros();
-                            break;
-
-                        case 3:
-                            VolumeLata();
-                            break;
-
-                        case 4:
-                            MediaHarmonica();
-                            break;
-
-                        case 5:
-                            AceitaNumeros();
-                            break;
-
-                        case 6:
-                            Diferenca();
-                            break;
-
-                        case 7:
-                            MediaAluno();
-                            break;
-
-                        case 8:
-                            MediaAluno();
-                            break;
-                    }
-                    Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
-                    int escolha = Convert.ToInt32(Console.ReadLine());
-
-                    if (escolha == 2)
-                    {
-                        i = 0;
-                    }
-                    else
-                    {
-
-                    }
-                }
-            }
+            
 
             static void exercicio9()
             {
