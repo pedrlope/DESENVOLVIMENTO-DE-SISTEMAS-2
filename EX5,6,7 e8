@@ -307,71 +307,245 @@ static void exercicio6()
         int escolha1 = Convert.ToInt32(Console.ReadLine());
         switch (escolha1)
         {
-                    case 1:
-        EX1();
-            break;
+            case 1:
+            EX1();
+                break;
 
-        case 2:
-        EX2();
-            break;
+            case 2:
+            EX2();
+                break;
 
-        case 3:
-        EX3();
-            break;
+            case 3:
+            EX3();
+                break;
 
-        case 4:
-        EX4();
-            break;
+            case 4:
+            EX4();
+                break;
 
-        case 5:
-        EX5();
-            break;
+            case 5:
+            EX5();
+                break;
 
-        case 6:
-        EX6();
-            break;
+            case 6:
+            EX6();
+                break;
 
-        case 7:
-        EX7();
-            break;
+            case 7:
+            EX7();
+                break;
+        }
+
+    static void EX1()
+    {
+        Console.WriteLine("digite o salario");
+        int salario = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("o salario foi ajustado em quantos por cento?");
+        double reajuste = Convert.ToDouble(Console.ReadLine());
+
+        double formula = (salario * (reajuste / 100)) + salario;
+
+        if (formula > salario)
+        {
+            Console.WriteLine($"O salario aumentou de {salario} para {formula}");
+        }
+
+        if (formula < salario)
+        {
+            Console.WriteLine($"O salario diminuiu de {salario} para {formula}");
+        }
+
+        else
+        {
+            Console.WriteLine("o salario não mudou");
+        }
     }
 
-static void EX1()
-{
+    static void EX2()
+    {
+        Console.WriteLine("digite o primeiro numero");
+        int num1 = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("digite o primeiro numero");
+        int num2 = Convert.ToInt32(Console.ReadLine());
+
+        int soma = num1 + num2;
+
+        if (soma > 10)
+        {
+            int formula = soma +5;
+            Console.WriteLine($"soma dá mais que dez resultado:{formula}");
+        }
+
+        else
+        {
+            int formula = soma - 7;
+            Console.WriteLine($"soma dá menos que dez resultado:{formula}");
+        }
+
+    }
+
+    static void EX3()
+    {
+        Console.WriteLine("digite o a da função");
+        int a = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("digite o b da função");
+        int b = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("digite o c da função");
+        int c = Convert.ToInt32(Console.ReadLine());
+
+        double delta = Math.Pow(b, 2) - 4 * a * c;
+        double x1 = (-b + Math.Sqrt(delta))/2*a;
+        double x2 = (-b - Math.Sqrt(delta))/2*a;
+
+        if(delta<0)
+        {
+            Console.WriteLine("não há raizes");
+        }
+        Console.WriteLine($"x1 = {x1}");
+        Console.WriteLine($"x2 = {x2}");
+    }
+
+    static void EX4()
+    {
+        Console.WriteLine("Digite o primeiro número:");
+        int num1 = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Digite o segundo número:");
+        int num2 = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Digite o terceiro número:");
+        int num3 = Convert.ToInt32(Console.ReadLine());
+
+        int maior, medio, menor;
+
+        // Comparações
+        if (num1 >= num2 && num1 >= num3)
+        {
+            maior = num1;
+            if (num2 >= num3)
+            {
+                medio = num2;
+                menor = num3;
+            }
+            else
+            {
+                medio = num3;
+                menor = num2;
+            }
+        }
+        else if (num2 >= num1 && num2 >= num3)
+        {
+            maior = num2;
+            if (num1 >= num3)
+            {
+                medio = num1;
+                menor = num3;
+            }
+            else
+            {
+                medio = num3;
+                menor = num1;
+            }
+        }
+        else
+        {
+            maior = num3;
+            if (num1 >= num2)
+            {
+                medio = num1;
+                menor = num2;
+            }
+            else
+            {
+                medio = num2;
+                menor = num1;
+            }
+        }
+
+        Console.WriteLine($"Maior: {maior}");
+        Console.WriteLine($"Médio: {medio}");
+        Console.WriteLine($"Menor: {menor}");
+    
 
 }
 
-static void EX2()
-{
+    static void EX5()
+    {
+        Console.WriteLine("digite o salario");
+        double salario = Convert.ToDouble(Console.ReadLine());
 
-}
+        if (salario <= 2259.2)
+        {
+            Console.WriteLine($"o imposto de renda é nulo");
+        }
 
-static void EX3()
-{
+        if (salario> 2259.2)
+            {
+            if (salario <= 2826.65){
+                Console.WriteLine($"o imposto de renda é {salario * 0.075}");
+            }
+            if(salario> 2826.65 && salario<= 3751.05)
+            {
+                Console.WriteLine($"o imposto de renda é {salario * 0.15}");
+            }
 
-}
+            if (salario <= 4664.68)
+            {
+                Console.WriteLine($"o imposto de renda é {salario * 0.225}");
+            }
 
-static void EX4()
-{
+            if (salario > 4664.68)
+            {
+                Console.WriteLine($"o imposto de renda é {salario * 0.275}");
+            }
+        }
+   
+    }
 
-}
+    static void EX6()
+    {
+        Console.WriteLine("digite o salario");
+        int salario = Convert.ToInt32(Console.ReadLine());
 
-static void EX5()
-{
+        Console.WriteLine("o salario foi ajustado em quantos por cento?");
+        double reajuste = Convert.ToDouble(Console.ReadLine());
 
-}
+        double formula = (salario * (reajuste / 100)) + salario;
 
-static void EX6()
-{
+        if (formula > salario)
+        {
+            Console.WriteLine($"O salario aumentou de {salario} para {formula}");
+        }
 
-}
+        if (formula < salario)
+        {
+            Console.WriteLine($"O salario diminuiu de {salario} para {formula}");
+        }
 
-static void EX7()
-{
+        else
+        {
+            Console.WriteLine("o salario não mudou");
+        }
+    }
 
-}
+    static void EX7()
+    {
+        Console.WriteLine("Digite um número:");
+        int numero = Convert.ToInt32(Console.ReadLine());
 
-        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+        if (!(numero <= 5))
+        {
+            Console.WriteLine("O número é maior que 5.");
+            
+        }
+        else
+        {
+            Console.WriteLine("O número é menor ou igual a 5.");
+        }
+    }
+
+    Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
 
         if (escolha == 2)
@@ -379,8 +553,10 @@ static void EX7()
             i = 0;
         }
         else
-            }
-}
+        {
+
+        }
+    }
 
             static void exercicio7()
 {
