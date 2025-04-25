@@ -563,6 +563,143 @@ static void exercicio8()
                 MediaAluno();
                 break;
         }
+static void EX1()
+{
+int i = 1;
+while (i <= 20)
+{
+    Console.WriteLine(i);
+    i += 2;
+}
+
+}
+
+static  void  EX2()
+{
+  int soma = 0, idade, contador = 0;
+
+Console.WriteLine("Digite as idades (digite idade negativa para encerrar):");
+
+while (true)
+{
+    idade = Convert.ToInt32(Console.ReadLine());
+
+    if (idade < 0)
+        break;
+
+    soma += idade;
+    contador++;
+}
+
+if (contador > 0)
+{
+    double media = (double)soma / contador;
+    Console.WriteLine($"Média das idades: {media}");
+}
+else
+{
+    Console.WriteLine("Nenhuma idade válida foi informada.");
+}
+
+}
+
+static  void  EX3()
+{
+ double paisA = 5000000, paisB = 7000000;
+int anos = 0;
+
+while (paisA <= paisB)
+{
+    paisA += paisA * 0.03;
+    paisB += paisB * 0.02;
+    anos++;
+}
+
+Console.WriteLine($"Levará {anos} anos para que o País A ultrapasse ou iguale o País B.");
+
+}
+
+static  void  EX4()
+{
+ int soma = 0, contador = 1;
+
+while (contador <= 20)
+{
+    Console.Write($"Digite a nota do aluno {contador}: ");
+    int nota = Convert.ToInt32(Console.ReadLine());
+    soma += nota;
+    contador++;
+}
+
+double media = (double)soma / 20;
+Console.WriteLine($"Média da turma: {media}");
+
+}
+
+static  void  EX5()
+{
+ int formula = (1+100)*50
+ Console.WriteLine($"a soma de 1 a 100 é {formula}");
+}
+
+static  void  EX6()
+{
+ int sim = 0, nao = 0, entrevistado = 1;
+
+while (entrevistado <= 500)
+{
+    Console.Write($"Pessoa {entrevistado} – Gostou do produto? (s/n): ");
+    string resposta = Console.ReadLine().ToLower();
+
+    if (resposta == "s")
+        sim++;
+    else if (resposta == "n")
+        nao++;
+
+    entrevistado++;
+}
+
+Console.WriteLine($"Total que responderam 'sim': {sim}");
+Console.WriteLine($"Total que responderam 'não': {nao}");
+if(nao<sim)
+{
+Console.WriteLine($"A maioria respondeu com nao");
+}
+else
+{
+Console.WriteLine($"A maioria respondeu com sim");
+}
+}
+
+static  void  EX7()
+{
+ int expoente = 0;
+
+while (expoente <= 15)
+{
+    double potencia = Math.Pow(3, expoente);
+    Console.WriteLine($"3^{expoente} = {potencia}");
+    expoente++;
+}
+
+}
+
+static  void  EX8()
+{
+Console.Write("Digite um número menor ou igual a 50: ");
+int n = Convert.ToInt32(Console.ReadLine());
+int resultado = n;
+
+while (resultado < 250)
+{
+    Console.WriteLine($"Resultado: {resultado}");
+    resultado *= 3;
+}
+
+}
+
+
+
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
 
