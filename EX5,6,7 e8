@@ -1,3 +1,5 @@
+using System.Data;
+
 Console.WriteLine("escolha o exercicio");
 Console.WriteLine("5 – Estrutura de Seleção IF e IF / ELSE");
 Console.WriteLine("6 – Estrutura de Seleção IF e IF / ELSE");
@@ -79,8 +81,8 @@ static void exercicio5()
             Console.WriteLine("digite o segundo numero");
             int num2 = Convert.ToInt32(Console.ReadLine());
 
-            valor = num1 - num2;
-            if (valor == 10)
+            valor = num1 + num2;
+            if (valor > 10)
             {
                 Console.WriteLine("maior que 10");
             }
@@ -120,9 +122,9 @@ static void exercicio5()
         {
             Console.WriteLine("Digite o numero");
             int num = Convert.ToInt32(Console.ReadLine());
-            if (num<0)
+            if (num < 0)
             {
-             Console.WriteLine($"deixando o número positivo {num * -1}");
+                Console.WriteLine($"deixando o número positivo {num * -1}");
             }
             else
             {
@@ -177,7 +179,7 @@ static void exercicio5()
 
             double g(double x)
             {
-                return 1*Math.Pow(x, 2) - 8 * x -10;
+                return 1 * Math.Pow(x, 2) - 8 * x - 10;
             }
 
             Console.WriteLine("Digite um valor para x:");
@@ -232,7 +234,7 @@ static void exercicio5()
             Console.WriteLine("Digite o lado C:");
             c = Convert.ToDouble(Console.ReadLine());
 
-            // Ordenação dos lados em ordem decrescente
+
             double maior = a, meio = b, menor = c;
 
             if (maior < meio)
@@ -258,7 +260,7 @@ static void exercicio5()
 
             Console.WriteLine($"\nLados em ordem decrescente: {maior}, {meio}, {menor}");
 
-           
+
             if (maior < meio + menor)
             {
                 Console.WriteLine("Forma um triângulo.");
@@ -277,18 +279,18 @@ static void exercicio5()
         }
     }
 
-        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
-        int escolha = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+    int escolha = Convert.ToInt32(Console.ReadLine());
 
-        if (escolha == 2)
-        {
-            i = 0;
-        }
-        else
-        {
-
-        }
+    if (escolha == 2)
+    {
+        i = 0;
     }
+    else
+    {
+
+    }
+}
 
 static void exercicio6()
 {
@@ -304,275 +306,6 @@ static void exercicio6()
         Console.WriteLine("5 - Calcula Imposto de Renda");
         Console.WriteLine("6 - Reajusta salário");
         Console.WriteLine("7 - Verifica número");
-        int escolha1 = Convert.ToInt32(Console.ReadLine());
-        switch (escolha1)
-        {
-            case 1:
-            EX1();
-                break;
-
-            case 2:
-            EX2();
-                break;
-
-            case 3:
-            EX3();
-                break;
-
-            case 4:
-            EX4();
-                break;
-
-            case 5:
-            EX5();
-                break;
-
-            case 6:
-            EX6();
-                break;
-
-            case 7:
-            EX7();
-                break;
-        }
-
-    static void EX1()
-    {
-        Console.WriteLine("digite o salario");
-        int salario = Convert.ToInt32(Console.ReadLine());
-
-        Console.WriteLine("o salario foi ajustado em quantos por cento?");
-        double reajuste = Convert.ToDouble(Console.ReadLine());
-
-        double formula = (salario * (reajuste / 100)) + salario;
-
-        if (formula > salario)
-        {
-            Console.WriteLine($"O salario aumentou de {salario} para {formula}");
-        }
-
-        if (formula < salario)
-        {
-            Console.WriteLine($"O salario diminuiu de {salario} para {formula}");
-        }
-
-        else
-        {
-            Console.WriteLine("o salario não mudou");
-        }
-    }
-
-    static void EX2()
-    {
-        Console.WriteLine("digite o primeiro numero");
-        int num1 = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("digite o primeiro numero");
-        int num2 = Convert.ToInt32(Console.ReadLine());
-
-        int soma = num1 + num2;
-
-        if (soma > 10)
-        {
-            int formula = soma +5;
-            Console.WriteLine($"soma dá mais que dez resultado:{formula}");
-        }
-
-        else
-        {
-            int formula = soma - 7;
-            Console.WriteLine($"soma dá menos que dez resultado:{formula}");
-        }
-
-    }
-
-    static void EX3()
-    {
-        Console.WriteLine("digite o a da função");
-        int a = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("digite o b da função");
-        int b = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("digite o c da função");
-        int c = Convert.ToInt32(Console.ReadLine());
-
-        double delta = Math.Pow(b, 2) - 4 * a * c;
-        double x1 = (-b + Math.Sqrt(delta))/2*a;
-        double x2 = (-b - Math.Sqrt(delta))/2*a;
-
-        if(delta<0)
-        {
-            Console.WriteLine("não há raizes");
-        }
-        Console.WriteLine($"x1 = {x1}");
-        Console.WriteLine($"x2 = {x2}");
-    }
-
-    static void EX4()
-    {
-        Console.WriteLine("Digite o primeiro número:");
-        int num1 = Convert.ToInt32(Console.ReadLine());
-
-        Console.WriteLine("Digite o segundo número:");
-        int num2 = Convert.ToInt32(Console.ReadLine());
-
-        Console.WriteLine("Digite o terceiro número:");
-        int num3 = Convert.ToInt32(Console.ReadLine());
-
-        int maior, medio, menor;
-
-        // Comparações
-        if (num1 >= num2 && num1 >= num3)
-        {
-            maior = num1;
-            if (num2 >= num3)
-            {
-                medio = num2;
-                menor = num3;
-            }
-            else
-            {
-                medio = num3;
-                menor = num2;
-            }
-        }
-        else if (num2 >= num1 && num2 >= num3)
-        {
-            maior = num2;
-            if (num1 >= num3)
-            {
-                medio = num1;
-                menor = num3;
-            }
-            else
-            {
-                medio = num3;
-                menor = num1;
-            }
-        }
-        else
-        {
-            maior = num3;
-            if (num1 >= num2)
-            {
-                medio = num1;
-                menor = num2;
-            }
-            else
-            {
-                medio = num2;
-                menor = num1;
-            }
-        }
-
-        Console.WriteLine($"Maior: {maior}");
-        Console.WriteLine($"Médio: {medio}");
-        Console.WriteLine($"Menor: {menor}");
-    
-
-}
-
-    static void EX5()
-    {
-        Console.WriteLine("digite o salario");
-        double salario = Convert.ToDouble(Console.ReadLine());
-
-        if (salario <= 2259.2)
-        {
-            Console.WriteLine($"o imposto de renda é nulo");
-        }
-
-        if (salario> 2259.2)
-            {
-            if (salario <= 2826.65){
-                Console.WriteLine($"o imposto de renda é {salario * 0.075}");
-            }
-            if(salario> 2826.65 && salario<= 3751.05)
-            {
-                Console.WriteLine($"o imposto de renda é {salario * 0.15}");
-            }
-
-            if (salario <= 4664.68)
-            {
-                Console.WriteLine($"o imposto de renda é {salario * 0.225}");
-            }
-
-            if (salario > 4664.68)
-            {
-                Console.WriteLine($"o imposto de renda é {salario * 0.275}");
-            }
-        }
-   
-    }
-
-    static void EX6()
-    {
-        Console.WriteLine("digite o salario");
-        int salario = Convert.ToInt32(Console.ReadLine());
-
-        Console.WriteLine("o salario foi ajustado em quantos por cento?");
-        double reajuste = Convert.ToDouble(Console.ReadLine());
-
-        double formula = (salario * (reajuste / 100)) + salario;
-
-        if (formula > salario)
-        {
-            Console.WriteLine($"O salario aumentou de {salario} para {formula}");
-        }
-
-        if (formula < salario)
-        {
-            Console.WriteLine($"O salario diminuiu de {salario} para {formula}");
-        }
-
-        else
-        {
-            Console.WriteLine("o salario não mudou");
-        }
-    }
-
-    static void EX7()
-    {
-        Console.WriteLine("Digite um número:");
-        int numero = Convert.ToInt32(Console.ReadLine());
-
-        if (!(numero <= 5))
-        {
-            Console.WriteLine("O número é maior que 5.");
-            
-        }
-        else
-        {
-            Console.WriteLine("O número é menor ou igual a 5.");
-        }
-    }
-
-    Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
-        int escolha = Convert.ToInt32(Console.ReadLine());
-
-        if (escolha == 2)
-        {
-            i = 0;
-        }
-        else
-        {
-
-        }
-    }
-
-           static void exercicio7()
-{
-    int i = 1;
-    while (i > 0)
-    {
-
-        Console.WriteLine("qual o exercicio");
-        Console.WriteLine("1 - Calcula tabuada de número");
-        Console.WriteLine("2 - Lê número e pede novos valores");
-        Console.WriteLine("3 - Quadrado entre um intervalo");
-        Console.WriteLine("4 - Determina idade e percentuais em pesquisa");
-        Console.WriteLine("5 - Lê valores e verifica-os");
-        Console.WriteLine("6 - Gera números e verifica divisores");
-        Console.WriteLine("7 - Termos de PA");
-        Console.WriteLine("8 - Calcula média Geral de alunos");
         int escolha1 = Convert.ToInt32(Console.ReadLine());
         switch (escolha1)
         {
@@ -603,105 +336,362 @@ static void exercicio6()
             case 7:
                 EX7();
                 break;
-
-            case 8:
-                EX8();
-                break;
         }
 
-        //Tabuada
         static void EX1()
         {
-            Console.WriteLine("qual o número que quer fazer a tabuada?");
-            int numero = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("digite o seu nome");
+            string nome = Console.ReadLine();
 
-            for (int i = 1; i <= 10; i++)
-            {
-                Console.WriteLine($"{i} X {numero} = {i * numero}");
-            }
+            Console.WriteLine("digite o seu sexo");
+            string sexo = Console.ReadLine();
+
+            Console.WriteLine($"seu nome é:{nome} e seu sexo é:{sexo}");
+
         }
-        //Tabuada
 
-        //LerNumero
         static void EX2()
         {
-            bool car = true;
-            while (car == true)
+            Console.WriteLine("digite o primeiro numero");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("digite o primeiro numero");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+
+            int soma = num1 + num2;
+
+            if (soma > 10)
             {
-                Console.WriteLine("qual o número?");
-                int numero = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("escreva sim para parar?");
-                string escolha = Convert.ToString(Console.ReadLine());
-                if (escolha == "sim")
-                {
-                    car = false;
-                }
+                int formula = soma + 5;
+                Console.WriteLine($"soma dá mais que dez resultado:{formula}");
+            }
+
+            else
+            {
+                int formula = soma - 7;
+                Console.WriteLine($"soma dá menos que dez resultado:{formula}");
             }
 
         }
 
         static void EX3()
         {
-            int i = 1;
-            while (i <= 20)
+            Console.WriteLine("digite o a da função");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("digite o b da função");
+            int b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("digite o c da função");
+            int c = Convert.ToInt32(Console.ReadLine());
+
+            double delta = Math.Pow(b, 2) - 4 * a * c;
+            double x1 = (-b + Math.Sqrt(delta)) / (2 * a);
+            double x2 = (-b - Math.Sqrt(delta)) / (2 * a);
+
+            if (delta < 0)
             {
-                int quadrado = i * i;
-                Console.WriteLine($"O quadrado de {i} é {quadrado}");
-                i++;
+                Console.WriteLine("não há raizes");
             }
+            Console.WriteLine($"x1 = {x1}");
+            Console.WriteLine($"x2 = {x2}");
         }
 
         static void EX4()
         {
-            Console.WriteLine("digite a quantidade de pessoas que vai fazer a pesquisa");
-            int pesquisa = Convert.ToInt32(Console.ReadLine());
-            double contador = 0;
-            for (int i = 1; i <= pesquisa; i++)
+            Console.WriteLine("Digite o primeiro número:");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Digite o segundo número:");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Digite o terceiro número:");
+            int num3 = Convert.ToInt32(Console.ReadLine());
+
+            int maior, medio, menor;
+
+
+            if (num1 >= num2 && num1 >= num3)
             {
-
-
-                Console.WriteLine("digite a sua idade");
-                int idade = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("digite a sua cor de cabelo");
-                string cabelo = (Console.ReadLine());
-                Console.WriteLine("digite a sua cor do seu olho");
-                string olhos = Convert.ToString(Console.ReadLine());
-
-
-                if (idade >= 18 && idade <= 35)
+                maior = num1;
+                if (num2 >= num3)
                 {
-                    if (cabelo.ToLower() == "loiros")
+                    medio = num2;
+                    menor = num3;
+                }
+                else
+                {
+                    medio = num3;
+                    menor = num2;
+                }
+            }
+            else if (num2 >= num1 && num2 >= num3)
+            {
+                maior = num2;
+                if (num1 >= num3)
+                {
+                    medio = num1;
+                    menor = num3;
+                }
+                else
+                {
+                    medio = num3;
+                    menor = num1;
+                }
+            }
+            else
+            {
+                maior = num3;
+                if (num1 >= num2)
+                {
+                    medio = num1;
+                    menor = num2;
+                }
+                else
+                {
+                    medio = num2;
+                    menor = num1;
+                }
+            }
+
+            Console.WriteLine($"Maior: {maior}");
+            Console.WriteLine($"Médio: {medio}");
+            Console.WriteLine($"Menor: {menor}");
+
+
+        }
+
+        static void EX5()
+        {
+            Console.WriteLine("digite o salario");
+            double salario = Convert.ToDouble(Console.ReadLine());
+
+            if (salario <= 2259.2)
+            {
+                Console.WriteLine($"o imposto de renda é nulo");
+            }
+
+            if (salario > 2259.2)
+            {
+                if (salario <= 2826.65)
+                {
+                    Console.WriteLine($"o imposto de renda é {salario * 0.075}");
+                }
+                if (salario > 2826.65 && salario <= 3751.05)
+                {
+                    Console.WriteLine($"o imposto de renda é {salario * 0.15}");
+                }
+
+                else if (salario <= 4664.68)
+                {
+                    Console.WriteLine($"o imposto de renda é {salario * 0.225}");
+                }
+
+                else
+                {
+                    Console.WriteLine($"o imposto de renda é {salario * 0.275}");
+                }
+            }
+
+        }
+
+        static void EX6()
+        {
+            Console.WriteLine("digite o salario");
+            int salario = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("o salario foi ajustado em quantos por cento?");
+            double reajuste = Convert.ToDouble(Console.ReadLine());
+
+            double formula = (salario * (reajuste / 100)) + salario;
+
+            if (formula > salario)
+            {
+                Console.WriteLine($"O salario aumentou de {salario} para {formula}");
+            }
+
+            if (formula < salario)
+            {
+                Console.WriteLine($"O salario diminuiu de {salario} para {formula}");
+            }
+
+            else
+            {
+                Console.WriteLine("o salario não mudou");
+            }
+        }
+
+        static void EX7()
+        {
+            Console.WriteLine("Digite um número:");
+            int numero = Convert.ToInt32(Console.ReadLine());
+
+            if (!(numero <= 5))
+            {
+                Console.WriteLine("O número é maior que 5.");
+
+            }
+            else
+            {
+                Console.WriteLine("O número é menor ou igual a 5.");
+            }
+        }
+
+        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+        int escolha = Convert.ToInt32(Console.ReadLine());
+
+        if (escolha == 2)
+        {
+            i = 0;
+        }
+        else
+        {
+
+        }
+    }
+}
+
+    static void exercicio7()
+    {
+        int i = 1;
+        while (i > 0)
+        {
+
+            Console.WriteLine("qual o exercicio");
+            Console.WriteLine("1 - Calcula tabuada de número");
+            Console.WriteLine("2 - Lê número e pede novos valores");
+            Console.WriteLine("3 - Quadrado entre um intervalo");
+            Console.WriteLine("4 - Determina idade e percentuais em pesquisa");
+            Console.WriteLine("5 - Lê valores e verifica-os");
+            Console.WriteLine("6 - Gera números e verifica divisores");
+            Console.WriteLine("7 - Termos de PA");
+            Console.WriteLine("8 - Calcula média Geral de alunos");
+            int escolha1 = Convert.ToInt32(Console.ReadLine());
+            switch (escolha1)
+            {
+                case 1:
+                    EX1();
+                    break;
+
+                case 2:
+                    EX2();
+                    break;
+
+                case 3:
+                    EX3();
+                    break;
+
+                case 4:
+                    EX4();
+                    break;
+
+                case 5:
+                    EX5();
+                    break;
+
+                case 6:
+                    EX6();
+                    break;
+
+                case 7:
+                    EX7();
+                    break;
+
+                case 8:
+                    EX8();
+                    break;
+            }
+
+            //Tabuada
+            static void EX1()
+            {
+                Console.WriteLine("qual o número que quer fazer a tabuada?");
+                int numero = Convert.ToInt32(Console.ReadLine());
+
+                for (int i = 1; i <= 10; i++)
+                {
+                    Console.WriteLine($"{i} X {numero} = {i * numero}");
+                }
+            }
+            //Tabuada
+
+            //LerNumero
+            static void EX2()
+            {
+                bool car = true;
+                while (car == true)
+                {
+                    Console.WriteLine("qual o número?");
+                    int numero = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("escreva sim para parar?");
+                    string escolha = Convert.ToString(Console.ReadLine());
+                    if (escolha == "sim")
                     {
-                        if (olhos.ToLower() == "verde")
+                        car = false;
+                    }
+                }
+
+            }
+
+            static void EX3()
+            {
+                int i = 1;
+                while (i <= 20)
+                {
+                    int quadrado = i * i;
+                    Console.WriteLine($"O quadrado de {i} é {quadrado}");
+                    i++;
+                }
+            }
+
+            static void EX4()
+            {
+                Console.WriteLine("digite a quantidade de pessoas que vai fazer a pesquisa");
+                int pesquisa = Convert.ToInt32(Console.ReadLine());
+                double contador = 0;
+                for (int i = 1; i <= pesquisa; i++)
+                {
+
+
+                    Console.WriteLine("digite a sua idade");
+                    int idade = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("digite a sua cor de cabelo");
+                    string cabelo = (Console.ReadLine());
+                    Console.WriteLine("digite a sua cor do seu olho");
+                    string olhos = Convert.ToString(Console.ReadLine());
+
+
+                    if (idade >= 18 && idade <= 35)
+                    {
+                        if (cabelo.ToLower() == "loiros")
                         {
-                            contador++;
+                            if (olhos.ToLower() == "verde")
+                            {
+                                contador++;
+                            }
                         }
                     }
                 }
+                double porcentagem = (contador / pesquisa) * 100;
+                Console.WriteLine($"A porcentagem de mulheres de 18 a 35 anos loiras de olhos verdes é de:{porcentagem}");
             }
-            double porcentagem = (contador / pesquisa)*100;
-            Console.WriteLine($"A porcentagem de mulheres de 18 a 35 anos loiras de olhos verdes é de:{porcentagem}");
-        }
-        static void EX5()
+            static void EX5()
             {
-            int contador = 0;
-            int i = 1;
+                int contador = 0;
+                int i = 1;
 
-            while (i <= 5)
-            {
-                Console.WriteLine($"Digite o {i}º número:");
-                int numero = Convert.ToInt32(Console.ReadLine());
-
-                if (numero < 0)
+                while (i <= 5)
                 {
-                    contador++;
+                    Console.WriteLine($"Digite o {i}º número:");
+                    int numero = Convert.ToInt32(Console.ReadLine());
+
+                    if (numero < 0)
+                    {
+                        contador++;
+                    }
+
+                    i++;
                 }
 
-                i++;
+                Console.WriteLine($"Quantidade de valores negativos: {contador}");
             }
-
-            Console.WriteLine($"Quantidade de valores negativos: {contador}");
-        }
 
 
             //LerNumero
@@ -720,26 +710,26 @@ static void exercicio6()
             }
             //GeraNumeros
 
+           
+
             static void EX7()
             {
+                Console.WriteLine("Digite o primeiro termo da PA:");
+                int a1 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Digite a razão da PA:");
+                int r = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Digite o número de termos:");
+                int n = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Digite a razão da PA:");
-            int r = Convert.ToInt32(Console.ReadLine());
+                for (int i = 1; i <= n; i++)
+                {
+                    int termo = a1 + (i - 1) * r;
+                    Console.WriteLine($"Termo {i} = {termo}");
+                }
+             }
 
-            Console.WriteLine("Digite o número de termos:");
-            int n = Convert.ToInt32(Console.ReadLine());
-            int num1 = n-(n-1);
-
-            int i = 0;
-            while (i < n)
-            {
-                int formula = num1 + (r * n);
-                Console.WriteLine($"termo{i+1} = {formula}");
-            }
-        }
-
-            //MediaTurma
-            static void EX8()
+        //MediaTurma
+        static void EX8()
             {
                 Console.WriteLine("Qual o numero de alunos?");
                 int alunos = Convert.ToInt32(Console.ReadLine());
@@ -772,203 +762,204 @@ static void exercicio6()
         }
     }
 
-static void exercicio8()
-{
-    int i = 1;
-    while (i > 0)
+    static void exercicio8()
     {
-
-        Console.WriteLine("qual o exercicio");
-        Console.WriteLine("1 - Apresenta valores em uma faixa de números");
-        Console.WriteLine("2 - Calcula média de idades");
-        Console.WriteLine("3 - Calcula população de um país");
-        Console.WriteLine("4 - Média de uma turma de alunos");
-        Console.WriteLine("5 - Soma dos primeiros números inteiros");
-        Console.WriteLine("6 - Resultado de pesquisa");
-        Console.WriteLine("7 - Potencias de um intervalo");
-        Console.WriteLine("8 - Lê números em um intervalo");
-        int escolha1 = Convert.ToInt32(Console.ReadLine());
-        switch (escolha1)
-        {
-            case 1:
-                ProdutoeAdicaoFracao();
-                break;
-
-            case 2:
-                ComparacoNumeros();
-                break;
-
-            case 3:
-                VolumeLata();
-                break;
-
-            case 4:
-                MediaHarmonica();
-                break;
-
-            case 5:
-                AceitaNumeros();
-                break;
-
-            case 6:
-                Diferenca();
-                break;
-
-            case 7:
-                MediaAluno();
-                break;
-
-            case 8:
-                MediaAluno();
-                break;
-        }
-static void EX1()
-{
-int i = 1;
-while (i <= 20)
-{
-    Console.WriteLine(i);
-    i += 2;
-}
-
-}
-
-static  void  EX2()
-{
-  int soma = 0, idade, contador = 0;
-
-Console.WriteLine("Digite as idades (digite idade negativa para encerrar):");
-
-while (true)
-{
-    idade = Convert.ToInt32(Console.ReadLine());
-
-    if (idade < 0)
-        break;
-
-    soma += idade;
-    contador++;
-}
-
-if (contador > 0)
-{
-    double media = (double)soma / contador;
-    Console.WriteLine($"Média das idades: {media}");
-}
-else
-{
-    Console.WriteLine("Nenhuma idade válida foi informada.");
-}
-
-}
-
-static  void  EX3()
-{
- double paisA = 5000000, paisB = 7000000;
-int anos = 0;
-
-while (paisA <= paisB)
-{
-    paisA += paisA * 0.03;
-    paisB += paisB * 0.02;
-    anos++;
-}
-
-Console.WriteLine($"Levará {anos} anos para que o País A ultrapasse ou iguale o País B.");
-
-}
-
-static  void  EX4()
-{
- int soma = 0, contador = 1;
-
-while (contador <= 20)
-{
-    Console.Write($"Digite a nota do aluno {contador}: ");
-    int nota = Convert.ToInt32(Console.ReadLine());
-    soma += nota;
-    contador++;
-}
-
-double media = (double)soma / 20;
-Console.WriteLine($"Média da turma: {media}");
-
-}
-
-static  void  EX5()
-{
- int formula = (1+100)*50
- Console.WriteLine($"a soma de 1 a 100 é {formula}");
-}
-
-static  void  EX6()
-{
- int sim = 0, nao = 0, entrevistado = 1;
-
-while (entrevistado <= 500)
-{
-    Console.Write($"Pessoa {entrevistado} – Gostou do produto? (s/n): ");
-    string resposta = Console.ReadLine().ToLower();
-
-    if (resposta == "s")
-        sim++;
-    else if (resposta == "n")
-        nao++;
-
-    entrevistado++;
-}
-
-Console.WriteLine($"Total que responderam 'sim': {sim}");
-Console.WriteLine($"Total que responderam 'não': {nao}");
-if(nao<sim)
-{
-Console.WriteLine($"A maioria respondeu com nao");
-}
-else
-{
-Console.WriteLine($"A maioria respondeu com sim");
-}
-}
-
-static  void  EX7()
-{
- int expoente = 0;
-
-while (expoente <= 15)
-{
-    double potencia = Math.Pow(3, expoente);
-    Console.WriteLine($"3^{expoente} = {potencia}");
-    expoente++;
-}
-
-}
-
-static  void  EX8()
-{
-Console.Write("Digite um número menor ou igual a 50: ");
-int n = Convert.ToInt32(Console.ReadLine());
-int resultado = n;
-
-while (resultado < 250)
-{
-    Console.WriteLine($"Resultado: {resultado}");
-    resultado *= 3;
-}
-
-}
-
-
-
-        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
-        int escolha = Convert.ToInt32(Console.ReadLine());
-
-        if (escolha == 2)
-        {
-            i = 0;
-        }
-        else
+        int i = 1;
+        while (i > 0)
         {
 
+            Console.WriteLine("qual o exercicio");
+            Console.WriteLine("1 - Apresenta valores em uma faixa de números");
+            Console.WriteLine("2 - Calcula média de idades");
+            Console.WriteLine("3 - Calcula população de um país");
+            Console.WriteLine("4 - Média de uma turma de alunos");
+            Console.WriteLine("5 - Soma dos primeiros números inteiros");
+            Console.WriteLine("6 - Resultado de pesquisa");
+            Console.WriteLine("7 - Potencias de um intervalo");
+            Console.WriteLine("8 - Lê números em um intervalo");
+            int escolha1 = Convert.ToInt32(Console.ReadLine());
+            switch (escolha1)
+            {
+                case 1:
+                EX1();
+                    break;
+
+                case 2:
+                EX2();
+                    break;
+
+                case 3:
+                EX3();
+                    break;
+
+                case 4:
+                EX4();
+                    break;
+
+                case 5:
+                EX5();
+                    break;
+
+                case 6:
+                EX6();
+                    break;
+
+                case 7:
+                EX7();
+                    break;
+
+                case 8:
+                EX8();
+                    break;
+            }
+            static void EX1()
+            {
+                int i = 1;
+                while (i <= 20)
+                {
+                    Console.WriteLine(i);
+                    i += 2;
+                }
+
+            }
+
+            static void EX2()
+            {
+                int soma = 0, idade, contador = 0;
+
+                Console.WriteLine("Digite as idades (digite idade negativa para encerrar):");
+
+                while (true)
+                {
+                    idade = Convert.ToInt32(Console.ReadLine());
+
+                    if (idade < 0)
+                        break;
+
+                    soma += idade;
+                    contador++;
+                }
+
+                if (contador > 0)
+                {
+                    double media = (double)soma / contador;
+                    Console.WriteLine($"Média das idades: {media}");
+                }
+                else
+                {
+                    Console.WriteLine("Nenhuma idade válida foi informada.");
+                }
+
+            }
+
+            static void EX3()
+            {
+                double paisA = 5000000, paisB = 7000000;
+                int anos = 0;
+
+                while (paisA <= paisB)
+                {
+                    paisA += paisA * 0.03;
+                    paisB += paisB * 0.02;
+                    anos++;
+                }
+
+                Console.WriteLine($"Levará {anos} anos para que o País A ultrapasse ou iguale o País B.");
+
+            }
+
+            static void EX4()
+            {
+                int soma = 0, contador = 1;
+
+                while (contador <= 20)
+                {
+                    Console.Write($"Digite a nota do aluno {contador}: ");
+                    int nota = Convert.ToInt32(Console.ReadLine());
+                    soma += nota;
+                    contador++;
+                }
+
+                double media = (double)soma / 20;
+                Console.WriteLine($"Média da turma: {media}");
+
+            }
+
+            static void EX5()
+            {
+                int formula = (1 + 100) * 50;
+                Console.WriteLine($"a soma de 1 a 100 é {formula}");
+            }
+
+            static void EX6()
+            {
+                int sim = 0, nao = 0, entrevistado = 1;
+
+                while (entrevistado <= 500)
+                {
+                    Console.Write($"Pessoa {entrevistado} – Gostou do produto? (s/n): ");
+                    string resposta = Console.ReadLine().ToLower();
+
+                    if (resposta == "s")
+                        sim++;
+                    else if (resposta == "n")
+                        nao++;
+
+                    entrevistado++;
+                }
+
+                Console.WriteLine($"Total que responderam 'sim': {sim}");
+                Console.WriteLine($"Total que responderam 'não': {nao}");
+                if (nao < sim)
+                {
+                    Console.WriteLine($"A maioria respondeu com nao");
+                }
+                else
+                {
+                    Console.WriteLine($"A maioria respondeu com sim");
+                }
+            }
+
+            static void EX7()
+            {
+                int expoente = 0;
+
+                while (expoente <= 15)
+                {
+                    double potencia = Math.Pow(3, expoente);
+                    Console.WriteLine($"3^{expoente} = {potencia}");
+                    expoente++;
+                }
+
+            }
+
+            static void EX8()
+            {
+                Console.Write("Digite um número menor ou igual a 50: ");
+                int n = Convert.ToInt32(Console.ReadLine());
+                int resultado = n;
+
+                while (resultado < 250)
+                {
+                    Console.WriteLine($"Resultado: {resultado}");
+                    resultado *= 3;
+                }
+
+            }
+
+
+
+            Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+            int escolha = Convert.ToInt32(Console.ReadLine());
+
+            if (escolha == 2)
+            {
+                i = 0;
+            }
+            else
+            {
+
+            }
         }
     }
-}
+
