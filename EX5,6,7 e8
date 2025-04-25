@@ -558,7 +558,7 @@ static void exercicio6()
         }
     }
 
-            static void exercicio7()
+           static void exercicio7()
 {
     int i = 1;
     while (i > 0)
@@ -577,40 +577,40 @@ static void exercicio6()
         switch (escolha1)
         {
             case 1:
-                ProdutoeAdicaoFracao();
+                EX1();
                 break;
 
             case 2:
-                ComparacoNumeros();
+                EX2();
                 break;
 
             case 3:
-                VolumeLata();
+                EX3();
                 break;
 
             case 4:
-                MediaHarmonica();
+                EX4();
                 break;
 
             case 5:
-                AceitaNumeros();
+                EX5();
                 break;
 
             case 6:
-                Diferenca();
+                EX6();
                 break;
 
             case 7:
-                MediaAluno();
+                EX7();
                 break;
 
             case 8:
-                MediaAluno();
+                EX8();
                 break;
         }
 
         //Tabuada
-        static void Tabuada()
+        static void EX1()
         {
             Console.WriteLine("qual o número que quer fazer a tabuada?");
             int numero = Convert.ToInt32(Console.ReadLine());
@@ -623,10 +623,10 @@ static void exercicio6()
         //Tabuada
 
         //LerNumero
-        static void LerNumero()
+        static void EX2()
         {
             bool car = true;
-            while (car = true)
+            while (car == true)
             {
                 Console.WriteLine("qual o número?");
                 int numero = Convert.ToInt32(Console.ReadLine());
@@ -639,55 +639,138 @@ static void exercicio6()
             }
 
         }
-        //LerNumero
 
-        //GeraNumeros
-        static void GeraNumeros()
+        static void EX3()
         {
-            for (float i = 10; i <= 100; i++)
+            int i = 1;
+            while (i <= 20)
             {
-                if (i % 11 == 5)
+                int quadrado = i * i;
+                Console.WriteLine($"O quadrado de {i} é {quadrado}");
+                i++;
+            }
+        }
+
+        static void EX4()
+        {
+            Console.WriteLine("digite a quantidade de pessoas que vai fazer a pesquisa");
+            int pesquisa = Convert.ToInt32(Console.ReadLine());
+            double contador = 0;
+            for (int i = 1; i <= pesquisa; i++)
+            {
+
+
+                Console.WriteLine("digite a sua idade");
+                int idade = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("digite a sua cor de cabelo");
+                string cabelo = (Console.ReadLine());
+                Console.WriteLine("digite a sua cor do seu olho");
+                string olhos = Convert.ToString(Console.ReadLine());
+
+
+                if (idade >= 18 && idade <= 35)
                 {
-                    Console.WriteLine($"numero divisivel por 11 com resto 5: {i}");
+                    if (cabelo.ToLower() == "loiros")
+                    {
+                        if (olhos.ToLower() == "verde")
+                        {
+                            contador++;
+                        }
+                    }
                 }
             }
-
+            double porcentagem = (contador / pesquisa)*100;
+            Console.WriteLine($"A porcentagem de mulheres de 18 a 35 anos loiras de olhos verdes é de:{porcentagem}");
         }
-        //GeraNumeros
-
-        //MediaTurma
-        static void MediaTurma()
-        {
-            Console.WriteLine("Qual o numero de alunos?");
-            int alunos = Convert.ToInt32(Console.ReadLine());
-            double somaDasMedias = 0;
-
-            for (int i = 1; i <= alunos; i++)
+        static void EX5()
             {
-                Console.WriteLine($"Qual a media do aluno {i}");
-                int mediaAluno = Convert.ToInt32(Console.ReadLine());
-                somaDasMedias += mediaAluno;
+            int contador = 0;
+            int i = 1;
+
+            while (i <= 5)
+            {
+                Console.WriteLine($"Digite o {i}º número:");
+                int numero = Convert.ToInt32(Console.ReadLine());
+
+                if (numero < 0)
+                {
+                    contador++;
+                }
+
+                i++;
             }
-            double formula = somaDasMedias / alunos;
-            Console.WriteLine($"A media da clase = {formula}");
 
-
+            Console.WriteLine($"Quantidade de valores negativos: {contador}");
         }
-        //MediaTurma
 
-        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
-        int escolha = Convert.ToInt32(Console.ReadLine());
 
-        if (escolha == 2)
-        {
-            i = 0;
+            //LerNumero
+
+            //GeraNumeros
+            static void EX6()
+            {
+                for (float i = 10; i <= 100; i++)
+                {
+                    if (i % 11 == 5)
+                    {
+                        Console.WriteLine($"numero divisivel por 11 com resto 5: {i}");
+                    }
+                }
+
+            }
+            //GeraNumeros
+
+            static void EX7()
+            {
+
+            Console.WriteLine("Digite a razão da PA:");
+            int r = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Digite o número de termos:");
+            int n = Convert.ToInt32(Console.ReadLine());
+            int num1 = n-(n-1);
+
+            int i = 0;
+            while (i < n)
+            {
+                int formula = num1 + (r * n);
+                Console.WriteLine($"termo{i+1} = {formula}");
+            }
         }
-        else
-        {
 
+            //MediaTurma
+            static void EX8()
+            {
+                Console.WriteLine("Qual o numero de alunos?");
+                int alunos = Convert.ToInt32(Console.ReadLine());
+                double somaDasMedias = 0;
+
+                for (int i = 1; i <= alunos; i++)
+                {
+                    Console.WriteLine($"Qual a media do aluno {i}");
+                    int mediaAluno = Convert.ToInt32(Console.ReadLine());
+                    somaDasMedias += mediaAluno;
+                }
+                double formula = somaDasMedias / alunos;
+                Console.WriteLine($"A media da clase = {formula}");
+
+
+            }
+            //MediaTurma
+
+            Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+            int escolha = Convert.ToInt32(Console.ReadLine());
+
+            if (escolha == 2)
+            {
+                i = 0;
+            }
+            else
+            {
+
+            }
         }
     }
-}
 
 static void exercicio8()
 {
