@@ -1,0 +1,573 @@
+using System.Data;
+
+Console.WriteLine("escolha o exercicio");
+Console.WriteLine("9 – Estrutura de Repetição IF, ELSE, While e outras");
+Console.WriteLine("10 – Estrutura de Repetição While e outras");
+Console.WriteLine("11 – Estrutura de Repetição While, For e outras");
+Console.WriteLine("12 – Estrutura de Repetição While, For e outras");
+int exercicio = Convert.ToInt32(Console.ReadLine());
+
+if (exercicio == 9)
+{
+    exercicio9();
+}
+
+if (exercicio == 10)
+{
+    exercicio10();
+}
+
+if (exercicio == 11)
+{
+    exercicio11();
+}
+
+if (exercicio == 12)
+{
+    exercicio12();
+}
+static void exercicio9()
+{
+    int i = 1;
+    while (i > 0)
+    {
+
+        Console.WriteLine("qual o exercicio");
+        Console.WriteLine("1 - Utilizando operadores lógicos");
+        Console.WriteLine("2 - Estruturas de seleção simples e repetição while");
+        Console.WriteLine("3 - Estrutura de repetição while e variáveis");
+        Console.WriteLine("4 - Contadores e incremento e while");
+        Console.WriteLine("5 - Calcula média de notas de aluno");
+        Console.WriteLine("6 - Recebe números com e extrai cada dígito");
+        Console.WriteLine("7 - Aninhamento de escruturas de seleção");
+        Console.WriteLine("8 - Soma dez primeiros números");
+        int escolha1 = Convert.ToInt32(Console.ReadLine());
+        switch (escolha1)
+        {
+            case 1:
+                EX1();
+                break;
+
+            case 2:
+                EX2();
+                break;
+
+            case 3:
+                EX3();
+                break;
+
+            case 4:
+                EX4();
+                break;
+
+            case 5:
+                EX5();
+                break;
+
+            case 6:
+                EX6();
+                break;
+
+            case 7:
+                EX7();
+                break;
+
+            case 8:
+                EX8();
+                break;
+        }
+
+        static void EX1()
+        {
+
+        }
+
+        static void EX2()
+        {
+
+        }
+
+        static void EX3()
+        {
+
+        }
+
+        static void EX4()
+        {
+
+        }
+
+        static void EX5()
+        {
+
+        }
+
+        static void EX6()
+        {
+
+        }
+
+        static void EX7()
+        {
+
+        }
+
+        static void EX8()
+        {
+
+        }
+
+        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+        int escolha = Convert.ToInt32(Console.ReadLine());
+
+        if (escolha == 2)
+        {
+            i = 0;
+        }
+        else
+        {
+
+        }
+    }
+}
+
+static void exercicio10()
+{
+    int i = 1;
+    while (i > 0)
+    {
+
+        Console.WriteLine("qual o exercicio");
+        Console.WriteLine("1 -Calcula tabuada de um número");
+        Console.WriteLine("2 - Lê valores e pede novos valores");
+        Console.WriteLine("3 - Seleção composta encadeada e aninhada");
+        Console.WriteLine("4 - Lê valores e conta os números negativos");
+        Console.WriteLine("5 - Calcula média de idade");
+        Console.WriteLine("6 - Calcula tempo");
+        Console.WriteLine("7 - Gera números divisíveis");
+        Console.WriteLine("8 - Média geral de alunos");
+        Console.WriteLine("9 - Calcula média de turma de alunos");
+        int escolha1 = Convert.ToInt32(Console.ReadLine());
+        switch (escolha1)
+        {
+            case 1:
+                EX1();
+                break;
+
+            case 2:
+                EX2();
+                break;
+
+            case 3:
+                EX3();
+                break;
+
+            case 4:
+                EX4();
+                break;
+
+            case 5:
+                EX5();
+                break;
+
+            case 6:
+                EX6();
+                break;
+
+            case 7:
+                EX7();
+                break;
+
+            case 8:
+                EX8();
+                break;
+
+            case 9:
+                EX9();
+                break;
+        }
+
+        static void EX1()
+        {
+
+        }
+
+        static void EX2()
+        {
+
+        }
+
+        static void EX3()
+        {
+
+        }
+
+        static void EX4()
+        {
+
+        }
+
+        static void EX5()
+        {
+
+        }
+
+        static void EX6()
+        {
+
+        }
+
+        static void EX7()
+        {
+
+        }
+
+        static void EX8()
+        {
+
+        }
+
+        static void EX9()
+        {
+
+        }
+
+        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+        int escolha = Convert.ToInt32(Console.ReadLine());
+
+        if (escolha == 2)
+        {
+            i = 0;
+        }
+        else
+        {
+
+        }
+    }
+}
+
+static void exercicio11()
+{
+    int i = 1;
+    while (i > 0)
+    {
+
+        Console.WriteLine("qual o exercicio");
+        Console.WriteLine("1 - Calcula soma de números inteiros");
+        Console.WriteLine("2 - Calcula termos de uma série");
+        Console.WriteLine("3 - Caucula alunos reprovados e aprovados");
+        Console.WriteLine("4 - Resultado de uma pesquisa de aceitação");
+        Console.WriteLine("5 - Calcula média de uma turma de alunos");
+        Console.WriteLine("6 - Lê numero e soma entre uma série");
+        Console.WriteLine("7 - Calcula uma função");
+        Console.WriteLine("8 - Calcula termos de PA");
+        Console.WriteLine("9 - Calcula temperaqtura em graus diversos e com variações");
+        int escolha1 = Convert.ToInt32(Console.ReadLine());
+        switch (escolha1)
+        {
+            case 1:
+                EX1();
+                break;
+
+            case 2:
+                EX1();
+                break;
+
+            case 3:
+                EX1();
+                break;
+
+            case 4:
+                EX1();
+                break;
+
+            case 5:
+                EX1();
+                break;
+
+            case 6:
+                EX1();
+                break;
+
+            case 7:
+                EX1();
+                break;
+
+            case 8:
+                EX1();
+                break;
+
+            case 9:
+                EX1();
+                break;
+
+        }
+
+        static void EX1()
+        {
+
+        }
+
+        static void EX2()
+        {
+
+        }
+
+        static void EX3()
+        {
+
+        }
+
+        static void EX4()
+        {
+
+        }
+
+        static void EX5()
+        {
+
+        }
+
+        static void EX6()
+        {
+
+        }
+
+        static void EX7()
+        {
+
+        }
+
+        static void EX8()
+        {
+
+        }
+
+        static void EX9()
+        {
+
+        }
+
+
+        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+        int escolha = Convert.ToInt32(Console.ReadLine());
+
+        if (escolha == 2)
+        {
+            i = 0;
+        }
+        else
+        {
+
+        }
+    }
+}
+
+static void exercicio12()
+{
+    int i = 1;
+    while (i > 0)
+    {
+
+        Console.WriteLine("qual o exercicio");
+        Console.WriteLine("1 - Calcula a soma de termos de uma série");
+        Console.WriteLine("2 - Petencia de 3 com variações");
+        Console.WriteLine("3 - Pesquisa de satisfação");
+        Console.WriteLine("4 - Soma de numeros de um intervalo");
+        Console.WriteLine("5 - Média de uma turma");
+        Console.WriteLine("6 - Juros compostos com MessageBox");
+        Console.WriteLine("7 - Reajuste de salário");
+        Console.WriteLine("8 - Repetição controlada por contador");
+        Console.WriteLine("9 - Calcula bonus de uma faixa salarial");
+        Console.WriteLine("10 - Lê número de faz multiplicações");
+        int escolha1 = Convert.ToInt32(Console.ReadLine());
+        switch (escolha1)
+        {
+            case 1:
+                EX1();
+                break;
+
+            case 2:
+                EX2();
+                break;
+
+            case 3:
+                EX3();
+                break;
+
+            case 4:
+                EX4();
+                break;
+
+            case 5:
+                EX5();
+                break;
+
+            case 6:
+                EX6();
+                break;
+
+            case 7:
+                EX7();
+                break;
+
+            case 8:
+                EX8();
+                break;
+
+            case 9:
+                EX9();
+                break;
+
+            case 10:
+                EX10();
+                break;
+        }
+        //EX1
+        static void EX1()
+
+        {
+            double numerador = 1000;
+            double soma = 0;
+
+            for (int i = 1; i <= 50; i++)
+            {
+                double termo = numerador / i;
+
+                if (i % 2 == 0)
+                {
+                    termo *= -1;
+                }
+
+                Console.WriteLine($"Termo {i}: {numerador} / {i} = {termo}");
+                soma += termo;
+                numerador -= 3;
+            }
+
+            Console.WriteLine($"\nSoma total dos 50 termos: {soma}");
+        }
+        //EX1
+
+        static void EX2()
+        {
+
+        }
+
+        static void EX3()
+        {
+
+        }
+
+        static void EX4()
+        {
+            int soma = 0;
+
+            for (int i = 2; i <= 100; i++)
+            {
+                Console.WriteLine($"{i}");
+                soma += i;
+            }
+            Console.WriteLine($" a soma é {soma}");
+        }
+
+        static void EX5()
+        {
+
+            double somaDasMedias = 0;
+
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.WriteLine($"Qual a media do aluno {i}");
+                int mediaAluno = Convert.ToInt32(Console.ReadLine());
+                somaDasMedias += mediaAluno;
+            }
+            double formula = somaDasMedias / 10;
+            Console.WriteLine($"A media da clase = {formula}");
+
+
+        }
+        EX6();
+        static void EX6()
+        {
+            Console.WriteLine($"Qual o tempo do emprestimo?Em meses");
+            int t = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"Qual o interesse do emprestimo?");
+            double indice = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine($"Qual o capital do emprestimo?");
+            int c = Convert.ToInt32(Console.ReadLine());
+            double resultado1 = 0;
+            double resultado2 = 0;
+
+
+
+            for (int i = 1; i <= t; i++)
+
+            {
+                double Juros = c * indice * i;
+                double Montante = Juros + c;
+
+                Console.WriteLine($"Mês {i}");
+                Console.WriteLine($"O Juros é = {Juros}");
+                Console.WriteLine($"O Montante é = {Montante}");
+                resultado1 = Juros;
+                resultado2 = Montante;
+            }
+
+
+        }
+
+        static void EX7()
+        {
+
+        }
+
+        static void EX8()
+        {
+
+            Console.WriteLine("Preparando o lançamento");
+
+            for (int i = 10; i >= 1; i--)
+            {
+                Console.WriteLine($"{i}");
+            }
+            Console.WriteLine($"Decolando!");
+
+
+        }
+
+        static void EX9()
+        {
+
+        }
+
+        //EX10
+        static void EX10()
+        {
+            Console.WriteLine("Qual número deseja multiplicar por 3?");
+            int numero = Convert.ToInt32(Console.ReadLine());
+            int soma = 0;
+            int formula = numero * 3;
+            for (int i = 0; i < 5; i++)
+            {
+
+                Console.WriteLine($" {numero} X 3 = {numero * 3}formula");
+                soma += formula;
+            }
+            Console.WriteLine($" o resultado é {formula}");
+        }
+
+
+
+        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+        int escolha = Convert.ToInt32(Console.ReadLine());
+
+        if (escolha == 2)
+        {
+            i = 0;
+        }
+        else
+        {
+
+        }
+    }
+}
