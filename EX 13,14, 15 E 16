@@ -147,52 +147,64 @@ static void exercicio13()
 
         static void EX7()
         {
+            Produto produto1 = new Produto("Teclado", 150.00m);
+            Produto produto2 = new Produto("Celular", 1500.99m);
+            Produto produto3 = new Produto("Laptop", 4500.50m);
 
-            bool verdade = true;
-            while (verdade = true)
+            bool continuar = true;
+            while (continuar)
             {
-                Produto produto1 = new Produto("Teclado", 150.00m);
-                Produto produto2 = new Produto("celular", 1500.99m);
-                Produto produto3 = new Produto("Laptop", 4500.50m);
-                Console.WriteLine("Digite a quantidade de dinheiro que você possui");
-                int dinheiro = Convert.ToInt32(Console.ReadLine());
-                if (dinheiro >= produto1.Preco)
-                {
+                Console.WriteLine("Digite a quantidade de dinheiro que você possui:");
+                decimal dinheiro = Convert.ToDecimal(Console.ReadLine());
 
-                    if (dinheiro > produto1.Preco && (dinheiro / 2) >= produto1.Preco)
-                    {
-                        Console.WriteLine("Voce pode comprar mais de um teclado");
-                    }
-                    Console.WriteLine("Voce pode comprar um teclado");
+                Console.WriteLine("Escolha o produto que deseja verificar:");
+                Console.WriteLine("1 - Teclado");
+                Console.WriteLine("2 - Celular");
+                Console.WriteLine("3 - Laptop");
+                int opcao = Convert.ToInt32(Console.ReadLine());
+
+                switch (opcao)
+                {
+                    case 1:
+                        VerificarCompra(produto1, dinheiro);
+                        break;
+                    case 2:
+                        VerificarCompra(produto2, dinheiro);
+                        break;
+                    case 3:
+                        VerificarCompra(produto3, dinheiro);
+                        break;
+                    default:
+                        Console.WriteLine("Opção inválida.");
+                        break;
                 }
 
-                if (dinheiro >= produto2.Preco)
-                {
-
-                    if (dinheiro > produto2.Preco && (dinheiro / 2) >= produto2.Preco)
-                    {
-                        Console.WriteLine("Voce pode comprar mais de um celular");
-                    }
-                    Console.WriteLine("Voce pode comprar um celular");
-                }
-
-                if (dinheiro >= produto3.Preco)
-                {
-
-                    if (dinheiro > produto2.Preco && (dinheiro / 2) >= produto2.Preco)
-                    {
-                        Console.WriteLine("Voce pode comprar mais de um Laptop");
-                    }
-                    Console.WriteLine("Voce pode comprar um Laptop");
-                }
-                Console.WriteLine("digite 1 caso deseje parar");
+                Console.WriteLine("Digite 1 para parar, qualquer outro número para continuar:");
                 int parar = Convert.ToInt32(Console.ReadLine());
                 if (parar == 1)
                 {
-                    verdade = false;
+                    continuar = false;
                 }
             }
         }
+
+        static void VerificarCompra(Produto produto, decimal dinheiro)
+        {
+            if (dinheiro >= produto.Preco)
+            {
+                Console.WriteLine($"Você pode comprar um {produto.Nome}");
+
+                if ((dinheiro / 2) >= produto.Preco)
+                {
+                    Console.WriteLine($"Você pode comprar mais de um {produto.Nome}");
+                }
+            }
+            else
+            {
+                Console.WriteLine($"Você não tem dinheiro suficiente para comprar um {produto.Nome}");
+            }
+        }
+
 
 
         static void EX9()
@@ -1133,3 +1145,15 @@ static void exercicio16()
         }
     }
 }
+class Produto
+{
+    public string Nome { get; set; }
+    public decimal Preco { get; set; }
+
+    public Produto(string nome, decimal preco)
+    {
+        Nome = nome;
+        Preco = preco;
+    }
+}
+
