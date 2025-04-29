@@ -46,49 +46,60 @@ static void exercicio13()
         switch (escolha1)
         {
             case 1:
-                ProdutoeAdicaoFracao();
+                EX1();
                 break;
 
             case 2:
-                ComparacoNumeros();
+                EX2();
                 break;
 
             case 3:
-                VolumeLata();
+                EX3();
                 break;
 
             case 4:
-                MediaHarmonica();
+                EX4();
                 break;
 
             case 5:
-                AceitaNumeros();
+                EX5();
                 break;
 
             case 6:
-                Diferenca();
+                EX6();
                 break;
 
             case 7:
-                MediaAluno();
+                EX7();
                 break;
 
             case 8:
-                AreaQuadrado();
+                EX8();
                 break;
 
             case 9:
-                NumeroAoQuadrado();
+                EX9();
                 break;
 
             case 10:
-                NumeroAoQuadrado();
+                EX10();
                 break;
         }
+        static void EX1()
+        {
+
+        }
+
+        static void EX2()
+        {
+
+        }
+
+
         static void EX3()
         {
             bool verdade = true;
-            while (verdade = true)
+            while (verdade)
             {
                 Console.WriteLine("Quais os numeros que vc deseja elevar ao quadrado?");
                 Console.WriteLine("1:");
@@ -117,7 +128,7 @@ static void exercicio13()
         {
             double formula = 0;
             bool verdade = true;
-            while (verdade = true)
+            while (verdade)
             {
                 Console.WriteLine("Qual o seu sexo?M para mulher e h para homem");
                 char sex = Char.ToUpper(Convert.ToChar(Console.ReadLine()));
@@ -144,6 +155,15 @@ static void exercicio13()
             }
         }
 
+        static void EX5()
+        {
+
+        }
+
+        static void EX6()
+        {
+
+        }
 
         static void EX7()
         {
@@ -188,24 +208,10 @@ static void exercicio13()
             }
         }
 
-        static void VerificarCompra(Produto produto, decimal dinheiro)
+        static void EX8()
         {
-            if (dinheiro >= produto.Preco)
-            {
-                Console.WriteLine($"Você pode comprar um {produto.Nome}");
 
-                if ((dinheiro / 2) >= produto.Preco)
-                {
-                    Console.WriteLine($"Você pode comprar mais de um {produto.Nome}");
-                }
-            }
-            else
-            {
-                Console.WriteLine($"Você não tem dinheiro suficiente para comprar um {produto.Nome}");
-            }
         }
-
-
 
         static void EX9()
         {
@@ -279,6 +285,11 @@ static void exercicio13()
                     verdade = false;
                 }
             }
+        }
+
+        static void EX10()
+        {
+
         }
 
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
@@ -687,13 +698,23 @@ static void exercicio15()
                 break;
 
             case 9:
-                Temperatura();
+                EX9();
                 break;
 
             case 10:
                 EX10();
                 break;
         }
+        static void EX1()
+        {
+
+        }
+
+        static void EX2()
+        {
+
+        }
+
         static void EX3()
         {
             double formula = 0;
@@ -760,6 +781,11 @@ static void exercicio15()
 
         }
 
+        static void EX5()
+        {
+
+        }
+
         static void EX6()
         {
             Console.WriteLine("Quantos números da sequência de Fibonacci você deseja gerar?");
@@ -805,16 +831,7 @@ static void exercicio15()
 
             static void EX8()
             {
-                int X = 1;
-                do
-                {
-                    int resultado = (X * X) - (3 * X) - 4;
-                    Console.WriteLine($"F({X}) = {resultado}");
 
-                    X++;
-                } while (X <= 10);
-            // Após sair do loop, exibe o menor número encontrado
-            Console.WriteLine($"O menor número digitado foi: {menorNumero}");
             
             }
 
@@ -822,7 +839,7 @@ static void exercicio15()
             
         
 
-        static void Temperatura()
+        static void EX9()
         {
             float temperatura, c, f;
             char unidade;
@@ -845,7 +862,10 @@ static void exercicio15()
 
         }
 
+        static void EX10()
+        {
 
+        }
 
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
@@ -1075,6 +1095,11 @@ static void exercicio16()
         }
         //EX3
 
+        static void EX4()
+        {
+
+        }
+
         static void EX5e8()
         {
             bool boll = true;
@@ -1095,6 +1120,67 @@ static void exercicio16()
                     }
                 }
             } while (boll);
+        }
+
+        static void EX6()
+        {
+
+        }
+
+        static void EX7()
+        {
+            for (int i = 0; i <= 3; i++)
+            {
+
+                Console.WriteLine("qual o seu salario?");
+                int salario = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("quantos anos está na empresa?");
+                int em = Convert.ToInt32(Console.ReadLine());
+                switch (em)
+                {
+                    case 10:
+                        Console.WriteLine("qual o seu sexo?");
+                        string x = Console.ReadLine();
+                        switch(x)
+                        {
+                            case "mulher":
+                                Console.WriteLine("Seu bonus salarial é de 25%");
+                                Console.WriteLine($"o total é: {salario * 0.25 + salario}");
+                                break;
+
+                            case "homem":
+                                Console.WriteLine("Seu bonus salarial é de 50R$");
+                                Console.WriteLine($"o total é: {salario + 50}");
+                                break;
+                        }
+                        break;
+
+
+
+                    case >= 15:
+                        Console.WriteLine("qual o seu sexo?");
+                        string y = Console.ReadLine();
+                        switch (y)
+                        {
+                            case "mulher":
+                                Console.WriteLine("Seu bonus salarial é de 25%");
+                                Console.WriteLine($"o total é: {salario*0.25+salario}");
+                                break;
+
+                            case "homem":
+                                Console.WriteLine("Seu bonus salarial é de 20%");
+                                Console.WriteLine($"o total é: {salario * 0.2 + salario}");
+                                break;
+                        }
+                        break;
+
+                    case < 10:
+                        Console.WriteLine("Seu bonus salarial é de 50R$");
+                        Console.WriteLine($"o total é: {salario+50}");
+                        break;
+                }
+            }
+
         }
 
         //CaluloDeAreas
@@ -1143,8 +1229,31 @@ static void exercicio16()
                 Console.WriteLine("Não é possivel");
             }
         }
+
+        static void EX10()
+        {
+
+        }
     }
 }
+
+static void VerificarCompra(Produto produto, decimal dinheiro)
+{
+    if (dinheiro >= produto.Preco)
+    {
+        Console.WriteLine($"Você pode comprar um {produto.Nome}");
+
+        if ((dinheiro / 2) >= produto.Preco)
+        {
+            Console.WriteLine($"Você pode comprar mais de um {produto.Nome}");
+        }
+    }
+    else
+    {
+        Console.WriteLine($"Você não tem dinheiro suficiente para comprar um {produto.Nome}");
+    }
+}
+
 class Produto
 {
     public string Nome { get; set; }
