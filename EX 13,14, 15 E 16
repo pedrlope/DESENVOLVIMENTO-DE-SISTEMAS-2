@@ -327,241 +327,48 @@ static void exercicio14()
         switch (escolha1)
         {
             case 1:
-                Somatoria();
+               EX1();
                 break;
 
             case 2:
-                Reajuste();
+                EX2();
                 break;
 
             case 3:
-                Perfeito();
+                EX3();
                 break;
 
             case 4:
-                DezNotas();
+                EX4();
                 break;
 
             case 5:
-                Expressão();
+                EX5();
                 break;
 
             case 6:
-                SerieNumerica();
+                EX6();
                 break;
 
             case 7:
-                Esfera();
+                EX7();
                 break;
 
             case 8:
-                SerieDez();
+                EX8();
                 break;
 
             case 9:
-                MediaDeAluno();
+                EX9();
                 break;
 
             case 10:
-                ExpressãoH();
+                EX10();
                 break;
         }
 
-        //reajuste salarial
-        static void Reajuste()
-        {
-            int i = 1;
-            do
-            {
-                Console.WriteLine($"Informe o salário do funcionário {i}: ");
-                double salario = Convert.ToDouble(Console.ReadLine());
-                double novoSalario = salario;
-                if (salario < 10000)
-                {
-                    novoSalario = salario * 1.55;
-                }
-                else if (salario <= 25000)
-                {
-                    novoSalario = salario * 1.30;
-                }
-                else
-                {
-                    novoSalario = salario * 1.20;
-                }
-                Console.WriteLine($"Salário reajustado: R$ {novoSalario:F2}");
-                i++;
-            } while (i <= 5);
-        }
-        //reajuste salarial
-
-        //Perfeito
-        static void Perfeito()
-        {
-            Console.WriteLine("Digite um número para verificar se é perfeito:");
-            int numero = Convert.ToInt32(Console.ReadLine());
-            int soma = 0;
-            int i = 1;
-            do
-            {
-                if (numero % i == 0)
-                {
-                    soma += i;
-                }
-                i++;
-            } while (i < numero);
-
-            if (soma == numero)
-            {
-                Console.WriteLine($"{numero} é um número perfeito!");
-            }
-            else
-            {
-                Console.WriteLine($"{numero} não é um número perfeito.");
-            }
-        }
-        //Perfeito
-
-        //DezNotas
-        static void DezNotas()
-        {
-            int i = 1;
-            double soma = 0;
-            do
-            {
-                Console.WriteLine($"Digite a nota {i}: ");
-                double nota = Convert.ToDouble(Console.ReadLine());
-                soma += nota;
-                i++;
-            } while (i <= 10);
-
-            double media = soma / 10;
-            Console.WriteLine($"A média das notas é: {media:F2}");
-        }
-        //DezNotas
-
-        //SerieNumerica
-        static void SerieNumerica()
-        {
-            Console.WriteLine("Digite o valor de X:");
-            double x = Convert.ToDouble(Console.ReadLine());
-
-            int expoente = 25;
-            double soma = 0;
-            int i = 1;
-            do
-            {
-                double termo = Math.Pow(x, expoente) / i;
-                if (i % 2 == 0)
-                {
-                    termo = -termo;
-                }
-                soma += termo;
-                expoente--;
-                i++;
-            } while (i <= 25);
-
-            Console.WriteLine($"Resultado da série: {soma}");
-        }
-        //SerieNumerica
-
-        //volume de esfera
-        static void Esfera()
-        {
-            double r = 0;
-            do
-            {
-                double volume = (4.0 / 3.0) * Math.PI * Math.Pow(r, 3);
-                Console.WriteLine($"Raio: {r} cm -> Volume: {volume:F2} cm³");
-                r += 0.5;
-            } while (r <= 20);
-        }
-
-        //volume de esfera
-
-        //SerieDez
-        static void SerieDez()
-        {
-            int n = 1;
-            do
-            {
-
-                Console.WriteLine($"{n}");
-                n++;
-
-            } while (n <= 10);
-        }
-        //SerieDez
-
-
-
-        //MediaDeAluno
-        static void MediaDeAluno()
-        {
-            Console.WriteLine("Quantos alunos deseja calcular a média?");
-            int qtd = Convert.ToInt32(Console.ReadLine());
-
-            int aluno = 1;
-
-            do
-            {
-                Console.WriteLine($"Digite a quantidade de notas do aluno {aluno}: ");
-                int numNotas = Convert.ToInt32(Console.ReadLine());
-                double soma = 0;
-                int j = 1;
-
-                do
-                {
-                    Console.WriteLine($"Nota {j}: ");
-                    double nota = Convert.ToDouble(Console.ReadLine());
-                    soma += nota;
-                    j++;
-                } while (j <= numNotas);
-
-                double media = soma / numNotas;
-                Console.WriteLine($"Média do aluno {aluno}: {media:F2}");
-                aluno++;
-            } while (aluno <= qtd);
-        }
-        //MediaDeAluno
-
-        //Expressão2
-        static void ExpressãoH()
-        {
-            {
-                int l = 0;
-                double dois, soma;
-                soma = 0;
-                do
-                {
-                    Console.WriteLine("qual o tamanho da espressão");
-                    double n = Convert.ToDouble(Console.ReadLine());
-                    for (int i = 1; i <= n; i++)
-                    {
-
-                        dois = i;
-                        soma += (1 / dois);
-                        Console.WriteLine($"O valor {i} é {1}/ {dois}");
-                    }
-                    Console.WriteLine($" a soma dos valores da expressao de {n} é: {soma}");
-                    Console.WriteLine($"digite 1 caso deseje parar");
-                    int escolha = Convert.ToInt32(Console.ReadLine());
-                    if (escolha == 1)
-                    {
-                        l = 1;
-                    }
-                    else
-                    {
-
-                    }
-                }
-                while (l == 0);
-            }
-        }
-        //Expressão2
-
-
         //Somatoria
-        static void Somatoria()
+        static void EX1()
 
         {
             int l = 0;
@@ -592,8 +399,80 @@ static void exercicio14()
         }
         //Somatoria
 
+        //reajuste salarial
+        static void EX2()
+        {
+            int i = 1;
+            do
+            {
+                Console.WriteLine($"Informe o salário do funcionário {i}: ");
+                double salario = Convert.ToDouble(Console.ReadLine());
+                double novoSalario = salario;
+                if (salario < 10000)
+                {
+                    novoSalario = salario * 1.55;
+                }
+                else if (salario <= 25000)
+                {
+                    novoSalario = salario * 1.30;
+                }
+                else
+                {
+                    novoSalario = salario * 1.20;
+                }
+                Console.WriteLine($"Salário reajustado: R$ {novoSalario:F2}");
+                i++;
+            } while (i <= 5);
+        }
+        //reajuste salarial
+
+        //Perfeito
+        static void EX3()
+        {
+            Console.WriteLine("Digite um número para verificar se é perfeito:");
+            int numero = Convert.ToInt32(Console.ReadLine());
+            int soma = 0;
+            int i = 1;
+            do
+            {
+                if (numero % i == 0)
+                
+                    soma += i;
+                
+                i++;
+            } while (i < numero);
+
+            if (soma == numero)
+            {
+                Console.WriteLine($"{numero} é um número perfeito!");
+            }
+            else
+            {
+                Console.WriteLine($"{numero} não é um número perfeito.");
+            }
+        }
+        //Perfeito
+
+        //DezNotas
+        static void EX4()
+        {
+            int i = 1;
+            double soma = 0;
+            do
+            {
+                Console.WriteLine($"Digite a nota {i}: ");
+                double nota = Convert.ToDouble(Console.ReadLine());
+                soma += nota;
+                i++;
+            } while (i <= 10);
+
+            double media = soma / 10;
+            Console.WriteLine($"A média das notas é: {media:F2}");
+        }
+        //DezNotas
+
         //Expressão
-        static void Expressão()
+        static void EX5()
 
         {
             int l = 0;
@@ -629,7 +508,126 @@ static void exercicio14()
             }
             while (l == 0);
         }
-        //Expressão
+
+        //SerieNumerica
+        static void EX6()
+        {
+            Console.WriteLine("Digite o valor de X:");
+            double x = Convert.ToDouble(Console.ReadLine());
+
+            int expoente = 25;
+            double soma = 0;
+            int i = 1;
+            do
+            {
+                double termo = Math.Pow(x, expoente) / i;
+                if (i % 2 == 0)
+                {
+                    termo = -termo;
+                }
+                soma += termo;
+                expoente--;
+                i++;
+            } while (i <= 25);
+
+            Console.WriteLine($"Resultado da série: {soma}");
+        }
+        //SerieNumerica
+
+        //volume de esfera
+        static void EX7()
+        {
+            double r = 0;
+            do
+            {
+                double volume = (4.0 / 3.0) * Math.PI * Math.Pow(r, 3);
+                Console.WriteLine($"Raio: {r} cm -> Volume: {volume:F2} cm³");
+                r += 0.5;
+            } while (r <= 20);
+        }
+
+        //volume de esfera
+
+        //SerieDez
+        static void EX8()
+        {
+            int n = 1;
+            do
+            {
+
+                Console.WriteLine($"{n}");
+                n++;
+
+            } while (n <= 10);
+        }
+        //SerieDez
+
+
+
+        //MediaDeAluno
+        static void EX9()
+        {
+            Console.WriteLine("Quantos alunos deseja calcular a média?");
+            int qtd = Convert.ToInt32(Console.ReadLine());
+
+            int aluno = 1;
+
+            do
+            {
+                Console.WriteLine($"Digite a quantidade de notas do aluno {aluno}: ");
+                int numNotas = Convert.ToInt32(Console.ReadLine());
+                double soma = 0;
+                int j = 1;
+
+                do
+                {
+                    Console.WriteLine($"Nota {j}: ");
+                    double nota = Convert.ToDouble(Console.ReadLine());
+                    soma += nota;
+                    j++;
+                } while (j <= numNotas);
+
+                double media = soma / numNotas;
+                Console.WriteLine($"Média do aluno {aluno}: {media:F2}");
+                aluno++;
+            } while (aluno <= qtd);
+        }
+        //MediaDeAluno
+
+        //Expressão2
+        static void EX10()
+        {
+            {
+                int l = 0;
+                double dois, soma;
+                soma = 0;
+                do
+                {
+                    Console.WriteLine("qual o tamanho da espressão");
+                    double n = Convert.ToDouble(Console.ReadLine());
+                    for (int i = 1; i <= n; i++)
+                    {
+
+                        dois = i;
+                        soma += (1 / dois);
+                        Console.WriteLine($"O valor {i} é {1}/ {dois}");
+                    }
+                    Console.WriteLine($" a soma dos valores da expressao de {n} é: {soma}");
+                    Console.WriteLine($"digite 1 caso deseje parar");
+                    int escolha = Convert.ToInt32(Console.ReadLine());
+                    if (escolha == 1)
+                    {
+                        l = 1;
+                    }
+                    else
+                    {
+
+                    }
+                }
+                while (l == 0);
+            }
+        }
+        //Expressão2
 
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
@@ -643,7 +641,6 @@ static void exercicio14()
 
         }
     }
-}
 
 static void exercicio15()
 {
