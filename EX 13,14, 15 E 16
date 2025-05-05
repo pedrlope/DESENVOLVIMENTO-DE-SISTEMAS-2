@@ -1150,7 +1150,60 @@ static void exercicio16()
 
         static void EX4()
         {
+            Console.Write("Digite sua idade: ");
+            int idade = Convert.ToInt32(Console.ReadLine());
 
+            if (idade >= 18)
+            {
+                Console.WriteLine("Você é maior de idade.");
+            }
+            else
+            {
+                Console.WriteLine("Você é menor de idade.");
+            }
+
+            Console.WriteLine("Escolha uma opção:");
+            Console.WriteLine("1 - Ver mensagem");
+            Console.WriteLine("2 - Ver número");
+            Console.WriteLine("3 - Sair");
+            int opcao = Convert.ToInt32(Console.ReadLine());
+
+            switch (opcao)
+            {
+                case 1:
+                    Console.WriteLine("Você escolheu ver a mensagem.");
+                    break;
+                case 2:
+                    Console.WriteLine("Você escolheu ver o número.");
+                    break;
+                case 3:
+                    Console.WriteLine("Saindo...");
+                    break;
+                default:
+                    Console.WriteLine("Opção inválida.");
+                    break;
+            }
+
+            int contador1 = 0;
+            Console.WriteLine("Contando com while:");
+            while (contador1 < 3)
+            {
+                Console.WriteLine($"Contador1: {contador1}");
+                contador1++;
+            }
+            int contador2 = 0;
+            Console.WriteLine("Contando com do/while:");
+            do
+            {
+                Console.WriteLine($"Contador2: {contador2}");
+                contador2++;
+            } while (contador2 < 3);
+
+            Console.WriteLine("Contando com for:");
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine($"i: {i}");
+            }
         }
 
         static void EX5e8()
@@ -1177,7 +1230,39 @@ static void exercicio16()
 
         static void EX6()
         {
+            bool par = true;
+            while (par)
+            {
+                Console.WriteLine("Digite o primeiro número");
+                int num1 = Convert.ToInt32(Console.ReadLine());
 
+                Console.WriteLine("Digite o primeiro número");
+                int num2 = Convert.ToInt32(Console.ReadLine());
+
+                int diferença = num1 - num2;
+                if (num1 > num2)
+                {
+                    Console.WriteLine($"{num1}é maior que {num2}");
+                }
+
+                if(num1==num2)
+                {
+                    Console.WriteLine("os valores são iguais");
+                }
+
+                else if(num2>num1)
+                {
+                    Console.WriteLine($"{num2}é maior que {num1}");
+                }
+
+
+                Console.WriteLine("quer parar?Digite 1 para parar");
+                int parar = Convert.ToInt32(Console.ReadLine());
+                if (parar == 1)
+                {
+                    par= false;
+                }
+            }
         }
 
         static void EX7()
@@ -1194,7 +1279,7 @@ static void exercicio16()
                     case 10:
                         Console.WriteLine("qual o seu sexo?");
                         string x = Console.ReadLine();
-                        switch(x)
+                        switch (x)
                         {
                             case "mulher":
                                 Console.WriteLine("Seu bonus salarial é de 25%");
@@ -1217,7 +1302,7 @@ static void exercicio16()
                         {
                             case "mulher":
                                 Console.WriteLine("Seu bonus salarial é de 25%");
-                                Console.WriteLine($"o total é: {salario*0.25+salario}");
+                                Console.WriteLine($"o total é: {salario * 0.25 + salario}");
                                 break;
 
                             case "homem":
@@ -1229,7 +1314,7 @@ static void exercicio16()
 
                     case < 10:
                         Console.WriteLine("Seu bonus salarial é de 50R$");
-                        Console.WriteLine($"o total é: {salario+50}");
+                        Console.WriteLine($"o total é: {salario + 50}");
                         break;
                 }
             }
@@ -1285,7 +1370,44 @@ static void exercicio16()
 
         static void EX10()
         {
+            int candidatoX = 0, candidatoY = 0, nulos = 0;
+            Console.WriteLine("qual candidado você votou?Digite 0 para voto nulo, 1 para o candidatoX e 2 para o candidatoY");
+            int voto = Convert.ToInt32(Console.ReadLine());
+            switch (voto)
+            {
+                case 0:
+                    nulos++;
+                    break;
+                case 1:
+                    candidatoX++;
+                    break;
+                case 2:
+                    candidatoY++;
+                    break;
+                default:
+                    Console.WriteLine("Candidato inválido.");
+                    return;
+            }
 
+            if (candidatoX > candidatoY)
+            {
+                Console.WriteLine("O com a maior quantidade de votos foi candidatoX");
+            }
+
+            if (candidatoY > candidatoX)
+            {
+                Console.WriteLine("O com a maior quantidade de votos foi candidatoY");
+            }
+
+            else
+            {
+                Console.WriteLine("Nenhum dos candidatos teve a maioria dos votos");
+            }
+
+            Console.WriteLine($"O candidatoX teve {candidatoX} votos");
+            Console.WriteLine($"O candidatoY teve {candidatoY} votos");
+            Console.WriteLine($"Teve {nulos} votos nulos");
+            
         }
     }
 }
