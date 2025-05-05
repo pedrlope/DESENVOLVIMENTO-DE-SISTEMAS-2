@@ -707,230 +707,310 @@ static void exercicio15()
         }
         static void EX1()
         {
+            double numerador = 1000;
+            double denominador = 1;
+            double soma = 0;
+            bool positivo = true;
+
+            while (numerador > 0)
+            {
+                double termo = numerador / denominador;
+
+                if (positivo)
+                    soma += termo;
+                else
+                    soma -= termo;
+
+                numerador -= 3;
+                denominador++;
+                positivo = !positivo;
+            }
+
+            Console.WriteLine($"A soma é igual a {soma}");
 
         }
 
         static void EX2()
         {
-             double totalPessoas = 200, homensCount = 0, mulheresCount = 0, sim = 0, nao = 0, simmuler=0, simhomen=0, naomuler=0, naohomen=0;
+            double totalPessoas = 200, homensCount = 0, mulheresCount = 0, sim = 0, nao = 0, simmuler = 0, simhomen = 0, naomuler = 0, naohomen = 0;
 
-    for (int i = 1; i <= totalPessoas; i++)
-    {
-        string sexo;
-
-        Console.Write("Digite o sexo (m para masculino, f para feminino): ");
-        sexo = Console.ReadLine().ToLower();
-
-
-        if (sexo == "m")
-        {
-            homensCount++;
-            Console.Write("Respondeu satisfeito com o produto? (s para sim, n para não): ");
-            string resposta = Convert.ToString(Console.ReadLine()).ToLower();
-
-            if (resposta == "s")
+            for (int i = 1; i <= totalPessoas; i++)
             {
-                sim++;
-                simhomen++;
-            }
-            else if (resposta == "n")
-            {
-                nao++;
-                naohomen++;
-            }
-        }
+                string sexo;
 
-        else if (sexo == "f")
-        {
-            mulheresCount++;
-            Console.Write("Respondeu satisfeito com o produto? (s para sim, n para não): ");
-            string resposta = Convert.ToString(Console.ReadLine()).ToLower();
+                Console.Write("Digite o sexo (m para masculino, f para feminino): ");
+                sexo = Console.ReadLine().ToLower();
 
-            if (resposta == "s")
-            {
-                sim++;
-                simmuler++;
-            }
 
-            else if (resposta == "n")
-            {
-                nao++;
-                naomuler++;
+                if (sexo == "m")
+                {
+                    homensCount++;
+                    Console.Write("Respondeu satisfeito com o produto? (s para sim, n para não): ");
+                    string resposta = Convert.ToString(Console.ReadLine()).ToLower();
+
+                    if (resposta == "s")
+                    {
+                        sim++;
+                        simhomen++;
+                    }
+                    else if (resposta == "n")
+                    {
+                        nao++;
+                        naohomen++;
+                    }
+                }
+
+                else if (sexo == "f")
+                {
+                    mulheresCount++;
+                    Console.Write("Respondeu satisfeito com o produto? (s para sim, n para não): ");
+                    string resposta = Convert.ToString(Console.ReadLine()).ToLower();
+
+                    if (resposta == "s")
+                    {
+                        sim++;
+                        simmuler++;
+                    }
+
+                    else if (resposta == "n")
+                    {
+                        nao++;
+                        naomuler++;
+                    }
+                }
             }
+            Console.WriteLine($"a porcentagem de não foi:{(nao / 200) * 100}");
+            Console.WriteLine($"a porcentagem de sim foi:{(sim / 200) * 100}");
+            Console.WriteLine($"a porcentagem de mulheres que falaram sim foi:{(simmuler / mulheresCount) * 100}");
+            Console.WriteLine($"a porcentagem de homens que falaram não foi:{(naohomen / homensCount) * 100}");
         }
     }
-    Console.WriteLine($"a porcentagem de não foi:{(nao / 200) * 100}");
-    Console.WriteLine($"a porcentagem de sim foi:{(sim / 200) * 100}");
-    Console.WriteLine($"a porcentagem de mulheres que falaram sim foi:{(simmuler / mulheresCount) * 100}");
-    Console.WriteLine($"a porcentagem de homens que falaram não foi:{(naohomen / homensCount) * 100}");
-}
-}
 
-        
 
-        static void EX3()
+
+    static void EX3()
+    {
+        double formula = 0;
+        int parar = 1;
+        do
         {
-            double formula = 0;
-            int parar = 1;
-            do
+            Console.WriteLine("qual o seu salario?");
+            double salario = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("voce é homem ou mulher?");
+            string genero = Convert.ToString(Console.ReadLine());
+
+            Console.WriteLine("à quanto tempo você trabalha?Em anos");
+            int trabalho = Convert.ToInt32(Console.ReadLine());
+
+            if ((genero == "Homem" || genero == "homem") && trabalho > 15)
             {
-                Console.WriteLine("qual o seu salario?");
-                double salario = Convert.ToDouble(Console.ReadLine());
-
-                Console.WriteLine("voce é homem ou mulher?");
-                string genero = Convert.ToString(Console.ReadLine());
-
-                Console.WriteLine("à quanto tempo você trabalha?Em anos");
-                int trabalho = Convert.ToInt32(Console.ReadLine());
-
-                if ((genero == "Homem" || genero == "homem") && trabalho > 15)
-                {
-                    formula = salario * 0.2 + salario;
-                }
-
-                if ((genero == "Mulher" || genero == "mulher") && trabalho > 10)
-                {
-                    formula = salario * 0.25 + salario;
-                }
-                else
-                {
-                    formula = salario + 5000;
-                }
-
-                Console.WriteLine($"Seu salario é {formula}");
-
-                Console.WriteLine("digite 1 para parar");
-                int parou = Convert.ToInt32(Console.ReadLine());
-
-                if (parou != 1)
-                {
-
-                }
-                else
-                {
-                    parar = 0;
-                }
+                formula = salario * 0.2 + salario;
             }
-            while (parar == 1);
-        }
 
-        static void EX4()
-        {
-            int menorNumero = int.MaxValue; // Inicializa com o maior valor possível para int
-            int R = 0;
-
-            do
+            if ((genero == "Mulher" || genero == "mulher") && trabalho > 10)
             {
-                Console.WriteLine("Digite um número (ou digite 0 para sair):");
-                int num = Convert.ToInt32(Console.ReadLine());
-
-                // Verifica se o número digitado é menor que o menor número encontrado até agora
-                if (num < menorNumero)
-                {
-                    menorNumero = num;
-                }
-
-            } while (true);
-
-        }
-
-        static void EX5()
-        {
-
-        }
-
-        static void EX6()
-        {
-            Console.WriteLine("Quantos números da sequência de Fibonacci você deseja gerar?");
-            int n = Convert.ToInt32(Console.ReadLine());
-
-            int a = 0, b = 1;
-            int contador = 1;
-
-            Console.WriteLine("Sequência de Fibonacci:");
-
-            // Gerando e imprimindo a sequência
-            do
+                formula = salario * 0.25 + salario;
+            }
+            else
             {
-                Console.WriteLine(a);
-                int temp = a + b;
-                a = b;
-                b = temp;
+                formula = salario + 5000;
+            }
 
-                contador++;
-            } while (contador <= n);
+            Console.WriteLine($"Seu salario é {formula}");
+
+            Console.WriteLine("digite 1 para parar");
+            int parou = Convert.ToInt32(Console.ReadLine());
+
+            if (parou != 1)
+            {
+
+            }
+            else
+            {
+                parar = 0;
+            }
         }
+        while (parar == 1);
+    }
 
+    static void EX4()
+    {
+        int menorNumero = int.MaxValue;
+        int R = 0;
 
-        EX7();
-        static void EX7()
+        do
         {
-            int soma = 1;
-            Console.WriteLine("Qual o número que deseja fatorar?");
+            Console.WriteLine("Digite um número (ou digite 0 para sair):");
             int num = Convert.ToInt32(Console.ReadLine());
 
-            for (int i = 1; i <= num; i++)
+            if (num < menorNumero)
             {
-                soma *= i;
+                menorNumero = num;
             }
-            Console.WriteLine($"a fatoração deu{soma}");
 
+        } while (true);
 
-            Console.WriteLine("Deseja continuar? Digite 0 para sair ou outro número para continuar.");
-            int R = Convert.ToInt32(Console.ReadLine());
-
-         while (R != 0) ;
     }
 
-            static void EX8()
-            {
+    static void EX5()
+    {
+        int impulso, maior = int.MinValue, contMaior = 0;
 
-            
+        do
+        {
+            Console.Write("Digite o número de impulsos (ou número negativo para sair): ");
+            impulso = Convert.ToInt32(Console.ReadLine());
+
+            if (impulso < 0)
+                break;
+
+            if (impulso > maior)
+            {
+                maior = impulso;
+                contMaior = 1;
+            }
+            else if (impulso == maior)
+            {
+                contMaior++;
             }
 
+        } while (true);
 
-            
-        
-
-        static void EX9()
+        if (contMaior > 0)
         {
-            float temperatura, c, f;
-            char unidade;
-
-            Console.WriteLine("qual a temperatura?");
-            temperatura = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("qual a unidade de medida?");
-            unidade = Char.ToUpper(Convert.ToChar(Console.ReadLine()));
-            f = (9 * temperatura) / 5 + 32;
-            c = (5 * (temperatura - 32)) / 9;
-            if (unidade == 'C' || unidade == 'c')
-            {
-                Console.WriteLine($" a temperatura é {f}");
-            }
-
-            if (unidade == 'F' || unidade == 'f')
-            {
-                Console.WriteLine($" a temperatura é {c}");
-            }
-
-        }
-
-        static void EX10()
-        {
-
-        }
-
-        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
-        int escolha = Convert.ToInt32(Console.ReadLine());
-
-        if (escolha == 2)
-        {
-            i = 0;
+            Console.WriteLine($"Maior número de impulsos: {maior}");
+            Console.WriteLine($"Número de assinantes com esse valor: {contMaior}");
         }
         else
         {
-
+            Console.WriteLine("Nenhum dado válido foi inserido.");
         }
+    }
+
+    static void EX6()
+    {
+        Console.WriteLine("Quantos números da sequência de Fibonacci você deseja gerar?");
+        int n = Convert.ToInt32(Console.ReadLine());
+
+        int a = 0, b = 1;
+        int contador = 1;
+
+        Console.WriteLine("Sequência de Fibonacci:");
+
+        do
+        {
+            Console.WriteLine(a);
+            int temp = a + b;
+            a = b;
+            b = temp;
+
+            contador++;
+        } while (contador <= n);
+    }
+
+
+    EX7();
+    static void EX7()
+    {
+        int soma = 1;
+        Console.WriteLine("Qual o número que deseja fatorar?");
+        int num = Convert.ToInt32(Console.ReadLine());
+
+        for (int i = 1; i <= num; i++)
+        {
+            soma *= i;
+        }
+        Console.WriteLine($"a fatoração deu{soma}");
+
+
+        Console.WriteLine("Deseja continuar? Digite 0 para sair ou outro número para continuar.");
+        int R = Convert.ToInt32(Console.ReadLine());
+
+        while (R != 0) ;
+    }
+
+    static void EX8()
+    {
+        int x = 1;
+
+        do
+        {
+            int contador = 0;
+            do
+            {
+                int resultado = x * x - 3 * x - 4;
+                Console.WriteLine($"F({x}) = {resultado}");
+                contador++;
+            } while (contador < 1);
+
+            x++;
+
+        } while (x <= 10);
+    }
+
+    static void EX9()
+    {
+        float temperatura, c, f;
+        char unidade;
+
+        Console.WriteLine("qual a temperatura?");
+        temperatura = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("qual a unidade de medida?");
+        unidade = Char.ToUpper(Convert.ToChar(Console.ReadLine()));
+        f = (9 * temperatura) / 5 + 32;
+        c = (5 * (temperatura - 32)) / 9;
+        if (unidade == 'C' || unidade == 'c')
+        {
+            Console.WriteLine($" a temperatura é {f}");
+        }
+
+        if (unidade == 'F' || unidade == 'f')
+        {
+            Console.WriteLine($" a temperatura é {c}");
+        }
+
+    }
+
+    static void EX10()
+    {
+        double numerador = 2;
+        double denominador = 500;
+        double soma = 0;
+        bool positivo = true;
+
+        while (denominador >= 50)
+        {
+            double termo = numerador / denominador;
+
+            if (positivo)
+            {
+                soma += termo;
+                numerador = 2;
+            }
+            else
+            {
+                soma -= termo;
+                numerador = 5;
+            }
+
+            denominador -= 50;
+            positivo = !positivo;
+        }
+
+        Console.WriteLine($"A soma é igual a {soma}");
+    }
+
+    Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+    int escolha = Convert.ToInt32(Console.ReadLine());
+
+    if (escolha == 2)
+    {
+        i = 0;
+    }
+    else
+    {
+
     }
 }
 
