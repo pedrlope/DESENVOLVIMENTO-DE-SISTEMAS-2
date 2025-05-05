@@ -712,8 +712,61 @@ static void exercicio15()
 
         static void EX2()
         {
+             double totalPessoas = 200, homensCount = 0, mulheresCount = 0, sim = 0, nao = 0, simmuler=0, simhomen=0, naomuler=0, naohomen=0;
 
+    for (int i = 1; i <= totalPessoas; i++)
+    {
+        string sexo;
+
+        Console.Write("Digite o sexo (m para masculino, f para feminino): ");
+        sexo = Console.ReadLine().ToLower();
+
+
+        if (sexo == "m")
+        {
+            homensCount++;
+            Console.Write("Respondeu satisfeito com o produto? (s para sim, n para não): ");
+            string resposta = Convert.ToString(Console.ReadLine()).ToLower();
+
+            if (resposta == "s")
+            {
+                sim++;
+                simhomen++;
+            }
+            else if (resposta == "n")
+            {
+                nao++;
+                naohomen++;
+            }
         }
+
+        else if (sexo == "f")
+        {
+            mulheresCount++;
+            Console.Write("Respondeu satisfeito com o produto? (s para sim, n para não): ");
+            string resposta = Convert.ToString(Console.ReadLine()).ToLower();
+
+            if (resposta == "s")
+            {
+                sim++;
+                simmuler++;
+            }
+
+            else if (resposta == "n")
+            {
+                nao++;
+                naomuler++;
+            }
+        }
+    }
+    Console.WriteLine($"a porcentagem de não foi:{(nao / 200) * 100}");
+    Console.WriteLine($"a porcentagem de sim foi:{(sim / 200) * 100}");
+    Console.WriteLine($"a porcentagem de mulheres que falaram sim foi:{(simmuler / mulheresCount) * 100}");
+    Console.WriteLine($"a porcentagem de homens que falaram não foi:{(naohomen / homensCount) * 100}");
+}
+}
+
+        
 
         static void EX3()
         {
