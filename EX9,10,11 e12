@@ -310,50 +310,180 @@ static void exercicio10()
 
         static void EX1()
         {
+            Console.Write("Digite um número para ver sua tabuada: ");
+            int numero = Convert.ToInt32(Console.ReadLine());
 
+            int i = 1;
+            while (i <= 10)
+            {
+                Console.WriteLine($"{numero} x {i} = {numero * i}");
+                i++;
+            }
         }
 
         static void EX2()
         {
+            string continuar = "sim";
 
+            while (continuar.ToLower() == "sim")
+            {
+                Console.Write("Digite um valor: ");
+                string valor = Console.ReadLine();
+
+                Console.Write("Deseja continuar? (sim/não): ");
+                continuar = Console.ReadLine();
+            }
+
+            Console.WriteLine("Programa finalizado.");
         }
+    }
 
         static void EX3()
         {
+        int i = 0,maiorIdade = 0,totalMulheres = 0,mulheresVerdeLouro = 0;
+        Console.WriteLine("com quantas pessoas foi feita a pesquisa?");
+        int qtd = Convert.ToInt32(Console.ReadLine());
 
+        while (i<qtd)
+        {
+            Console.Write("Digite a idade: ");
+            int idade = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Digite o sexo (f/m): ");
+            char sexo = Convert.ToChar(Console.ReadLine().ToLower());
+
+            Console.Write("Cor dos cabelos (louro/castanho/preto): ");
+            string cabelo = Console.ReadLine().ToLower();
+
+            Console.Write("Cor dos olhos (azul/verde/castanho): ");
+            string olhos = Console.ReadLine().ToLower();
+
+            if (idade > maiorIdade)
+            {
+                maiorIdade = idade;
+            }
+
+            if (sexo == 'f')
+            {
+                totalMulheres++;
+                if (idade >= 18 && idade <= 35 && cabelo == "louro" && olhos == "verde")
+                {
+                    mulheresVerdeLouro++;
+                }
+            }
         }
+        double porcentagem = totalMulheres > 0 ? (mulheresVerdeLouro * 100.0) / totalMulheres : 0;
+        Console.WriteLine($"Maior idade: {maiorIdade}");
+        Console.WriteLine($"Porcentagem de mulheres com idade entre 18 e 35, cabelos louros e olhos verdes: {porcentagem}");
+    }
 
         static void EX4()
         {
+        int i = 0, negativos = 0;
 
+        while (i < 5)
+        {
+            Console.Write($"Digite o valor {i + 1}: ");
+            int valor = Convert.ToInt32(Console.ReadLine());
+
+            if (valor < 0)
+            {
+                negativos++;
+            }
+
+            i++;
         }
+
+        Console.WriteLine($"Total de valores negativos: {negativos}");
+    }
 
         static void EX5()
         {
-
+        int count = 0;
+        Console.Write($"Digite a quantidade de pessoas ");
+        int pessoas = Convert.ToInt32(Console.ReadLine());
+        while (pessoas != 0)
+        {
+            Console.Write($"Digite a idade");
+            int valor = Convert.ToInt32(Console.ReadLine());
+            pessoas--;
+            count += valor;
         }
+        Console.WriteLine($"a media  da idade é :{count/pessoas}");
+    }
 
         static void EX6()
         {
-
+        int anos = 0;
+        Console.WriteLine("digite o numero de habitantes do paísA");
+        int paisA= Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("digite o numero de habitantes do paísB");
+        int paisB = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("digite o a frequencia que o país A cresce");
+        int paisAC = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("digite o a frequencia que o país B cresce");
+        int paisBC = Convert.ToInt32(Console.ReadLine());
+        if (paisA >= paisB)
+        {
+            Console.WriteLine("o país A já iguala a o país B");
         }
+        if (paisA< paisB && paisAC <= paisBC)
+        {
+            Console.WriteLine("o país A nunca vai se igualar ou superar o número de habitantes do paísB");
+        }
+        while (paisA <= paisB)
+        {
+            paisA = (int)(paisA * paisAC);
+            paisB = (int)(paisB * paisBC);
+            anos++;
+        }
+        Console.WriteLine($"Serão necessários {anos} anos para que o país A ultrapasse ou iguale o país B.");
+    }
+
 
         static void EX7()
+    {
+        int numero = 10, count = 0;
+
+        while (numero <= 100)
         {
-
+            if (numero % 11 == 5)
+            {
+                Console.WriteLine(numero);
+            }
+            numero++;
+            count++;
         }
-
+        Console.WriteLine($"a quantidade de números que são divisiveis por 11 com resto 5 é: {count}");
+    }
         static void EX8()
         {
-
+          Console.WriteLine("digite a quantidade de alunos");
+          int alunos = Convert.ToInt32(Console.ReadLine());
+        int soma = 0;
+         for (int i =0; i < alunos; i++)
+        {
+            Console.WriteLine($"digite a nota do aluno {i}");
+            int nota = Convert.ToInt32(Console.ReadLine());
+            soma += nota;
+        }
+        Console.WriteLine($"a media da turma é :{soma/alunos}");
         }
 
         static void EX9()
+    {
+        int alunos = 10;
+        int soma = 0;
+        for (int i = 0; i < alunos; i++)
         {
-
+            Console.WriteLine($"digite a nota do aluno {i}");
+            int nota = Convert.ToInt32(Console.ReadLine());
+            soma += nota;
         }
+        Console.WriteLine($"a media da turma é :{soma / alunos}");
+    }
 
-        Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
+    Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
 
         if (escolha == 2)
@@ -365,7 +495,6 @@ static void exercicio10()
 
         }
     }
-}
 
 static void exercicio11()
 {
