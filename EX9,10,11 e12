@@ -496,6 +496,8 @@ static void exercicio10()
         }
     }
 
+
+
 static void exercicio11()
 {
     int i = 1;
@@ -555,47 +557,196 @@ static void exercicio11()
 
         static void EX1()
         {
+            int soma = 0;
 
+            for (int i = 1; soma <= 50; i++)
+            {
+                soma += i;
+                Console.WriteLine($"Soma {soma}");
+            }
         }
 
         static void EX2()
         {
+            double soma = 0;
+            double numerador, denominador;
+            int sinal = 1;
 
+            for (int i = 0; i < 10; i++)
+            {
+                numerador = (i % 2 == 0) ? 2 : 5;
+                denominador = 500 - (i * 50);
+                soma += sinal * (numerador / denominador);
+                sinal *= -1;
+            }
+
+            Console.WriteLine($"Soma dos 10 primeiros termos da série: {soma}");
         }
 
         static void EX3()
         {
+        int aprovados = 0, reprovados = 0;
+            Console.Write("Quantos alunos?");
+            int alunos = Convert.ToInt32(Console.ReadLine());
 
+            while (alunos!=0)
+        {
+            Console.Write("Digite a nota do aluno: ");
+            int nota = Convert.ToInt32(Console.ReadLine());
+
+            if (nota >= 6.0)
+            {
+                aprovados++;
+            }
+            else
+            {
+                reprovados++;
+            }
+                alunos--;
         }
+
+        Console.WriteLine($"Aprovados: {aprovados}");
+        Console.WriteLine($"Reprovados: {reprovados}");
+    }
 
         static void EX4()
         {
 
+            double totalPessoas = 500, homensCount = 0, mulheresCount = 0, sim = 0, nao = 0, simmuler = 0, simhomen = 0, naomuler = 0, naohomen = 0;
+
+            for (int i = 1; i <= totalPessoas; i++)
+            {
+                string sexo;
+
+                Console.Write("Digite o sexo (m para masculino, f para feminino): ");
+                sexo = Console.ReadLine().ToLower();
+
+
+                if (sexo == "m")
+                {
+                    homensCount++;
+                    Console.Write("Respondeu satisfeito com o produto? (s para sim, n para não): ");
+                    string resposta = Convert.ToString(Console.ReadLine()).ToLower();
+
+                    if (resposta == "s")
+                    {
+                        sim++;
+                        simhomen++;
+                    }
+                    else if (resposta == "n")
+                    {
+                        nao++;
+                        naohomen++;
+                    }
+                }
+
+                else if (sexo == "f")
+                {
+                    mulheresCount++;
+                    Console.Write("Respondeu satisfeito com o produto? (s para sim, n para não): ");
+                    string resposta = Convert.ToString(Console.ReadLine()).ToLower();
+
+                    if (resposta == "s")
+                    {
+                        sim++;
+                        simmuler++;
+                    }
+
+                    else if (resposta == "n")
+                    {
+                        nao++;
+                        naomuler++;
+                    }
+                }
+            }
+            Console.WriteLine($"a porcentagem de não foi:{(nao / 500) * 100}");
+            Console.WriteLine($"a porcentagem de sim foi:{(sim / 500) * 100}");
+            Console.WriteLine($"a porcentagem de mulheres que falaram sim foi:{(simmuler / mulheresCount) * 100}");
+            Console.WriteLine($"a porcentagem de homens que falaram não foi:{(naohomen / homensCount) * 100}");
         }
 
         static void EX5()
         {
-
+            Console.WriteLine("digite a quantidade de alunos");
+            int alunos = Convert.ToInt32(Console.ReadLine());
+            int soma = 0;
+            int i = 0;
+            while (alunos>i)
+            {
+                Console.WriteLine($"digite a nota do aluno {i}");
+                int nota = Convert.ToInt32(Console.ReadLine());
+                soma += nota;
+                i++;
+            }
+            Console.WriteLine($"a media da turma é :{soma / alunos}");
         }
 
         static void EX6()
         {
+            Console.Write("Digite um número inteiro (N): ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int soma = 0;
 
+            for (int i = 1; i <= N; i++)
+            {
+                soma += i;
+            }
+
+            Console.WriteLine($"Soma dos números de 1 até {N} é: {soma}");
         }
 
         static void EX7()
         {
+            for (int x = 1; x <= 100; x++)
+            {
+                for (int y = 0; y <= 5; y++)
+                {
+                    double numerador = Math.Pow(x, 2) + 3 * x + Math.Pow(y, 2);
+                    double denominador = (x * y) - 5 * y - 3 * x + 15;
 
+                    if (denominador != 0)
+                    {
+                        double resultado = numerador / denominador;
+                        Console.WriteLine($"F({x},{y}) = {resultado:F4}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"F({x},{y}) = indefinido (divisão por zero)");
+                    }
+                }
+            }
         }
 
         static void EX8()
         {
+            Console.Write("Digite o primeiro termo da PA: ");
+            int a1 = Convert.ToInt32(Console.ReadLine());
 
+            Console.Write("Digite a razão da PA: ");
+            int r = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Digite o número de termos: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+
+            int contador = 0;
+            while (contador < n)
+            {
+                int termo = a1 + contador * r;
+                Console.WriteLine($"Termo {contador + 1}: {termo}");
+                contador++;
+            }
         }
 
         static void EX9()
         {
+            Console.WriteLine("digite uma temperatura em f");
+            int f = Convert.ToInt32(Console.ReadLine());
 
+            for (f = 32; f <= 64; f++)
+            {
+                double c = (f - 32) * 5.0 / 9.0;
+                Console.WriteLine($"{f}°F = {c:F2}°C");
+            }
         }
 
 
@@ -612,6 +763,7 @@ static void exercicio11()
         }
     }
 }
+
 
 static void exercicio12()
 {
