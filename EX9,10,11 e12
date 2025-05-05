@@ -79,43 +79,164 @@ static void exercicio9()
 
         static void EX1()
         {
+            Console.Write("Digite o sexo (masculino/feminino): ");
+            string sexo = Console.ReadLine().ToLower();
 
+            if (sexo == "masculino")
+            {
+                Console.WriteLine("Sexo masculino.");
+            }
+            else if (sexo == "feminino")
+            {
+                Console.WriteLine("Sexo feminino.");
+            }
+            else
+            {
+                Console.WriteLine("Sexo não identificado.");
+            }
         }
 
         static void EX2()
         {
+            Console.Write("Digite um número menor ou igual a 50: ");
+            int num = Convert.ToInt32(Console.ReadLine());
 
+            if (num <= 50)
+            {
+                int resultado = num;
+                while (resultado < 250)
+                {
+                    resultado *= 3;
+                    Console.WriteLine("Resultado: " + resultado);
+                }
+            }
+            else
+            {
+                Console.WriteLine("Número inválido.");
+            }
         }
 
         static void EX3()
         {
-
+            int i = 1;
+            int soma = 0;
+            while ( i < 10)
+            {
+                i++;
+                Console.WriteLine("Digite a nota do aluno");
+                int nota = Convert.ToInt32(Console.ReadLine());
+                soma = +nota;
+            }
+            int media = soma / 10;
+            Console.WriteLine($"a media é:{media}");
         }
 
         static void EX4()
         {
-
+            int i = 1;
+            while (i <= 10)
+            {
+                if (i % 2 != 0)
+                {
+                    Console.WriteLine(i);
+                }
+                i++;
+            }
         }
 
         static void EX5()
         {
+            Console.Write("Digite a primeira nota");
+            double n1 = Convert.ToDouble(Console.ReadLine());
 
+            Console.Write("Digite a segunda nota");
+            double n2 = Convert.ToDouble(Console.ReadLine());
+
+            double media = (n1 + n2) / 2;
+
+            if (media >= 7)
+            {
+                Console.WriteLine($"Aprovado! Média {media}");
+            }
+            else if (media >= 4)
+            {
+                Console.WriteLine($"Em exame! Média {media}");
+                Console.Write("Digite a nota do exame ");
+                double exame = Convert.ToDouble(Console.ReadLine());
+                media = (media + exame) / 2;
+                if (media >= 5)
+                {
+                    Console.WriteLine($"Aprovado após exame. Média final {media}");
+                }
+                else
+                {
+                    Console.WriteLine($"Reprovado após exame. Média final {media}");
+                }
+            }
+            else
+            {
+                Console.WriteLine($"Reprovado! Média: {media}");
+            }
         }
 
         static void EX6()
         {
+            Console.Write("Digite um número entre 1000 e 9999: ");
+            int numero = Convert.ToInt32(Console.ReadLine());
 
+            if (numero >= 1000 && numero <= 9999)
+            {
+                int milhar = numero / 1000;
+                int centena = (numero % 1000) / 100;
+                int dezena = (numero % 100) / 10;
+                int unidade = numero % 10;
+
+                Console.WriteLine($"Milhar: {milhar}");
+                Console.WriteLine($"Centena: {centena}");
+                Console.WriteLine($"Dezena: {dezena}");
+                Console.WriteLine($"Unidade: {unidade}");
+            }
+            else
+            {
+                Console.WriteLine("Número fora do intervalo permitido.");
+            }
         }
 
         static void EX7()
         {
+            Console.Write("Digite a idade: ");
+            int idade = Convert.ToInt32(Console.ReadLine());
 
+            if (idade >= 0)
+            {
+                if (idade < 18)
+                {
+                    Console.WriteLine("Menor de idade.");
+                }
+                else
+                {
+                    Console.WriteLine("Maior de idade.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Idade inválida.");
+            }
         }
 
         static void EX8()
         {
+            int i = 1, soma = 0;
 
+            while (i <= 10)
+            {
+                soma += i;
+                i++;
+            }
+
+            Console.WriteLine("Soma dos 10 primeiros números inteiros: " + soma);
         }
+         
 
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
