@@ -342,9 +342,41 @@ static void exercicio13()
         }
 
         static void EX10()
-        {
+{
+    bool wheli = true;
+    while(wheli) {
 
+    Console.WriteLine("digite o numero1");
+    int num1 = Convert.ToInt32(Console.ReadLine());
+
+    Console.WriteLine("digite o numero2");
+    int num2 = Convert.ToInt32(Console.ReadLine());
+
+    int diferença = num1 - num2;
+    switch(diferença)
+        {
+            case int p when p * num1 > p * num2:
+            Console.WriteLine("O número 1 é o maior"); 
+            break;
+
+            case int p when p * num1 < p * num2:
+            Console.WriteLine("O número 2 é o maior");
+            break;
+
+            case int p when p * num1 == p * num2:
+            Console.WriteLine("Os números são iguais");
+            break;
         }
+
+    Console.WriteLine("deseja continuar?Digite 1 para parar");
+    int r = Convert.ToInt32(Console.ReadLine());
+    if (r == 1)
+    {
+        wheli = false;
+    }
+                 }
+
+}
 
         Console.WriteLine("quer mudar de exercicio? Aperte 2 para sair");
         int escolha = Convert.ToInt32(Console.ReadLine());
