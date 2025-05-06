@@ -91,10 +91,32 @@ static void exercicio13()
         }
 
         static void EX2()
+{
+    while (true)
+    {
+
+        Console.WriteLine("Qual o salario inicial?Digite 0 para sair");
+        int salario = Convert.ToInt32(Console.ReadLine());
+        if (salario == 0) break;
+        Console.WriteLine("Qual a porcentagem do reajuste?");
+        int porcentagem = Convert.ToInt32(Console.ReadLine());
+        double reajuste = 0;
+        switch (porcentagem)
         {
+            case int p when p < 50:
+                 reajuste = 250 + salario;
+                break;
 
+            case 50:
+                reajuste = ((15 * salario) / 100) + salario;
+                break;
+
+            case int p when p > 50:
+                reajuste = ((30 * salario) / 100) + salario;
+                break;
         }
-
+    }
+}
 
         static void EX3()
         {
@@ -161,9 +183,41 @@ static void exercicio13()
         }
 
         static void EX6()
+{
+    int A=0, B=0, C = 0, D = 0, F = 0;
+    for (int i = 0; i < 10; i++)
+    {
+        Console.WriteLine("Digite a sua nota(De 1 a 10");
+        int nota = Convert.ToInt32(Console.ReadLine());
+        switch (nota)
         {
+            case int p when p >= 0 && p < 3:
+                F++;
+                break;
+
+            case int p when p >= 3 && p < 5:
+                D++;
+                break;
+
+            case int p when p >= 5 && p < 7:
+                C++;
+                break;
+
+            case int p when p >= 7 && p < 9:
+                B++;
+                break;
+
+            case int p when p >=9&&p<11:
+                A++;
+                break;
+
+            case int p when p >=11:
+                Console.WriteLine("Isso é impossivel");
+                break;
 
         }
+    }
+}
 
         static void EX7()
         {
