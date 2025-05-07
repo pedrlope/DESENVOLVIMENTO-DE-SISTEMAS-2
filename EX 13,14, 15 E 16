@@ -25,69 +25,47 @@ if (exercicio == 16)
     exercicio16();
 }
 
-static void exercicio13()
-{
-    int i = 1;
-    while (i > 0)
-    {
-
-        Console.WriteLine("qual o exercicio");
-        Console.WriteLine("1 – Faz pesquisa de preços por região");
-        Console.WriteLine("2 – Reajuste salarial de funcionário");
-        Console.WriteLine("3 – Quadrado de números");
-        Console.WriteLine("4 – Peso ideal de uma pessoa com base em dados pessoais");
-        Console.WriteLine("5 – Recebe informações de produtos: Preço, região, etc");
-        Console.WriteLine("6 – Verifica notas informadas");
-        Console.WriteLine("7 - Valor máximo de gastos de clientes");
-        Console.WriteLine("8 – Verifica dados com base em classificação");
-        Console.WriteLine("9 - Simples calculadora com MessageBox");
-        Console.WriteLine("10 - Comparação entre números");
-        int escolha1 = Convert.ToInt32(Console.ReadLine());
-        switch (escolha1)
-        {
-            case 1:
-                EX1();
-                break;
-
-            case 2:
-                EX2();
-                break;
-
-            case 3:
-                EX3();
-                break;
-
-            case 4:
-                EX4();
-                break;
-
-            case 5:
-                EX5();
-                break;
-
-            case 6:
-                EX6();
-                break;
-
-            case 7:
-                EX7();
-                break;
-
-            case 8:
-                EX8();
-                break;
-
-            case 9:
-                EX9();
-                break;
-
-            case 10:
-                EX10();
-                break;
-        }
         static void EX1()
         {
+            Console.Write("Digite o nome do produto: ");
+            string nome = Convert.ToString(Console.ReadLine());
 
+            Console.Write("Qual o preço padrão do produto?");
+            decimal preco = Convert.ToDecimal(Console.ReadLine());
+
+            string regiao = "";
+            int valregiao = 0;
+
+            Console.Write("Digite o código da região (1 a 5): ");
+            int codigoRegiao = Convert.ToInt32(Console.ReadLine()); ;
+            switch (codigoRegiao)
+            {
+                case 1:
+                    regiao = "Sul";
+                    valregiao = 12;
+                    break;
+                case 2:
+                    regiao = "Sudeste";
+                    valregiao = 12;
+                    break;
+                case 3:
+                    regiao = "Centro-Oeste";
+                    valregiao = 8;
+                    break;
+                case 4:
+                    regiao = "Norte";
+                    valregiao = 4;
+                    break;
+                case 5:
+                    regiao = "Nordeste";
+                    valregiao = 4;
+                    break;
+            }
+
+            Produto produto = new Produto(nome, preco);
+            Console.WriteLine($"O Produto é {produto.Nome}");
+            Console.WriteLine($"a Região é {regiao}");
+            Console.WriteLine($"o preço da região é {produto.Preco * valregiao}");
         }
 
         static void EX2()
@@ -179,7 +157,45 @@ static void exercicio13()
 
         static void EX5()
         {
+            Console.Write("Digite o nome do produto: ");
+            string nome = Convert.ToString(Console.ReadLine());
 
+            Console.Write("Qual o preço padrão do produto?");
+            decimal preco= Convert.ToDecimal(Console.ReadLine());
+
+            string regiao = "";
+            int valregiao = 0;
+
+            Console.Write("Digite o código da região (1 a 5): ");
+            int codigoRegiao= Convert.ToInt32(Console.ReadLine()); ;
+            switch(codigoRegiao)
+            {
+                case 1:
+                    regiao = "Sul";
+                    valregiao = 12;
+                    break;
+                case 2:
+                    regiao = "Sudeste";
+                    valregiao = 12;
+                    break;
+                case 3:
+                    regiao = "Centro-Oeste";
+                    valregiao = 8;
+                    break;
+                case 4:
+                    regiao = "Norte";
+                    valregiao = 4;
+                    break;
+                case 5:
+                    regiao = "Nordeste";
+                    valregiao = 4;
+                    break;
+            }
+
+            Produto produto = new Produto(nome, preco);
+            Console.WriteLine($"O Produto é {produto.Nome}");
+            Console.WriteLine($"a Região é {regiao}");
+            Console.WriteLine($"o preço da região é {produto.Preco*valregiao}");
         }
 
         static void EX6()
@@ -264,7 +280,54 @@ static void exercicio13()
 
         static void EX8()
         {
+            while (true)
+            {
+                Console.WriteLine("Qual o número da amostra?");
+                int amostra = Convert.ToInt32(Console.ReadLine());
 
+                Console.WriteLine("Qual o conteudo de carbono?");
+                int carbono = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Qual a dureza rockwell?");
+                int rockwell = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Qual a resistencia a psi?");
+                int tracao = Convert.ToInt32(Console.ReadLine());
+
+                int grau = 0;
+                if ((carbono/ 100) <= 0.7 && rockwell > 50 && tracao > 80000)
+                {
+                    grau = 10;
+                }
+
+                else if ((carbono/100 <= 0.7 && rockwell > 50) || (carbono / 100 <= 0.7 && tracao > 80000) || (rockwell > 50 && tracao > 80000))
+                {
+                    grau = 9;
+                }
+
+                else if (carbono / 100 <= 0.7 || rockwell > 50 || tracao > 80000)
+                {
+                    grau = 8;
+                }
+
+                else
+                {
+                    grau = 7;
+                }
+                switch (grau)
+                {
+                    case 10:
+                    case 9:
+                    case 8:
+                    case 7:
+                        Console.WriteLine($"O grau da amostra {amostra} é {grau}");
+                        break;
+                }
+                Console.WriteLine("Deseja parar? Digite 1 para sair.");
+                int sair = Convert.ToInt32(Console.ReadLine());
+                if (sair == 1)
+                    break;
+            }
         }
 
         static void EX9()
