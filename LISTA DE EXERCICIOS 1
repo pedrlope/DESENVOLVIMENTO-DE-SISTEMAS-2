@@ -1,0 +1,363 @@
+# LISTA
+
+
+
+
+#include <stdbool.h>
+#include <math.h>
+#include <stdio.h>
+
+int main()
+
+{
+
+ void exercicio1()
+{
+    int numerador,numero;
+numero = 1;
+numerador = 1; 
+
+for (numerador; numerador !=11; numero ++)
+{
+if (numero == 10)
+{
+    printf("%d X %d = %d\n", numerador, numero, numerador*numero);
+numerador++;
+numero= 1;
+}if(numerador != 11)
+{
+  printf("%d X %d = %d\n", numerador, numero, numerador*numero);
+}
+}
+}
+
+
+
+ void exercicio2()
+ {
+    int linha, coluna, contador;
+    contador = 0;
+     printf("olá, digite o numero \n");
+     scanf("%d", &linha);
+     for(linha; linha>0; linha--)
+     {
+         printf("\n*");
+         
+     coluna =contador;
+     for(coluna; coluna>0; coluna--)
+     {
+         printf("*");
+     }
+     contador ++;
+     }
+     }
+
+void exercicio3()
+ {
+    int num, numero;
+    float soma;
+    printf("oi, digite o primeiro numero \n");
+    scanf("%d", &num);
+    
+    for (num; num>0 ;num--)
+    {
+        printf("digite o numero \n");
+        scanf("%d", &numero);
+        soma+=numero;
+    }
+    printf("a soma eh %f", soma);
+}
+
+ 
+ void exercicio4()
+ {
+     int num,valor;
+     printf("olá, digite o numero e veja quantos primos tem de 2 até ele\n");
+     scanf("%d", &num);
+     
+     for(valor=3; valor<num; valor++)
+     {
+         if (valor%2==0 && valor!=2 || valor %3==0 && valor !=3 || valor%5==0  && valor !=5)
+        {
+            printf("não primo\n");
+            break;
+        }
+        else
+        {
+        printf("primo:%d\n", valor);
+        }
+     }
+ }
+ 
+ void exercicio5()
+ {
+     int alunos,contador;
+    float media, soma, notas;
+    bool variavel = true;
+    contador =0;
+    printf("Digite o numero de alunos\n");
+    scanf("%d", &alunos);
+    
+    for(alunos; alunos>0; alunos--)
+    {
+        soma = 0;
+        printf("As notas vão de 0 a 10\n");
+        printf("Digite as notas do %d aluno, para parar digite -1\n", alunos);
+        while(variavel)
+        {
+            scanf("%f", &notas);
+            if(notas<0 || notas>10)
+            {
+                
+            
+            if(notas == -1)
+            {
+                variavel =false;
+                break;
+            }
+            
+            continue;
+            }
+            soma+= notas;
+            contador ++;
+            media = soma/contador;
+        }
+        soma = 0;
+        contador =0;
+        variavel = true;
+        printf("Media do aluno %d eh: %f\n",alunos, media);
+    }
+ }
+ 
+ void exercicio6()
+ {
+    int num, variavel, numerador, piramide;
+    
+    printf("digite o numero de digitos\n");
+    scanf("%d", &num);
+    numerador = 1;
+    variavel = 0;
+    
+    for(num; num>0;num--)
+    {
+        
+        for(piramide = 1; piramide < num; piramide++)
+       {
+        printf(" ");
+       }   
+        while(variavel<numerador)
+        {
+            if(variavel!=0)
+            {
+            printf("%d", variavel);
+            }
+            variavel++;
+        }
+        printf("%d", numerador);
+        while(variavel!=0 && variavel!=1)
+        {
+            printf("%d", variavel-1);
+            variavel --;
+        }
+        printf("\n");
+        variavel = 1;
+        numerador++;
+    }
+ }
+ 
+ void exercicio7()
+ {
+        int num, cont, numerador, formula, formula2,formula3;
+  printf("digite um  numero\n");
+  scanf("%d", &num);
+  cont = 1;
+  numerador = 2;
+
+for (num; num>0; num--)
+{
+    formula = (pow(2,numerador))-1;
+    formula2 = pow(2,numerador-1);
+    formula3=formula*formula2;
+    if(formula3>num)
+    {
+        break;
+    }
+    while(formula%cont == 0 )
+    
+    {
+        
+        if(cont <= formula && formula2>1)
+        {
+            printf("%d\n", formula3);
+            break;
+        }
+        cont++;
+    }
+    numerador++;
+}
+ }
+ 
+ void exercicio8()
+ {
+    int a, b, c, n;
+
+    printf("Digite n: \n");
+    scanf("%d", &n);
+
+    for (a = 1; a <= n; a++)
+    {
+        for (b = a; b <= n; b++)
+        {
+            for (c = b; c <= n; c++)
+            {
+                if (a * a + b * b == c * c)
+                {
+                    printf("%d² + %d² = %d²\n", a, b, c);
+                }
+            }
+        }
+    }
+ }
+ 
+ void exercicio9()
+ {
+    int n, i, j, espacos, asteriscos;
+
+    printf("Digite o numero: \n");
+    scanf("%d", &n);
+
+    for (i = 1; i <= n; i++)
+    {
+        espacos = n - i;
+        asteriscos = 2 * i - 1;
+
+        for (j = 0; j < espacos; j++)
+        {
+            printf(" ");
+        }
+
+        for (j = 0; j < asteriscos; j++)
+        {
+            printf("*");
+        }
+
+        printf("\n");
+    }
+
+    for (i = n - 1; i >= 1; i--)
+    {
+        espacos = n - i;
+        asteriscos = 2 * i - 1;
+
+        for (j = 0; j < espacos; j++)
+        {
+            printf(" ");
+        }
+
+        for (j = 0; j < asteriscos; j++)
+        {
+            printf("*");
+        }
+
+        printf("\n");
+    }
+     
+ }
+ 
+ void exercicio10()
+ {
+    int numero, formula, numerador, cont, variavel;
+    
+    printf("digite o numero\n");
+    scanf("%d", &numero);
+    cont =1;
+    
+     printf("%d = a ", numero); 
+    for(numerador = 2; numerador<=numero; numerador)
+    {
+              
+               
+        formula = numero%numerador;
+         
+        if(formula == 0)
+        {
+            cont++;
+            if (numerador == numero)
+            {
+                printf("%d¹\n", numerador);
+                break;
+            }
+         numero = numero/numerador;
+        printf("%d¹ * ", numerador);
+        
+        
+        numerador = 2;
+         
+        }
+        else
+        {
+
+            numerador++;
+            cont =1;
+        }
+        
+                
+    }
+}
+int escolha;
+
+  do
+  {
+  printf("escolha os seguintes exercicios: 1 - 2 - 3 - 4 - 5 - 6 - 7 - 8. - 9 - 10 ou digite outro numero para parar\n");
+  printf("digite o exercicio desejado\n");
+  scanf("%d", &escolha);
+
+  switch(escolha)
+  {
+      case 1:
+      exercicio1();
+      break;
+      
+      case 2:
+      exercicio2();
+      break;
+      
+      case 3:
+      exercicio3();
+      break;
+      
+      case 4:
+      exercicio4();
+      break;
+      
+      case 5:
+      exercicio5();
+      break;
+      
+      case 6:
+      exercicio6();
+      break;
+      
+      case 7:
+      exercicio7();
+      break;
+      
+      case 8:
+      exercicio8();
+      break;
+      
+      case 9:
+      exercicio9();
+      break;
+      
+      case 10:
+      exercicio10();
+      break;
+      
+      default:
+      escolha = 11;
+      break;
+      
+  }
+  }while(escolha != 11);
+}
