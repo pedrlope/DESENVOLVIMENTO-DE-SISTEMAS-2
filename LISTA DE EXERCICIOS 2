@@ -1,0 +1,223 @@
+
+#include <stdbool.h>
+#include <math.h>
+#include <stdio.h>
+
+
+void exercicio1()
+    {
+  int anos, dias, meses, formula;
+  
+  printf("digite sua idade em anos\n");
+  scanf("%d", &anos);
+  printf("digite sua idade em meses\n");
+  scanf("%d", &meses);
+  printf("digite sua idade em dias\n");
+  scanf("%d", &dias);
+  formula= dias+(meses*30) +(anos*360);
+  if(anos == 0 && meses ==0 && dias ==0 )
+  {
+   printf("essa idade não eh possivel\n");
+   
+  }
+  else
+  {
+  printf("você tem %d dias\n", formula);
+  }
+    }
+    
+    void exercicio2()
+   {
+    int primeiro, ultimo;
+    
+    printf("digite o primeiro numero\n");
+    scanf("%d", &primeiro);
+    printf("digite o ultimo numero\n");
+    scanf("%d", &ultimo);
+    if(primeiro == ultimo)
+   {
+     printf("não eh possivel\n");
+   }
+   if (primeiro < ultimo)
+   {
+    for (primeiro; primeiro<ultimo-1; primeiro++)
+    {
+        printf("%d\n", primeiro+1);
+    }
+   }
+   
+   if (ultimo < primeiro)
+   {
+    for (ultimo; ultimo<primeiro-1; ultimo++)
+    {
+        printf("%d\n", ultimo+1);
+    }
+   }
+    
+   }
+   
+   void exercicio3()
+   {
+       int num1, num2;
+    
+    printf("quantas casas tem o numero\n");
+    scanf("%d", &num1);
+    num2 = num1;
+    int vector[num1]; 
+    for(num1; num1>0; num1--)
+    {
+        printf("digite o numero\n");
+        scanf("%d", &vector);
+    }
+    for (int i = 0; i<num2; i++ )
+    {
+    printf(" %d", vector[num1]-i);
+    }
+   }
+   
+   void exercicio5()
+   {
+       int num1, num2, contador;
+  
+  printf("digite o numero1\n");
+  scanf("%d", &num1);
+  printf("digite o numero2\n");
+  scanf("%d", &num2);
+  
+  for(contador =2; contador<=num1 && contador <=num2; contador++)
+  {
+      if(num1%contador ==0 && num2%contador ==0)
+  {
+      printf("MMC = a %d\n", contador);
+      break;
+  }
+  
+  }
+   }
+   
+   int exercicio6()
+   {
+       int valor;
+    float x, x2, x3, y, c,formula;
+            
+                 printf("digite o coeficiente de x², x e y, e digite c\n");
+                     scanf("%f %f %f %f", &x2 , &x, &y, &c);
+                     
+                     if(y ==0 ||( x ==0 && x2 ==0))
+                {
+                    printf("isso nao eh possivel\n");
+                    return 0;
+                }
+                
+                printf("digite um valor para x\n");
+                scanf("%d",&valor);
+                
+                formula = ((pow(valor,2)*x2)+x*valor+c)/y;
+                
+                printf("f(%d) = %f \n", valor, formula);
+   }
+   
+   void exercicio7()
+   {
+       int num, razão, valor, formula;
+  
+  printf("digite o primeiro numero e a razão da progressão\n");
+  scanf("%d %d", &num, &razão);
+  printf("digite o valordesejado \n");
+  scanf(" %d", &valor);
+  formula = num * pow(razão, valor-1);
+  
+  printf(" a progressão geometrica de razão %d tem %d como seu %d valor", razão, formula, valor);
+   }
+   
+   void exercicio8()
+   {
+       float emprestimo, montante, juros, indice, tempo;
+    
+    
+   printf("digite o indice, tempo em meses e o valor do emprestimo\n");
+            scanf("%f %f %f", &indice, &tempo, &emprestimo);
+             
+             juros = emprestimo * powf(1+indice,tempo);
+             montante = juros +emprestimo;
+             printf("o juros eh de %f, o pagamento total eh de %f que parcelado em %f meses equivale a %f por mes", juros, montante, tempo, montante/tempo);
+   }
+   
+   void exercicio9()
+   {
+       int n;
+    
+    printf("digite o numero\n");
+    scanf("%d", &n);
+    
+    printf("%d\n", n);
+    for (n; n>1; n)
+    {
+        
+        if(n%2 == 0)
+        {
+            n = n/2;
+            printf("  %d", n);
+        }
+        
+        else
+        {
+            n = n*3+1;
+            printf("  %d", n);
+        }
+    }
+   }
+   
+
+
+int main()
+{
+    int escolha;
+
+  do
+  {
+  printf("escolha os seguintes exercicios: 1 - 2 - 3 - 5 - 6 - 7 - 8. - 9 ou digite outro numero para parar\n");
+  printf("digite o exercicio desejado\n");
+  scanf("%d", &escolha);
+
+  switch(escolha)
+  {
+      case 1:
+      exercicio1();
+      break;
+      
+      case 2:
+      exercicio2();
+      break;
+      
+      case 3:
+      exercicio3();
+      break;
+      
+      case 5:
+      exercicio5();
+      break;
+      
+      case 6:
+      exercicio6();
+      break;
+      
+      case 7:
+      exercicio7();
+      break;
+      
+      case 8:
+      exercicio8();
+      break;
+      
+      case 9:
+      exercicio9();
+      break;
+      
+      default:
+      escolha = 12;
+      break;
+      
+  }
+  }while(escolha != 12);
+}
