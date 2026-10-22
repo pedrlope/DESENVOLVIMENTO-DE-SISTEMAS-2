@@ -140,28 +140,35 @@
      
      void exercicio7()
      {
-         int num, lados; int variavel = 1;
-   printf("digite o numero de vezes que o dado foi lançado");
-   scanf("%d", &num);
-   int vector[num];
-   printf("digite o resultado de cada lançamento");
-   for(int i =0; i<num; i++)
-   {
-       scanf("%d", &vector[i]);
-   }
-   
-   for(num; num>0 ; num--)
-   {
-       for(int i = 0; i<num; i++)
-       {
-           if(vector)
-           variavel++;
-       }
-       printf("%d", variavel);
-   }
-   /*
-     não terminei
-   */
+         int num;
+
+    printf("Digite o numero de vezes que o dado foi lancado:\n");
+    scanf("%d", &num);
+
+    int vector[num];
+    int ocorrencias[6] = {0};
+
+    printf("Digite o resultado de cada lancamento:\n");
+    for (int i = 0; i < num; i++)
+    {
+        scanf("%d", &vector[i]);
+    }
+
+    for (int i = 0; i < num; i++)
+    {
+        ocorrencias[vector[i] - 1]++;
+    }
+
+    for (int i = 0; i < num; i++)
+    {
+        if(ocorrencias[i] >0)
+        {
+        printf(" %d", ocorrencias[i]);
+        
+        }
+    }
+
+    printf("\n");
      }
      
      
