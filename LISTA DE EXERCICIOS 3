@@ -1,0 +1,344 @@
+
+#include <stdbool.h>
+#include <math.h>
+#include <stdio.h>
+
+
+     void exercicio1()
+     {
+         int vector[10];
+    int num1 =0;
+    for(int i = 0; i<10; i++)
+    {
+        printf("digite o numero\n");
+        scanf("%d", &vector[i]);
+    }
+    for (int i = 0; i<10; i++)
+    {
+        if(vector[i]%2 == 0 && vector[i] != 0 )
+        {
+    printf(" %d", vector[i]);
+        }
+    }
+     }
+     
+     void exercicio2()
+     {
+         int x, cont;
+       int vector[10]; 
+       int num;
+       cont = 0;
+    for(int i =0; i <10; i++)
+    {
+        printf("digite o numero\n");
+        scanf("%d", &vector[i]);
+    }
+    printf("digite o X");
+    scanf("%d", &x);
+    for (int i = 0; i<10; i++ )
+    {
+        if(vector[i] == x )
+        {
+            if(cont == 0)
+            {
+            num = i;
+            }
+            cont++;
+        }
+    }
+    printf(" X apareceu %d vezes, a primeira aparição  foi %d", cont, num);
+     }
+     
+     void exercicio3()
+     {
+         float b, formula, formula2, razao, sum;
+    razao = 100;
+    sum = 0;
+    printf("digite o numero\n");
+    scanf("%f", &b);
+    for (int x=0; x<50; x++)
+    {
+      formula = (b+x)-(b*razao);
+      formula2 = pow(formula,3);
+      sum+=formula2;
+      razao --;
+    }
+    printf("a soma eh %f \n ", sum);
+     }
+     
+     void exercicio4()
+     {
+         int vector [50];
+   
+   for (int i =1 ; i<50; i++)
+   {
+        vector[50] = (i+5*i)%(i+1);
+       
+       printf("%d ", vector[50]);
+   }
+     }
+     
+     void exercicio5()
+     {
+          int vector[10];
+  int array[10];
+  int variavel = 0;
+  for(int i =0; i<10; i++)
+    {
+        printf("digite o numero\n");
+        scanf("%d", &vector[i]);
+    }
+    
+    printf("digite os numeros do segundo vetor\n");
+    for(int i =0; i<10; i++)
+    {
+        printf("digite o numero\n");
+        scanf("%d", &array[i]);
+    }
+    
+  for (int i = 0; i<10; i++ )
+    {
+        if(vector[i] == array[i] )
+        {
+    printf(" %d ", vector[i]);
+    variavel++;
+        }
+    }
+     }
+     
+     void exercicio6()
+     {
+         int vector[5];
+  int array[5];
+  int variavel = 0;
+  for(int i =0; i<5; i++)
+    {
+        printf("digite o numero\n");
+        scanf("%d", &vector[i]);
+    }
+    
+    printf("digite os numeros do segundo vetor\n");
+    for(int i =0; i<5; i++)
+    {
+        printf("digite o numero\n");
+        scanf("%d", &array[i]);
+    }
+    
+  for (int i = 0; i<5; i++ )
+    {
+        if(vector[i] == array[i] )
+        {
+    variavel++;
+        }
+    }
+    if (variavel ==5)
+    {
+        printf("vetores identicos");
+        
+    }
+     }
+     
+     void exercicio7()
+     {
+         int num, lados; int variavel = 1;
+   printf("digite o numero de vezes que o dado foi lançado");
+   scanf("%d", &num);
+   int vector[num];
+   printf("digite o resultado de cada lançamento");
+   for(int i =0; i<num; i++)
+   {
+       scanf("%d", &vector[i]);
+   }
+   
+   for(num; num>0 ; num--)
+   {
+       for(int i = 0; i<num; i++)
+       {
+           if(vector)
+           variavel++;
+       }
+       printf("%d", variavel);
+   }
+   /*
+     não terminei
+   */
+     }
+     
+     
+     void exercicio9()
+     {
+         int vector[10];
+  int array[10];
+  int vestor[10];
+    for(int i =0; i<10; i++)
+    {
+        printf("digite o numero\n");
+        scanf("%d", &vector[i]);
+    }
+    
+    printf("digite os numeros do segundo vetor\n");
+    for(int i =0; i<10; i++)
+    {
+        printf("digite o numero\n");
+        scanf("%d", &array[i]);
+    }
+    for(int i =0; i<10; i++)
+    {
+        vestor[i] = vector[i]*array[i];
+    }
+    
+    for(int i = 0; i<10; i++ )
+    {
+    printf(" %d ", vestor[i]);
+    }
+     }
+     
+     void exercicio10()
+     {
+         int vector[10];
+    int x;
+
+    for(int i = 0; i < 10; i++)
+    {
+        scanf("%d", &vector[i]);
+    }
+
+    for(int i = 0; i < 10; i++)
+    {
+        x = 2;
+
+        while(x < vector[i])
+        {
+            if(vector[i] % x == 0)
+            {
+                break;
+            }
+
+            x++;
+        }
+
+        if(vector[i] > 1 && x == vector[i])
+        {
+            printf("%d posicao %d\n", vector[i], i);
+        }
+    }
+     }
+     
+     void exercicio11()
+     {
+         int m, n;
+    int  array [100], vector[100], c[200];
+    int i, j, k;
+    printf("digite m\n");
+    scanf("%d", &m);
+
+    for (i = 0; i < m; i++) {
+        scanf("%d", & array [i]);
+    }
+    printf("digite n\n");
+    scanf("%d", &n);
+
+    for (i = 0; i < n; i++) {
+        scanf("%d", &vector[i]);
+    }
+
+    i = 0;
+    j = 0;
+    k = 0;
+
+    while (i < m && j < n) {
+        if ( array [i] < vector[j]) {
+            c[k] =  array [i];
+            i++;
+            k++;
+        } else if ( array [i] > vector[j]) {
+            c[k] = vector[j];
+            j++;
+            k++;
+        } else {
+            c[k] =  array [i];
+            i++;
+            j++;
+            k++;
+        }
+    }
+
+    while (i < m) {
+        c[k] =  array [i];
+        i++;
+        k++;
+    }
+
+    while (j < n) {
+        c[k] = vector[j];
+        j++;
+        k++;
+    }
+
+    for (i = 0; i < k; i++) {
+        printf("%d ", c[i]);
+    }
+
+    printf("\n");
+     }
+
+int main()
+{
+    int escolha;
+
+  do
+  {
+  printf("escolha os seguintes exercicios: 1 - 2 - 3 - 5 - 6 - 7  - 9 - 10 - 11 ou digite outro numero para parar\n");
+  printf("digite o exercicio desejado\n");
+  scanf("%d", &escolha);
+
+  switch(escolha)
+  {
+      case 1:
+      exercicio1();
+      break;
+      
+      case 2:
+      exercicio2();
+      break;
+      
+      case 3:
+      exercicio3();
+      break;
+      
+      case 4:
+      exercicio4();
+      break;
+      
+      case 5:
+      exercicio5();
+      break;
+      
+      case 6:
+      exercicio6();
+      break;
+      
+      case 7:
+      exercicio7();
+      break;
+      
+      case 9:
+      exercicio9();
+      break;
+      
+      case 10:
+      exercicio10();
+      break;
+      
+      case 11:
+      exercicio11();
+      break;
+      
+      
+      default:
+      escolha = 13;
+      break;
+      
+  }
+  }while(escolha != 13);
+}
