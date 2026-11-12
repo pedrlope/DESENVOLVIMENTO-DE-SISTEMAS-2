@@ -1,0 +1,367 @@
+
+#include <stdbool.h>
+#include <math.h>
+#include <stdio.h>
+
+
+     void exercicio1()
+     {
+         int var,matrix[5][10];
+    var = 0;
+    int mat1, mat2, soma;
+    mat1 = 0;
+    mat2 = 0;
+    for (int i = 0; i<5; i++)
+    {
+        for(int j = 0; j<10; j++)
+        {
+            matrix[i][j] = var;
+            var++;
+        }
+    }
+    for(int i = 0; i<5; i++)
+    {
+        mat1 += matrix[i][7];
+       
+    }
+    
+    for(int j = 0; j<10; j++)
+    {
+        mat2 += matrix[2][j];
+       
+    }
+    soma = mat1 + mat2;
+     printf("%d\n", soma);
+     }
+     
+     void exercicio2()
+     {
+       int matrix[10][10];
+  int  var, z, w ;
+  var = 0;
+  
+  for(int i = 0; i<10; i++)
+  {
+      for(int j = 0; j<10; j++)
+      {
+          scanf("%d", &matrix[i][j]);
+      }
+  }
+  
+  for(int i =0; i<10; i++)
+    {
+        z = i;
+        for(int j =0; j<10; j++)
+        {
+            w = j+1;
+            if(w==10)
+            {
+                z++;
+                w = 0;
+            }
+              while(matrix[i][j] > matrix[z][w])
+              { 
+                   if(w==10&& z ==10)
+                   {
+                       printf("o maior valor  eh %d, na posição %d %d", matrix[i][j], i, j);
+                return 0;
+                   }
+                   w++;
+              }
+              
+        }
+    }
+     }
+     
+     void exercicio3()
+     {
+        int var,matrix[5][5];
+    var =1;
+    for (int i = 0; i<5; i++)
+    {
+        for(int j = 0; j<5; j++)
+        {
+            if(i == j)
+            {
+            matrix[i][j] = var;
+            }
+            else
+            {
+                matrix[i][j] = 0;
+            }
+        }
+    }
+    
+    for (int i = 0; i<5; i++)
+    {
+        for(int j = 0; j<5; j++)
+        {
+            printf(" ");
+            printf("%d", matrix[i][j]);
+        }
+        printf("\n");
+    } 
+     }
+     
+     void exercicio4()
+     {
+        int var,matrix[4][4];
+    var =1;
+    for (int i = 0; i<4; i++)
+    {
+        for(int j = 0; j<4; j++)
+        {
+            
+            matrix[i][j] = var;
+         var++;   
+        }
+    }
+    
+    for (int i = 0; i<4; i++)
+    {
+        for(int j = 0; j<4; j++)
+        {
+            printf("  ");
+            
+            if(j == 0)
+            {
+
+                printf("%d", matrix[j][i]);
+            }
+            
+                
+            if(i == 0 && j!=0)
+            {
+                printf("%d", matrix[i][j]);
+            }
+            
+        }
+        printf("\n");
+    } 
+     }     
+     
+     void exercicio5()
+     {
+        int var,matrix[5][5];
+    var =1;
+    for (int i = 0; i<5; i++)
+    {
+        for(int j = 0; j<5; j++)
+        {
+            scanf("%d", &var);
+                matrix[i][j] = var;
+        }
+    }
+    
+    for (int i = 0; i<5; i++)
+    {
+        for(int j = 0; j<5; j++)
+        {
+            if(j>i)
+            {
+            matrix[i][j] = 0;
+            }
+            printf(" ");
+            printf("%d", matrix[i][j]);
+        }
+        printf("\n");
+    } 
+     }
+     
+     void exercicio6()
+     {
+      int tamanho, var;
+    printf("digite o tamanho\n");
+    scanf("%d", &tamanho);
+    
+    int matrix[tamanho][tamanho];
+    var = 0;
+    if(tamanho>10)
+    {
+        printf("tamanho tem que ser maior ou igual a 10\n");
+        tamanho =0;
+    }
+    
+    for (int i = 0; i<tamanho; i++)
+    {
+        for(int j = 0; j<tamanho; j++)
+        {
+           scanf("%d", &matrix[i][j]);
+        }
+    }
+    
+    for (int i = 0; i<tamanho; i++)
+    {
+        for(int j = 0; j<tamanho; j++)
+        {
+                printf("  ");
+                printf("%d", matrix[j][i]);
+            
+        }
+        printf("\n");
+    }
+     }
+     
+     void exercicio7()
+     {
+        int var,matrix[10][10];
+    var =1;
+    for (int i = 0; i<10; i++)
+    {
+        for(int j = 0; j<10; j++)
+        {
+            if(i<j)
+            {
+            matrix[i][j] = 2*i + 7*j - 2;
+            }
+            if(i>j)
+            {
+            matrix[i][j] = (pow(3*i,2) + 7*j - 2);
+            }
+            if(i==j)
+            {
+            matrix[i][j] = (pow(4*i,3) - pow(5*j,2) + 1);
+            }
+        }
+    }
+    
+    for (int i = 0; i<10; i++)
+    {
+        for(int j = 0; j<10; j++)
+        {
+                printf("  ");
+                printf("%d", matrix[i][j]);
+            
+        }
+        printf("\n");
+    }
+     }
+     
+     void exercicio8()
+     {
+        int var,soma, di1, di2,matrix[3][3];
+    var =1; di2 =1; di1 =1;
+    for (int i = 0; i<3; i++)
+    {
+        for(int j = 0; j<3; j++)
+        {
+                matrix[i][j] = var;
+                var++;
+        }
+    }
+    
+    for (int i = 0; i<3; i++)
+    {
+        for(int j = 0; j<3; j++)
+        {
+            if(i == j)
+            {
+            di1 *= matrix[i][j];
+            }
+            if(j+i == 2)
+            di2 *= matrix[i][j];
+        }
+        
+    }    
+    soma = di2+di1;
+    printf("%d", soma);
+     }
+     
+     void exercicio9()
+     {
+     
+     }
+     
+     void exercicio10()
+     {
+         int umvalor;
+    printf("digite um valor");
+    scanf("%d", &umvalor);
+    int matrix[umvalor][umvalor];
+    int var,somalinha, somacoluna, diagonais;
+    var =0;
+    for (int i = 0; i<umvalor; i++)
+    {
+        for(int j = 0; j<umvalor; j++)
+        {
+                matrix[i][j] = var;
+                var++;
+        }
+    }
+    
+    for (int i = 0; i<umvalor; i++)
+    {
+        for(int j = 0; j<umvalor; j++)
+        {
+            if(i<=j)
+            {
+            somalinha += matrix[i][j]
+            }
+        }
+        /*
+          não terminei
+        */
+    }    
+    soma = di2+di1;
+    printf("%d", soma);
+     }
+
+int main()
+{
+    int escolha;
+
+  do
+  {
+  printf("escolha os seguintes exercicios: 1 - 2 - 3 - 5 - 6 - 7 - 8 - 9 - 10 ou digite outro numero para parar\n");
+  printf("digite o exercicio desejado\n");
+  scanf("%d", &escolha);
+
+  switch(escolha)
+  {
+      case 1:
+      exercicio1();
+      break;
+      
+      case 2:
+      exercicio2();
+      break;
+      
+      case 3:
+      exercicio3();
+      break;
+      
+      case 4:
+      exercicio4();
+      break;
+      
+      case 5:
+      exercicio5();
+      break;
+      
+      case 6:
+      exercicio6();
+      break;
+      
+      case 7:
+      exercicio7();
+      break;
+      
+      case 8:
+      exercicio8();
+      break;
+      
+      case 9:
+      exercicio9();
+      break;
+      
+      case 10:
+      exercicio10();
+      break;
+      
+      default:
+      escolha = 13;
+      break;
+      
+  }
+  }while(escolha != 13);
+}
